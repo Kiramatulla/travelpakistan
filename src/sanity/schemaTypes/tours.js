@@ -1,0 +1,144 @@
+export const tours = {
+    name: "tour",
+    title: "Tour",
+    type: "document",
+    fields: [
+      {
+        name: "title",
+        title: "Tour Name",
+        type: "string",
+        validation: (Rule) => Rule.required(),
+      },
+      {
+        name: "slug",
+        title: "Slug",
+        type: "slug",
+        options: {
+          source: "title",
+          maxLength: 200,
+        },
+        validation: (Rule) => Rule.required(),
+      },
+      {
+        name: "featured",
+        title: "Featured Tour",
+        type: "boolean",
+      },
+      {
+        name: "category",
+        title: "Category",
+        type: "reference",
+        to: [{ type: "category" }],
+        validation: (Rule) => Rule.required(),
+      },
+      {
+        name:'images',
+        title:'Images',
+        type:'array',
+        options: { hotspot: true },
+        of:[{type:'image'}]
+    },
+      {
+        name: "travelMode",
+        title: "Travel Mode",
+        type: "string",
+        options: {
+          list: [
+            { title: "By Road", value: "by-road" },
+            { title: "By Air", value: "by-air" },
+          ],
+        },
+        validation: (Rule) => Rule.required(),
+      },
+      {
+        name: "tourOverview",
+        title: "Tour Overview",
+        type: "text",
+      },
+      {
+        name: "itinerary",
+        title: "Itinerary",
+        type: "array",
+        of: [{ type: "block" }],
+      },
+      
+      {
+        name: "tourPriceBestHotels",
+        title: "Tour Price Best Hotels",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "tourPriceStandardHotels",
+        title: "Tour Price Standard Hotels",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "International2Persons",
+        title: "Luxury for 2 persons",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "International3Persons",
+        title: "Luxury for 3 persons",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "International4Persons",
+        title: "Luxury for 4 persons",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "International5Persons",
+        title: "Luxury for 5 persons",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "Domestic2Persons",
+        title: "Standard for 2 persons",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "Domestic3Persons",
+        title: "Standard for 3 persons",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "Domestic4Persons",
+        title: "Standard for 4 persons",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "Domestic5Persons",
+        title: "Standard for 5 persons",
+        type: "number",
+        validation: (Rule) => Rule.min(0),
+      },
+      {
+        name: "inclusionExclusion",
+        title: "Inclusion & Exclusion",
+        type: "array",
+        of: [{ type: "block" }],
+      },
+      {
+        name: "mainHighlights",
+        title: "Main Highlights",
+        type: "array",
+        of: [{ type: "block" }],
+      },
+      {
+        name: "regionHistory",
+        title: "Region History",
+        type: "text",
+      },
+    ],
+  };
+  
