@@ -28,7 +28,7 @@ const ContactInfo = () => {
           <IoCallOutline size={28} className="text-gray-600" />
           <div>
             <h3 className="font-semibold">Call Us</h3>
-            <p className="text-sm text-gray-500">+92 3455575757</p>
+            <p className="text-sm text-gray-500">+92 342 5952863</p>
           </div>
         </div>
 

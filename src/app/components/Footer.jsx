@@ -17,7 +17,7 @@ const Footer = () => {
               </p>
               <p>
                 
-                <span className="font-bold">Whatsapp:</span> +92 333 0598645
+                <span className="font-bold">Whatsapp:</span> +92 342 5952863
               </p>
               <p>
                 
