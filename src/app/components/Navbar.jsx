@@ -6,7 +6,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
 import HunzaDropDown from "./NavbarComponents/HunzaDropDown";
-import TrekDropDown from "./NavbarComponents/trekDropDown";
 import CompanyPolicy from "./NavbarComponents/CompanyPolicy";
 
 const Navbar = () => {
