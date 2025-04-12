@@ -9,12 +9,12 @@ const VehicleDetails = ({ vehicles }) => {
     return (
         <div>
         {/* Vehicle Links */}
-        <nav className="flex flex-wrap justify-center space-x-4 mb-8 font-semibold text-sm">
+        <nav className="flex flex-wrap gap-y-4 justify-center space-x-4 mb-8 font-semibold text-sm">
           {vehicles.map((vehicle) => (
             <button
               key={vehicle._id}
               onClick={() => setSelectedVehicle(vehicle)}
-              className={`px-4 border-r-2 border-r-cyan-600 hover:text-orange-600 last:border-r-0 focus:outline-none ${
+              className={`px-4 border-r-2 border-r-cyan-600  hover:text-orange-600 last:border-r-0 focus:outline-none ${
                 selectedVehicle?._id === vehicle._id
                   ? "text-orange-600 font-bold"
                   : ""
@@ -27,7 +27,7 @@ const VehicleDetails = ({ vehicles }) => {
   
         {/* Vehicle Image and Info Side by Side */}
         {selectedVehicle && (
-          <div className=" flex lg:flex-row items-center justify-center">
+          <div className=" flex flex-col pb-4  md:flex-row lg:flex-row items-center justify-center">
             {/* Left: Image */}
             <div className=" flex justify-center">
               <Image
