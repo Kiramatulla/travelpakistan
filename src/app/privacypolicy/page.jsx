@@ -1,8 +1,14 @@
-import React from 'react'
 
-const page = () => {
+import { client } from '@/sanity/lib/client'
+import PrivacyPolicy from '../components/aboutComp/PrivacyPolicy'
+
+const page = async() => {
+  const privacy = await client.fetch(`*[_type == "sitePolicies"][0]`);
+ 
   return (
-    <div>page</div>
+    <section>
+      <PrivacyPolicy privacy={privacy}/>
+    </section>
   )
 }
 
