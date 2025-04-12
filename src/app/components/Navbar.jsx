@@ -47,7 +47,7 @@ const Navbar = () => {
             Home
           </Link>
           <HunzaDropDown />
-          {/* <TrekDropDown /> */}
+          
 
           <Link href="/trekking" className="hover:text-orange-600">
             Treks
