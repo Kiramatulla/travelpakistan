@@ -5,6 +5,9 @@ import headerBg from "../assets/header-bg-color.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
+import HunzaDropDown from "./NavbarComponents/HunzaDropDown";
+import TrekDropDown from "./NavbarComponents/trekDropDown";
+import CompanyPolicy from "./NavbarComponents/CompanyPolicy";
 
 const Navbar = () => {
   const [showCart, setShowCart] = useState(false);
@@ -20,7 +23,10 @@ const Navbar = () => {
         <Image src={headerBg} alt="Header Background" className="w-full" />
       </div>
 
-      <nav className="mx-auto flex max-w-7xl items-center justify-between text-white lg:px-8" aria-label="Global">
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between text-white lg:px-8"
+        aria-label="Global"
+      >
         {/* Logo */}
         <div className="flex flex-1 justify-start">
           <Link href="/" className="-m-1.5 p-1.5">
@@ -37,64 +43,102 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex md:gap-x-6 lg:text-sm font-sans">
-          <Link href="/" className="hover:text-orange-600">Home</Link>
-          <Link href="/tours" className="hover:text-orange-600">Tours</Link>
-          <Link href="/trekking" className="hover:text-orange-600">Treks</Link>
-          <Link href="/blogs" className="hover:text-orange-600">Blogs</Link>
-          <Link href="/visainfo" className="hover:text-orange-600">Visa Info</Link>
-          <Link href="/contact" className="hover:text-orange-600">Contact</Link>
-          <div className="group relative">
-            <button className="text-white hover:text-orange-600">About</button>
-            <div className="absolute left-0 hidden group-hover:block bg-white text-black rounded-md shadow-lg min-w-[160px] z-50">
-              <Link
-                href="/about"
-                className="block px-4 py-2 hover:bg-orange-100"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/refundpolicy"
-                className="block px-4 py-2 hover:bg-orange-100"
-              >
-                Refund Policy
-              </Link>
-              <Link
-                href="/privacypolicy"
-                className="block px-4 py-2 hover:bg-orange-100"
-              >
-                Privacy Policy
-              </Link>
-            </div>
-          </div>
-        
+          <Link href="/" className="hover:text-orange-600">
+            Home
+          </Link>
+          <HunzaDropDown />
+          {/* <TrekDropDown /> */}
 
+          <Link href="/trekking" className="hover:text-orange-600">
+            Treks
+          </Link>
 
+          <Link href="/blogs" className="hover:text-orange-600">
+            Blogs
+          </Link>
+          <Link href="/visainfo" className="hover:text-orange-600">
+            Visa Info
+          </Link>
+          <Link href="/contact" className="hover:text-orange-600">
+            Contact
+          </Link>
+         <CompanyPolicy/>
         </div>
 
         {/* Right Side */}
         <div className="flex flex-1 justify-end items-center gap-4">
           <span className="hidden md:inline">License No. 000</span>
           {/* Hamburger Menu - for Mobile */}
-          <button className="md:hidden text-black text-2xl p-2" onClick={handleClick}>
+          <button
+            className="md:hidden text-black text-2xl p-2"
+            onClick={handleClick}
+          >
             <GiHamburgerMenu />
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden flex flex-col gap-4 py-10 px-10 fixed top-0 bottom-0 w-72 z-50 h-screen bg-slate-900 transition-all duration-500 ${showCart ? 'right-0' : '-right-72'}`}>
+        <div
+          className={`md:hidden flex flex-col gap-4 py-10 px-10 fixed top-0 bottom-0 w-72 z-50 h-screen bg-slate-900 transition-all duration-500 ${showCart ? "right-0" : "-right-72"}`}
+        >
           <div>
-            <button className="absolute top-6 right-6 text-white cursor-pointer" onClick={handleClick}>
+            <button
+              className="absolute top-6 right-6 text-white cursor-pointer"
+              onClick={handleClick}
+            >
               <ImCross />
             </button>
           </div>
           <div className="flex flex-col gap-y-2 mt-14 font-sans text-white text-xl">
-            <Link href="/" className="hover:text-orange-600" onClick={handleClick}>Home</Link>
-            <Link href="/tours" className="hover:text-orange-600" onClick={handleClick}>Tours</Link>
-            <Link href="/trekking" className="hover:text-orange-600" onClick={handleClick}>Treks</Link>
-            <Link href="/blogs" className="hover:text-orange-600" onClick={handleClick}>Blogs</Link>
-            <Link href="/visainfo" className="hover:text-orange-600" onClick={handleClick}>Visa Info</Link>
-            <Link href="/about" className="hover:text-orange-600" onClick={handleClick}>About</Link>
-            <Link href="/contact" className="hover:text-orange-600" onClick={handleClick}>Contact</Link>
+            <Link
+              href="/"
+              className="hover:text-orange-600"
+              onClick={handleClick}
+            >
+              Home
+            </Link>
+            <Link
+              href="/tours"
+              className="hover:text-orange-600"
+              onClick={handleClick}
+            >
+              Tours
+            </Link>
+            <Link
+              href="/trekking"
+              className="hover:text-orange-600"
+              onClick={handleClick}
+            >
+              Treks
+            </Link>
+            <Link
+              href="/blogs"
+              className="hover:text-orange-600"
+              onClick={handleClick}
+            >
+              Blogs
+            </Link>
+            <Link
+              href="/visainfo"
+              className="hover:text-orange-600"
+              onClick={handleClick}
+            >
+              Visa Info
+            </Link>
+            <Link
+              href="/about"
+              className="hover:text-orange-600"
+              onClick={handleClick}
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="hover:text-orange-600"
+              onClick={handleClick}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </nav>
