@@ -1,3 +1,4 @@
+import ContactHomeComp from "./components/contactComponents/ContactHomeComp";
 import ContactInfo from "./components/ContactInfo";
 import Hero from "./components/Hero";
 import HomeCard from "./components/homeCardComp/HomeCard";
@@ -25,6 +26,9 @@ export default function Home() {
       </section>
       <section>
         <ServicesOffered />
+      </section>
+      <section>
+        <ContactHomeComp/>
       </section>
   </main>
   );
