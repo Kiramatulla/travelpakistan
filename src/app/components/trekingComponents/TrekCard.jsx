@@ -18,12 +18,12 @@ const TrekCard = ({ trek }) => {
             />
           </div>
           <div className="mt-2">
-            <h3 className="text-white mb-3 font-bold text-center">
+            <h3 className=" mb-3 font-bold text-center">
               {trek.title}
             </h3>
 
             {/* ✅ Limit height & truncate overflow text */}
-            <p className="text-sm text-center text-white h-[58px] overflow-hidden ">
+            <p className="text-sm text-center  h-[58px] overflow-hidden ">
               {trek.trekOverview}
             </p>
 

@@ -6,13 +6,13 @@ const TrekCardDetails = async () => {
   const treks = await client.fetch(`*[_type == "treks" && featured == true]`);
 
   return (
-    <section className="mt-2 pt-12 dark:bg-slate-900 font-sans">
+    <section className="mt-2 pt-12  font-sans">
       {/* Section Header */}
       <header className="max-w-screen-md mx-auto text-center">
-        <h2 className="mb-4 text-3xl font-bold dark:text-white text-slate-600">
+        <h2 className="mb-4 text-3xl font-bold  text-slate-600">
           BASE CAMP TREKKING OPTIONS
         </h2>
-        <p className="text-gray-500 dark:text-white">
+        <p className="text-gray-500 ">
           Webby is a PHP Framework built on top of Codeigniter 3 for easy PHP
           web application development using both HMVC and MVC patterns
         </p>

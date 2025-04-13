@@ -4,7 +4,7 @@ import {MdOutlineEmojiTransportation} from "react-icons/md"
 const ServicesOffered = () => {
   return (
     <>
-      <section className="py-24 font-sans bg-slate-300 lg:mt-8">
+      <section className="py-14 font-sans bg-slate-300 lg:mt-8">
         <div className="container mx-auto px-3">
           <h2 className="text-4xl mb-6 font-bold text-center">
             Services We Provide
@@ -17,7 +17,7 @@ const ServicesOffered = () => {
       </section>
 
       {/* <!-- Feature Box Section --> */}
-      <section className="pb-32 font-sans bg-slate-300">
+      <section className="pb-24 font-sans bg-slate-300">
         <div className="relative container flex flex-col items-start px-12 lg:px-24  mx-auto  md:flex-row md:space-x-7">
           {/* <!-- Horizontal Line --> */}
           <div className="hidden absolute top-24 w-10/12 left-32 h-4 bg-cyan-600 md:block"></div>

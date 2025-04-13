@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ContactHomeComp = () => {
   return (
-    <div className=" bg-slate-300 ">
+    <section className=" bg-slate-300 ">
       <div className="relative h-64 max-w-4xl mx-auto sm:h-80 md:h-72 ">
         <Image
           src={bgImage}
@@ -27,7 +27,7 @@ const ContactHomeComp = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
