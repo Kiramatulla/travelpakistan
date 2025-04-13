@@ -11,23 +11,19 @@ const Footer = () => {
             {/* <Image src=" " width={200} height={200} className="mr-5 h-6 sm:h-9" alt="logo" /> */}
             <div className="text-sm text-gray-500 space-y-2">
               <p>
-                
-                <span className="font-bold">Email: </span> 
+                <span className="font-bold">Email: </span>
                 travelpaksitan@gmail.com
               </p>
               <p>
-                
                 <span className="font-bold">Whatsapp:</span> +92 342 5952863
               </p>
               <p>
-                
-                <span className="font-bold">Main Office:</span> Kargil-Skardu Rd,
-                Hussainabad, Skardu, 16400
+                <span className="font-bold">Main Office:</span> Kargil-Skardu
+                Rd, Hussainabad, Skardu, 16400
               </p>
               <p>
-                
-                <span className="font-bold">Branch Office: </span> Noor Plaza, Near
-                Serena Hotel, Gilgit City
+                <span className="font-bold">Branch Office: </span> Noor Plaza,
+                Near Serena Hotel, Gilgit City
               </p>
             </div>
           </div>
@@ -71,10 +67,8 @@ const Footer = () => {
                 <Link className="hover:opacity-75" href="/refundpolicy">
                   Refund Policy
                 </Link>
-                
               </nav>
             </div>
-           
 
             <div>
               <h2 className="font-medium">We are Social</h2>
@@ -83,20 +77,40 @@ const Footer = () => {
                 Voluptas, accusantium.
               </p>
               <div className="flex mt-8 space-x-6 text-gray-600">
-                <Link className="hover:opacity-75" href="www.facebook.com">
+                <Link
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-75"
+                >
                   <span className="sr-only"> Facebook </span>
                   <FaFacebook size={30} className="text-blue-600" />
                 </Link>
-                <Link className="hover:opacity-75" href="www.instagram.com">
+                <Link
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-75"
+                >
                   <span className="sr-only"> Instagram </span>
                   <FaInstagram size={30} className="text-red-700" />
                 </Link>
-                <Link className="hover:opacity-75" href="www.linkdin.com">
+                <Link
+                  href="https://pk.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-75"
+                >
                   <span className="sr-only"> Twitter </span>
                   <FaLinkedin size={30} className="text-blue-700" />
                 </Link>
 
-                <Link className="hover:opacity-75" href="www.tripadvisor.com">
+                <Link
+                  href="https://www.tripadvisor.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-75"
+                >
                   <span className="sr-only"> Trip Adviser </span>
                   <BiLogoTripAdvisor size={30} className="text-green-600" />
                 </Link>
