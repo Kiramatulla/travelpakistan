@@ -1,8 +1,14 @@
-import React from 'react'
+import { client } from '@/sanity/lib/client';
+import VisaInfoComp from '../components/aboutComp/VisaInfoComp';
 
-const page = () => {
+
+const page = async() => {
+    const privacy = await client.fetch(`*[_type == "sitePolicies"][0]`);
+  
   return (
-    <div>page</div>
+    <div>
+      <VisaInfoComp privacy={privacy}/>
+    </div>
   )
 }
 

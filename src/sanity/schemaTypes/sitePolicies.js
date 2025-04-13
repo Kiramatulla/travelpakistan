@@ -22,6 +22,12 @@ export default {
         of: [{ type: 'block' }]
       },
       {
+        name: 'visaInfo',
+        title: 'Visa Information',
+        type: 'array',
+        of: [{ type: 'block' }]
+      },
+      {
         name: 'lastUpdated',
         title: 'Last Updated',
         type: 'datetime'
