@@ -38,7 +38,7 @@ const Footer = () => {
                 <Link className="hover:opacity-75" href="/about">
                   About
                 </Link>
-                <Link className="hover:opacity-75" href="/visa-info">
+                <Link className="hover:opacity-75" href="visainfo">
                   Visa Informations
                 </Link>
                 <Link className="hover:opacity-75" href="/tours">
