@@ -4,16 +4,19 @@ import Link from "next/link";
 
 const PAGE_SIZE = 12;
 
-const Page = async ({searchParams}) => {
-   const currentPage = parseInt(searchParams.page || "1");
-    const start = (currentPage - 1) * PAGE_SIZE;
-    const end = start + PAGE_SIZE;
-  
-    const totalTours = await client.fetch(`count(*[_type == "tour"])`);
-    const totalPages = Math.ceil(totalTours / PAGE_SIZE);
-  
-    const tours = await client.fetch(`*[_type == "tour"][${start}...${end}]`);
-  
+
+const Page = async ({ searchParams }) => {
+  const currentPage = parseInt(searchParams.page || "1");
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const end = start + PAGE_SIZE;
+
+  // Fetch the tours for this specific page (using pagination)
+  const tours = await client.fetch(`*[_type == "tour"][${start}...${end}]`);
+
+  // Fetch the total number of tours (for pagination controls)
+  const totalTours = await client.fetch(`count(*[_type == "tour"])`);
+  const totalPages = Math.ceil(totalTours / PAGE_SIZE);
+
   return (
     <>
       <p className="text-3xl font-bold mt-10 text-center underline font-sans">
@@ -21,9 +24,11 @@ const Page = async ({searchParams}) => {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-14 lg:mx-20 ">
         {tours.map((tour) => (
-         <TourPagCard key={tour._id} tour={tour}/>
+          <TourPagCard key={tour._id} tour={tour} />
         ))}
       </div>
+
+      {/* Pagination controls */}
       <div className="flex justify-center gap-4 mt-10 mb-20">
         {currentPage > 1 && (
           <Link
