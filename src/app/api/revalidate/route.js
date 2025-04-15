@@ -34,7 +34,7 @@ export async function POST(req) {
 
     // Manually revalidate each path via Vercel's tag-based or ISR caching if supported
     for (const path of revalidatedPaths) {
-      console.log(`Revalidating ${path}`);
+     
       // Just a placeholder — real revalidation might use tags or external fetch
     }
 
