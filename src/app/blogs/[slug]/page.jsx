@@ -1,7 +1,8 @@
 import BlogDetailComponent from "@/app/components/blogComponents/BlogDetailComponent";
 import { client } from "@/sanity/lib/client";
 
-
+export const dynamicParams = true;
+export const revalidate = 0;
 
 const page = async ({ params }) => {
   const blogs = await client.fetch(

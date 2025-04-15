@@ -18,25 +18,18 @@ export async function POST(req) {
       return NextResponse.json({ message: 'Missing slug or type' }, { status: 400 });
     }
 
+    const staticPaths = ['/', '/tours', '/trekking', '/blogs'];
     const pathMap = {
       tour: `/tours/${slug}`,
       trekking: `/trekking/${slug}`,
       blog: `/blogs/${slug}`,
     };
 
-    const staticListPaths = {
-      tour: '/tours',
-      trekking: '/trekking',
-      blog: '/blogs',
-    };
-
     const dynamicPath = pathMap[type];
-    const listPath = staticListPaths[type];
-
-    const revalidatedPaths = [dynamicPath, listPath, '/'];
+    const revalidatedPaths = [...staticPaths, dynamicPath];
 
     for (const path of revalidatedPaths) {
-      revalidatePath(path);
+      revalidatePath(path); // This actually triggers revalidation
     }
 
     return NextResponse.json({ revalidated: true, paths: revalidatedPaths });
