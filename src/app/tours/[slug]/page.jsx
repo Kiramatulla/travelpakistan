@@ -1,9 +1,6 @@
 import TourDetailsPage from "@/app/components/tourDetailPage/TourDetailsPage";
 import { client } from "@/sanity/lib/client";
 
-export const dynamicParams = true;
-export const revalidate = false; // Or a number (in seconds) if you want background revalidation too
-
 
 // ✅ This will generate static pages for each tour at build time
 export async function generateStaticParams() {
