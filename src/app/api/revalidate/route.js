@@ -2,7 +2,7 @@ import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-  const secret = process.env.REVALIDATE_SECRET;
+  const secret = 'trav3lpakist0n';
   const { searchParams } = new URL(req.url);
 
   if (searchParams.get("secret") !== secret) {
