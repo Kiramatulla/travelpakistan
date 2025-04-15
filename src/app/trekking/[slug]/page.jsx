@@ -1,8 +1,7 @@
 import TrekDetailPage from "@/app/components/trekingComponents/TrekDetailPage";
 import { client } from "@/sanity/lib/client";
 
-export const dynamicParams = true;
-export const revalidate = 0;
+
 
 const page = async ({params}) => {
     const treks = await client.fetch(
