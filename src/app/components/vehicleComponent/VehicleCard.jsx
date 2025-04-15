@@ -1,7 +1,5 @@
 import { client } from "@/sanity/lib/client";
-import Image from "next/image";
 import { FaIndent, FaOutdent } from "react-icons/fa6";
-import parado from "../../assets/parado.jpg"
 import VehicleDetails from "./VehicleDetails";
 
 
