@@ -1,9 +1,10 @@
+import { revalidatePath } from 'next/cache';
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {
   const secret = 'trav3lpakist0n';
-
   const { searchParams } = new URL(req.url);
+
   if (searchParams.get('secret') !== secret) {
     return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
   }
@@ -17,10 +18,7 @@ export async function POST(req) {
       return NextResponse.json({ message: 'Missing slug or type' }, { status: 400 });
     }
 
-    // These are the base/static pages
     const staticPaths = ['/', '/tours', '/trekking', '/blogs'];
-
-    // Dynamic page based on type
     const pathMap = {
       tour: `/tours/${slug}`,
       trekking: `/trekking/${slug}`,
@@ -28,14 +26,10 @@ export async function POST(req) {
     };
 
     const dynamicPath = pathMap[type];
-
-    // Trigger revalidation via fetch to internal revalidate tag route
     const revalidatedPaths = [...staticPaths, dynamicPath];
 
-    // Manually revalidate each path via Vercel's tag-based or ISR caching if supported
     for (const path of revalidatedPaths) {
-     
-      // Just a placeholder — real revalidation might use tags or external fetch
+      revalidatePath(path); // This actually triggers revalidation
     }
 
     return NextResponse.json({ revalidated: true, paths: revalidatedPaths });
