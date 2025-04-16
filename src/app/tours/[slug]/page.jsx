@@ -14,6 +14,26 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }) {
+  const query = `*[_type == "tour" && slug.current == $slug][0]{
+    title,
+    Metadescription
+  }`;
+  const tour = await client.fetch(query, { slug: params.slug });
+
+  if (!tour) {
+    return {
+      title: "Tour not found",
+      description: "This tour does not exist or has been removed.",
+    };
+  }
+
+  return {
+    title: tour.title,
+    description: tour.Metadescription,
+  };
+}
+
 const page = async ({ params }) => {
   const query = `*[_type == "tour" && slug.current == '${params.slug}'][0]`;
   const tours = await client.fetch(query);
