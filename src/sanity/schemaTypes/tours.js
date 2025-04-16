@@ -23,7 +23,7 @@ export const tours = {
         name: "Metadescription",
         title: "Meta Description",
         type: "text",
-        description: "Short description for SEO (recommended: 140–160 characters)",
+        description: "Short description for SEO (recommended: 140 to 160 characters)",
         validation: Rule => Rule.max(160).warning("Meta description should be under 160 characters"),
       },
       {

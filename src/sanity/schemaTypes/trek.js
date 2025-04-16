@@ -20,6 +20,13 @@ export const treks = {
         validation: (Rule) => Rule.required(),
       },
       {
+        name: "Metadescription",
+        title: "Meta Description",
+        type: "text",
+        description: "Short description for SEO (recommended: 140–160 characters)",
+        validation: Rule => Rule.max(160).warning("Meta description should be under 160 characters"),
+      },
+      {
         name: "featured",
         title: "Featured Treks",
         type: "boolean",
