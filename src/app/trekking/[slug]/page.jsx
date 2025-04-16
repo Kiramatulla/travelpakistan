@@ -4,6 +4,36 @@ import { client } from "@/sanity/lib/client";
 export const dynamicParams = true;
 export const revalidate = 0;
 
+export async function generateStaticParams() {
+  const query = `*[_type == "treks"]{ "slug": slug.current }`;
+  const treks = await client.fetch(query);
+
+  return treks.map((trek) => ({
+    slug: trek.slug,
+  }));
+}
+
+export async function generateMetadata({ params }) {
+  const query = `*[_type == "treks" && slug.current == $slug][0]{
+    title,
+    Metadescription
+  }`;
+  const treks = await client.fetch(query, { slug: params.slug });
+
+  if (!treks) {
+    return {
+      title: "Trek not found",
+      description: "This trek does not exist or has been removed.",
+    };
+  }
+
+  return {
+    title: treks.title,
+    description: treks.Metadescription,
+  };
+}
+
+
 const page = async ({params}) => {
     const treks = await client.fetch(
         `*[_type == "treks" && slug.current == '${params.slug}'][0]`
