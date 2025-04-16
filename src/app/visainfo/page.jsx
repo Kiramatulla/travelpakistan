@@ -1,8 +1,8 @@
 import { client } from '@/sanity/lib/client';
 import VisaInfoComp from '../components/aboutComp/VisaInfoComp';
-import {Metadata} from "next"
 
-export const Metadata ={
+
+export const metadata ={
   title:"Visa Information"
 } 
 

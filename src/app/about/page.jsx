@@ -3,7 +3,7 @@ import AboutUs from "../components/aboutComp/AboutUs"
 import {Metadata} from "next"
 
 
-export const Metadata ={
+export const metadata ={
   title:"About"
 } 
 
