@@ -78,7 +78,7 @@ const Footer = () => {
               </p>
               <div className="flex mt-8 space-x-6 text-gray-600">
                 <Link
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/profile.php?id=61575373047070"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:opacity-75"
@@ -87,7 +87,7 @@ const Footer = () => {
                   <FaFacebook size={30} className="text-blue-600" />
                 </Link>
                 <Link
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/violatours.pk/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:opacity-75"

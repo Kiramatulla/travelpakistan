@@ -29,7 +29,7 @@ const Navbar = () => {
       >
         {/* Logo */}
         <div className="flex flex-1 justify-start relative">
-          <Link href="/" className="relative  h-20 w-32">
+          <Link href="/" className="relative h-20 w-32">
             <span className="sr-only">Your Company</span>
             <Image
               className="absolute inset-y-0 left-0 my-auto "
@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex  md:gap-x-6 lg:text-sm font-sans md:rounded-full md:shadow-2xl md:border md:py-5 md:px-36 md:bg-slate-600 text-white ">
+        <div className="hidden md:flex  md:gap-x-6 lg:text-sm font-sans md:rounded-full md:shadow-2xl md:border md:py-5 md:px-36 md:bg-slate-700 text-white ">
           <Link href="/" className="hover:text-orange-600">
             Home
           </Link>
