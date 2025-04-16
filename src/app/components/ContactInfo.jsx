@@ -6,9 +6,9 @@ import { MdOutlineEmail } from "react-icons/md";
 
 const ContactInfo = () => {
   return (
-    <div className="font-sans border-t md:mt-20 border-b-2  py-6  md:mx-28 md:mb-10 md:border-t-0 md:rounded-full md:border-8 border-[#3f9fac] md:shadow-2xl">
+    <div className="font-sans border-t md:mt-20 border-b-2  py-6  md:mx-28 md:mb-10 md:border-t-0 md:rounded-full md:border-8 border-[#3f9fac] md:shadow-2xl overflow-hidden">
       
-      <div className="container grid grid-cols-2 gap-y-6 md:grid-cols-4 lg:mx-auto lg:pl-10 text-gray-800   ">
+      <div className="text-sm container grid grid-cols-2 gap-y-6 md:grid-cols-4 lg:mx-auto lg:pl-10 text-gray-800   ">
         {/* Visit Us */}
         <div className="flex items-center space-x-3 ">
           <CiLocationOn size={34} className="text-gray-600" />
