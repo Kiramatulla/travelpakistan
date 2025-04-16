@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
       description: treks.Metadescription,
       images: [
         {
-          url: treks.mainImage?.asset?.url || 'https://yourwebsite.com/default-og.jpg',
+          url: treks.mainImage?.asset?.url, 
           width: 1200,
           height: 630,
           alt: `${treks.title} - Cover Image`,
