@@ -1,7 +1,7 @@
 
 import { client } from '@/sanity/lib/client'
 import PrivacyPolicy from '../components/aboutComp/PrivacyPolicy'
-
+import {Metadata} from "next"
 
 export const Metadata ={
   title:"Privacy Policy"

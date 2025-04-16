@@ -1,6 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import RefundPolicy from "../components/aboutComp/RefundPolicy";
-
+import {Metadata} from "next"
 
 export const Metadata ={
   title:"Refund Policy"
