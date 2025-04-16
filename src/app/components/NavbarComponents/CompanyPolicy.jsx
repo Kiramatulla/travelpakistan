@@ -8,19 +8,19 @@ const CompanyPolicy = () => {
                <div className="absolute left-0 hidden group-hover:block bg-white text-black rounded-md shadow-lg min-w-[160px] z-50">
                  <Link
                    href="/about"
-                   className="block px-4 py-2 hover:bg-cyan-500 hover:text-white"
+                   className="block px-4 py-2 hover:bg-slate-600 hover:text-white"
                  >
                    About Us
                  </Link>
                  <Link
                    href="/refundpolicy"
-                   className="block px-4 py-2 hover:bg-cyan-500 hover:text-white"
+                   className="block px-4 py-2 hover:bg-slate-600 hover:text-white"
                  >
                    Refund Policy
                  </Link>
                  <Link
                    href="/privacypolicy"
-                   className="block px-4 py-2 hover:bg-cyan-500 hover:text-white"
+                   className="block px-4 py-2 hover:bg-slate-600 hover:text-white"
                  >
                    Privacy Policy
                  </Link>
