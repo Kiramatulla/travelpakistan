@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex  md:gap-x-6 lg:text-sm font-sans md:rounded-full md:shadow-2xl md:border md:py-5 md:px-36 md:bg-cyan-800 text-white ">
+        <div className="hidden md:flex  md:gap-x-6 lg:text-sm font-sans md:rounded-full md:shadow-2xl md:border md:py-5 md:px-36 md:bg-slate-600 text-white ">
           <Link href="/" className="hover:text-orange-600">
             Home
           </Link>
