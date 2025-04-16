@@ -10,7 +10,7 @@ const RelatedBlogTours = ({ relatedBlogTours }) => {
   return (
     <section className="lg:pl-8 lg:pr-8 py-8">
       <h3 className="bg-cyan-600 text-white font-semibold text-sm font-sans py-4 rounded lg:pl-2">
-        Other Similar and Related Tours
+        Related Tours
       </h3>
       <p className=" text-xs pt-4  pl-4 font-sans">
         <span className="font-bold">Note:</span> Below in the related Tours the
