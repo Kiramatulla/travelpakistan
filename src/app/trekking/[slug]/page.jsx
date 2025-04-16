@@ -16,8 +16,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const query = `*[_type == "treks" && slug.current == $slug][0]{
     title,
-    Metadescription
+    Metadescription,
+    mainImage {
+      asset-> {
+        url
+      }
+    }
   }`;
+
   const treks = await client.fetch(query, { slug: params.slug });
 
   if (!treks) {
@@ -30,6 +36,18 @@ export async function generateMetadata({ params }) {
   return {
     title: treks.title,
     description: treks.Metadescription,
+    openGraph: {
+      title: treks.title,
+      description: treks.Metadescription,
+      images: [
+        {
+          url: treks.mainImage?.asset?.url || 'https://yourwebsite.com/default-og.jpg',
+          width: 1200,
+          height: 630,
+          alt: `${treks.title} - Cover Image`,
+        },
+      ],
+    },
   };
 }
 
