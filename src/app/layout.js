@@ -20,6 +20,9 @@ export const metadata = {
     template: "%s - Viola Tours Pakistan"
   },
   description: "Top Pakistan tour packages to Hunza, Skardu, Fairy Meadows & more.",
+  twitter:{
+    card:'summary_large_image'
+  }
 };
 
 export default function RootLayout({ children }) {
