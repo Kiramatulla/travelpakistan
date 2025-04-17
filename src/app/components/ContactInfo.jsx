@@ -3,6 +3,9 @@ import { IoCallOutline } from "react-icons/io5";
 import {GoClock} from "react-icons/go"
 import { MdOutlineEmail } from "react-icons/md";
 
+export const metadata ={
+  title:"Contact Us",
+}
 
 const ContactInfo = () => {
   return (

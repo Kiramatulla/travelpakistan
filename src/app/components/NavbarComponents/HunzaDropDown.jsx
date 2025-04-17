@@ -1,10 +1,12 @@
 import Link from 'next/link'
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 
 const HunzaDropDown = () => {
   return (
     <div className="group relative">
-    <Link href="/tours" className=" hover:text-orange-600">Tours</Link>
+    <Link href="/tours" className=" hover:text-orange-600 flex items-end">Tours <RiArrowDropDownLine/>
+    </Link>
     <div className="absolute left-0 hidden group-hover:block bg-white text-black rounded-md shadow-lg min-w-[250px] z-50">
       <Link
         href="/tours"

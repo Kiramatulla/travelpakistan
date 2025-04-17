@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import React from 'react'
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 
 const CompanyPolicy = () => {
   return (
     <div className="group relative">
-               <button className="text-white hover:text-orange-600">About</button>
+               <button className="text-white hover:text-orange-600 flex items-end">About <RiArrowDropDownLine/></button>
                <div className="absolute left-0 hidden group-hover:block bg-white text-black rounded-md shadow-lg min-w-[160px] z-50">
                  <Link
                    href="/about"
