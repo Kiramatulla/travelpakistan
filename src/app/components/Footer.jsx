@@ -73,8 +73,8 @@ const Footer = () => {
             <div>
               <h2 className="font-medium">We are Social</h2>
               <p className="max-w-xs text-sm mt-4 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, accusantium.
+                For more visual contents, including videos,images and reviews,
+                check out our social media through the links provided
               </p>
               <div className="flex mt-8 space-x-6 text-gray-600">
                 <Link
