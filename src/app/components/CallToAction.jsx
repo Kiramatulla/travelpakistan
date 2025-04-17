@@ -1,24 +1,34 @@
 import Link from "next/link";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
 
-export default function CallToAction() {
+const CallToAction = () => {
   return (
-    <section className="bg-slate-200 mb-4 font-sans rounded-2xl  py-8 px-2 ">
-      <div className=" mx-auto text-center space-y-6">
-        {/* Original Heading */}
-        <h2 className="font-bold text-2xl">
-          DESIGN YOUR TOUR
-        </h2>
-        <p className="text-gray-800 text-base sm:text-lg">
-        Customize your adventure—your way
-        </p>
+    <aside className="font-sans bg-gradient-to-r from-cyan-600 to-blue-500 text-white rounded-2xl p-6 shadow-lg space-y-4 mb-8">
+      <h2 className="text-xl font-bold text-center">Need Help Planning?</h2>
+      <p className="text-sm text-center">
+        Reach out to our travel experts for custom itineraries, group deals, and more.
+      </p>
+
+      <div className="space-y-3">
         <Link
           href="/contact"
-          className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-6 py-3 rounded-2xl transition duration-300 shadow-md"
+          className="block w-full text-center bg-white text-cyan-700 font-semibold py-2 rounded-xl hover:bg-gray-100 transition"
         >
-          Contact Us
+          Get In Touch
         </Link>
 
+        <div className="text-sm flex items-center gap-2 justify-center">
+          <FaPhoneAlt className="text-white" />
+          <span>+92 300 1234567</span>
+        </div>
+        <div className="text-sm flex items-center gap-2 justify-center">
+          <MdOutlineMailOutline className="text-white text-lg" />
+          <span>info@yourtour.com</span>
+        </div>
       </div>
-    </section>
+    </aside>
   );
-}
+};
+
+export default CallToAction;

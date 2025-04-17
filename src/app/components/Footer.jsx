@@ -1,124 +1,85 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { BiLogoTripAdvisor } from "react-icons/bi";
 import Link from "next/link";
-import Image from "next/image";
+
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r font-sans from-gray-100 via-[#bce1ff] to-gray-100">
-      <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap- lg:grid-cols-3">
+    <footer className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 font-sans">
+      <div className="max-w-screen-xl mx-auto px-6 py-12 lg:py-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+          {/* Contact Info */}
           <div>
-            {/* <Image src=" " width={200} height={200} className="mr-5 h-6 sm:h-9" alt="logo" /> */}
-            <div className="text-sm text-gray-500 space-y-2">
+            <h3 className="text-lg font-bold mb-4 text-gray-800">Contact Us</h3>
+            <div className="text-sm text-gray-600 space-y-2">
               <p>
-                <span className="font-bold">Email: </span>
-                travelpaksitan@gmail.com
+                <span className="font-semibold">Email:</span> travelpakistan@gmail.com
               </p>
               <p>
-                <span className="font-bold">Whatsapp:</span> +92 342 5952863
+                <span className="font-semibold">WhatsApp:</span> +92 342 5952863
               </p>
               <p>
-                <span className="font-bold">Main Office:</span> Kargil-Skardu
-                Rd, Hussainabad, Skardu, 16400
+                <span className="font-semibold">Main Office:</span> Kargil-Skardu Rd, Hussainabad, Skardu
               </p>
               <p>
-                <span className="font-bold">Branch Office: </span> Noor Plaza,
-                Near Serena Hotel, Gilgit City
+                <span className="font-semibold">Branch Office:</span> Noor Plaza, Near Serena Hotel, Gilgit City
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <p className="font-medium">Company</p>
-              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                <Link className="hover:opacity-75" href="/about">
-                  About
-                </Link>
-                <Link className="hover:opacity-75" href="visainfo">
-                  Visa Informations
-                </Link>
-                <Link className="hover:opacity-75" href="/tours">
-                  Tours
-                </Link>
-                <Link className="hover:opacity-75" href="/trekking">
-                  Treks
-                </Link>
-              </nav>
-            </div>
 
+          {/* Links */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div>
-              <p className="font-medium">Helpful Links</p>
-              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                <Link className="hover:opacity-75" href="/contact">
-                  Contact
-                </Link>
-
-                <Link className="hover:opacity-75" href="livechat">
-                  Live Chat
-                </Link>
+              <h4 className="font-semibold mb-3 text-gray-800">Company</h4>
+              <nav className="flex flex-col space-y-2 text-sm text-gray-600">
+                <Link href="/about" className="hover:text-blue-700">About</Link>
+                <Link href="/visainfo" className="hover:text-blue-700">Visa Info</Link>
+                <Link href="/tours" className="hover:text-blue-700">Tours</Link>
+                <Link href="/trekking" className="hover:text-blue-700">Treks</Link>
               </nav>
             </div>
             <div>
-              <p className="font-medium">Legal</p>
-              <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                <Link className="hover:opacity-75" href="/privacypolicy">
-                  Privacy Policy
-                </Link>
-                <Link className="hover:opacity-75" href="/refundpolicy">
-                  Refund Policy
-                </Link>
+              <h4 className="font-semibold mb-3 text-gray-800">Helpful Links</h4>
+              <nav className="flex flex-col space-y-2 text-sm text-gray-600">
+                <Link href="/contact" className="hover:text-blue-700">Contact</Link>
+                <Link href="/livechat" className="hover:text-blue-700">Live Chat</Link>
               </nav>
             </div>
-
             <div>
-              <h2 className="font-medium">We are Social</h2>
-              <p className="max-w-xs text-sm mt-4 text-gray-600">
-                For more visual contents, including videos,images and reviews,
-                check out our social media through the links provided
-              </p>
-              <div className="flex mt-8 space-x-6 text-gray-600">
-                <Link
-                  href="https://www.facebook.com/profile.php?id=61575373047070"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-75"
-                >
-                  <span className="sr-only"> Facebook </span>
-                  <FaFacebook size={30} className="text-blue-600" />
-                </Link>
-                <Link
-                  href="https://www.instagram.com/violatours.pk/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-75"
-                >
-                  <span className="sr-only"> Instagram </span>
-                  <FaInstagram size={30} className="text-red-700" />
-                </Link>
-                <Link
-                  href="https://pk.linkedin.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-75"
-                >
-                  <span className="sr-only"> Twitter </span>
-                  <FaLinkedin size={30} className="text-blue-700" />
-                </Link>
+              <h4 className="font-semibold mb-3 text-gray-800">Legal</h4>
+              <nav className="flex flex-col space-y-2 text-sm text-gray-600">
+                <Link href="/privacypolicy" className="hover:text-blue-700">Privacy Policy</Link>
+                <Link href="/refundpolicy" className="hover:text-blue-700">Refund Policy</Link>
+              </nav>
+            </div>
+          </div>
 
-                <Link
-                  href="https://www.tripadvisor.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-75"
-                >
-                  <span className="sr-only"> Trip Adviser </span>
-                  <BiLogoTripAdvisor size={30} className="text-green-600" />
-                </Link>
-              </div>
+          {/* Social & Description */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-800 mb-4">We are Social</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              For videos, images, and traveler reviews, follow us on our social media platforms:
+            </p>
+            <div className="flex items-center space-x-5">
+              <Link href="https://www.facebook.com/profile.php?id=61575373047070" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={28} className="text-blue-600 hover:opacity-80" />
+              </Link>
+              <Link href="https://www.instagram.com/violatours.pk/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={28} className="text-pink-600 hover:opacity-80" />
+              </Link>
+              <Link href="https://pk.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={28} className="text-blue-700 hover:opacity-80" />
+              </Link>
+              <Link href="https://www.tripadvisor.com/" target="_blank" rel="noopener noreferrer">
+                <BiLogoTripAdvisor size={30} className="text-green-600 hover:opacity-80" />
+              </Link>
             </div>
           </div>
         </div>
-        <p className="mt-8 text-xs text-gray-800">© 2022 Comany Name</p>
+
+        {/* Footer Bottom */}
+        <div className="mt-12 border-t pt-6 text-center text-xs text-gray-700">
+          © {new Date().getFullYear()} Travel Pakistan. All rights reserved.
+        </div>
       </div>
     </footer>
   );

@@ -1,3 +1,4 @@
+import CallToAction from "../CallToAction";
 import Blogs from "../tourDetailPage/Blogs";
 import RelatedTours from "../tourDetailPage/RelatedTours";
 import BlogContent from "./BlogContent";
@@ -17,6 +18,7 @@ const BlogDetailComponent = ({ blogs, relatedTours, relatedBlogs }) => {
       </div>
       <div className="p-8 lg:w-[27%] lg:p-8 lg:sticky lg:top-8 lg:mt-34">
         {/* Render your sidebar details here */}
+      <CallToAction/>
         <Blogs relatedBlogs={relatedBlogs} />
       </div>
     </div>
