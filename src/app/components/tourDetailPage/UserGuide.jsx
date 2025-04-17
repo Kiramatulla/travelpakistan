@@ -5,7 +5,7 @@ const UserGuide = () => {
     "We offer 4 options based on the category of hotel and services: Premium, Mid Range, Standard, and Basic.",
     "The price mentioned in the 'Price Per Person' section is for Standard Services. For other options, please contact our agents.",
     "The price per person decreases as the number of participants increases.",
-    "For history buffs, a Hunza Valley tour promises an unforgettable experience — from hiking to the stunning Hopper Glacier.",
+    "The side section(when viewed on laptop) provides additional information about the regions histroy, culture and top tourist hotspots in the region.",
   ];
 
   return (
