@@ -12,7 +12,7 @@ const page = async ({ params }) => {
     `*[_type == "tour" && category._ref == '${blogs.category._ref}']`
   );
   const relatedBlogs = await client.fetch(
-    `*[_type =="blogs" && category._ref == '${blogs.category._ref}']`
+    `*[_type =="blogs" && category._ref == '${blogs.category._ref}' && slug.current != '${params.slug}']`
   );
   return (
     <div className=" mt-5 lg:mt-2 mb-20">

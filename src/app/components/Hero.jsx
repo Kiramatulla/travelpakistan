@@ -1,4 +1,4 @@
-import bgImage from "../assets/hunza.jpeg"
+import bgImage from "../assets/hunzavalley.jpg"
 import Image from "next/image"
 import SearchForm from "./SearchForm"
 
