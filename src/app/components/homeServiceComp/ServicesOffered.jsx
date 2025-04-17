@@ -7,11 +7,10 @@ const ServicesOffered = () => {
       <section className="py-14 font-sans bg-slate-300 lg:mt-8">
         <div className="container mx-auto px-3">
           <h2 className="text-4xl mb-6 font-bold text-center">
-            Services We Provide
+            EveryThing you Need For a Smooth Journey
           </h2>
           <p className="max-w-xs mx-auto text-center text-gray-400 md:max-w-md">
-            Track how your links are performing across the web with our advanced
-            statistics dashboard.
+          We help in providing essential documents for visa processing to reliable local experienced guides, comfortable accommodation and transportation
           </p>
         </div>
       </section>
