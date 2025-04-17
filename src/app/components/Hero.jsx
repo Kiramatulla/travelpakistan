@@ -4,7 +4,7 @@ import SearchForm from "./SearchForm"
 
 const Hero = () => {
   return (
-    <section className="relative mt-4 lg:mx-40 h-[28rem] bg-cover bg-center rounded-full">
+    <section className="relative mt-4 h-[20rem] lg:mx-40 lg:h-[28rem] bg-cover bg-center rounded-full">
 
     <Image
       src={bgImage}
@@ -18,12 +18,12 @@ const Hero = () => {
 
 
     <header className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-      <h1 className="absolute top-56 font-sans lg:top-[14rem] md:top-30 text-xl md:text-4xl font-bold mb-6">
+      <h1 className="absolute top-40 font-sans lg:top-[14rem] md:top-30 text-xl md:text-4xl font-bold mb-6">
         Discover Pakistans Hidden Treasure
       </h1>
 
       
-      <div className="lg:w-full max-w-lg absolute top-60 lg:top-[16rem] py-8">
+      <div className=" lg:w-full lg:max-w-lg absolute top-44 lg:top-[16rem] py-8">
         <SearchForm />
       </div>
     </header>

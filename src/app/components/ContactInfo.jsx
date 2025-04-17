@@ -46,7 +46,7 @@ const ContactInfo = () => {
           <MdOutlineEmail size={26} className="text-gray-600" />
           <div>
             <h3 className="font-semibold">Email Us</h3>
-            <p className="text-sm text-gray-500">travelpakistan@gmail.com</p>
+            <p className="text-sm text-gray-500">violatours@gmail.com</p>
           </div>
         </div>
       </div>

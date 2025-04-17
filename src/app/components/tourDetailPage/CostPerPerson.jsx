@@ -6,7 +6,7 @@ const CostPerPerson = ({ tours }) => {
       </h2>
   
         <div className="my-6  bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <table className="w-full lg:text-sm font-sans">
+          <table className="w-full text-sm font-sans">
             <caption className="sr-only">
               Pricing details for international tourists based on group size.
             </caption>
@@ -47,7 +47,7 @@ const CostPerPerson = ({ tours }) => {
       </h2>
   
         <div className="my-6 bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <table className="w-full lg:text-sm font-sans">
+          <table className="w-full text-sm font-sans">
             <caption className="sr-only">
               Pricing details for domestic tourists based on group size.
             </caption>
