@@ -1,6 +1,6 @@
 import { FaCcVisa } from "react-icons/fa6";
-import {FaMapMarkedAlt} from "react-icons/fa"
-import {MdOutlineEmojiTransportation} from "react-icons/md"
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { MdOutlineEmojiTransportation } from "react-icons/md";
 const ServicesOffered = () => {
   return (
     <>
@@ -10,7 +10,9 @@ const ServicesOffered = () => {
             EveryThing you Need For a Smooth Journey
           </h2>
           <p className="max-w-xs mx-auto text-center text-gray-400 md:max-w-md">
-          We help in providing essential documents for visa processing to reliable local experienced guides, comfortable accommodation and transportation
+            We help in providing essential documents for visa processing to
+            reliable local experienced guides, comfortable accommodation and
+            transportation
           </p>
         </div>
       </section>
@@ -24,7 +26,7 @@ const ServicesOffered = () => {
           <div className="absolute w-2 left-1/2 h-full -ml-1 bg-cyan-700 md:hidden"></div>
 
           {/* <!-- Box 1 --> */}
-          <div className="relative flex flex-col p-6 space-y-6 bg-white rounded-lg md:w-1/3">
+          <div className="relative flex flex-col p-6 space-y-4 bg-white rounded-lg md:w-1/3">
             {/* <!-- Image Positioning --> */}
             <div className="absolute -ml-10 left-1/2 -top-10 md:left-16">
               {/* <!-- Image Container For Background & Center --> */}
@@ -36,14 +38,14 @@ const ServicesOffered = () => {
               Visa Processing
             </h5>
             <p className="text-center text-gray-500 md:text-left lg:text-sm">
-              Boost your brand recognition with each click. Generic links dont
-              mean a thing. Branded links help instil confidence in your
-              content.
+              We offer visa helps, by providing supporting documents including,
+              invitaion letter, Itinerary on companies letterhead and other
+              supporting documents
             </p>
           </div>
 
           {/* <!-- Box 2 --> */}
-          <div className="relative flex flex-col mt-24 p-6 bg-white space-y-6 rounded-lg md:mt-8 md:w-1/3">
+          <div className="relative flex flex-col mt-24 p-6 bg-white space-y-4 rounded-lg md:mt-8 md:w-1/3">
             {/* <!-- Image Positioning --> */}
             <div className="absolute -ml-10 left-1/2 -top-10 md:left-16">
               {/* <!-- Image Container For Background & Center --> */}
@@ -58,14 +60,14 @@ const ServicesOffered = () => {
               Transport & Accomodation
             </h5>
             <p className="text-center text-gray-500 md:text-left lg:text-sm">
-              Gain insights into who is clicking your links. Knowing when and
-              where people engage with your content helps inform better
-              decisions.
+              Our accomodations and Vehicle are choosen based on prioritizing
+              our clients preferences. we offer Luxury hotels and also Local
+              experiences like staying with host families
             </p>
           </div>
 
           {/* <!-- Box 3 --> */}
-          <div className="relative flex flex-col mt-24 p-6 space-y-6 bg-white rounded-lg md:mt-16 md:w-1/3">
+          <div className="relative flex flex-col mt-24 p-6 space-y-4 bg-white rounded-lg md:mt-16 md:w-1/3">
             {/* <!-- Image Positioning --> */}
             <div className="absolute -ml-10 left-1/2 -top-10 md:left-16">
               {/* <!-- Image Container For Background & Center --> */}
@@ -77,8 +79,8 @@ const ServicesOffered = () => {
               Local Guide and Driver
             </h5>
             <p className="text-center text-gray-500 md:text-left lg:text-sm">
-              Improve brand awareness and content discoverability through
-              customizable links, supercharging audience engagement.
+              For in-depth knowledge we only hire local guides and local drivers
+              who knows the area inside out, ensuring a hassle-free travel.
             </p>
           </div>
         </div>
