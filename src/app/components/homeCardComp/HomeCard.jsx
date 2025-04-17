@@ -8,13 +8,12 @@ const HomeCard = async() => {
   return (
     <section className="font-sans flex flex-col items-center">
       {/* Section Header */}
-      <header className="max-w-screen-md text-center">
-        <h1 className="text-3xl text-slate-600 font-bold mt-10 md:mb-2">
-          EXPLORE OUR FEATURED TRIP
+      <header className="mx-4 max-w-screen-md text-center">
+        <h1 className="text-3xl text-slate-600 font-bold mt-10 mb-2 md:mb-2">
+          Explore Pakistans Tour Packages - 2025
         </h1>
-        <p className="text-gray-500 text-center md:mb-10">
-          Find everything you need to look and feel your best, and shop the
-          latest mens fashion and lifestyle products.
+        <p className=" text-gray-500 text-center md:mb-10">
+        Discover Pakistan tour packages for 2025, designed just for you. Whether you want to explore the mountains of Hunza valley, the deserts of Cholistan, or the culture of Lahore — weve got a trip that fits your style, budget, and time
         </p>
       </header>
 

@@ -1,7 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import TrekCard from "./TrekCard";
 
-
 const TrekCardDetails = async () => {
   const treks = await client.fetch(`*[_type == "treks" && featured == true]`);
 
@@ -10,11 +9,13 @@ const TrekCardDetails = async () => {
       {/* Section Header */}
       <header className="max-w-screen-md mx-auto text-center">
         <h2 className="mb-4 text-3xl font-bold  text-slate-600">
-          BASE CAMP TREKKING OPTIONS
+          Trekking the Karakoram, K2 Base Camp, Gondogoro La and Hidden Passes.
         </h2>
         <p className="text-gray-500 ">
-          Webby is a PHP Framework built on top of Codeigniter 3 for easy PHP
-          web application development using both HMVC and MVC patterns
+          Explore Trekking adventures across Pakistan wildest Frontier in 2025 –
+          challenge yourself via the Legendary K2 Base Camp to the
+          exciting Gondogoro La, cross remote passes of Hisper La, Khurdopin and
+          Lukpe La.
         </p>
       </header>
 
