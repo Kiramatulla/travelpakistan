@@ -13,7 +13,7 @@ const ContactHomeComp = () => {
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center text-white px-4  rounded-t-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold">
-            Plan Your Custom Tour
+            Design Your Own Adventure
           </h2>
           <p className="mt-2 text-sm sm:text-base max-w-xl pb-4">
             Fill out the form below and we will get back to you with a
