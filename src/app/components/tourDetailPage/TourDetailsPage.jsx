@@ -13,7 +13,7 @@ import VisaAndRefund from "./VisaAndRefund";
 
 const TourDetailPage =  ({ tours, relatedTours, relatedBlogs }) => {
   return (
-    <section className="lg:flex lg:flex-row lg:ml-16">
+    <main className="lg:flex lg:flex-row lg:ml-16">
       {/* Main Tour Content */}
       <section className="lg:w-[65%] lg:pl-2 lg:ml-8 pb-20 rounded-lg">
         <section>
@@ -45,7 +45,7 @@ const TourDetailPage =  ({ tours, relatedTours, relatedBlogs }) => {
         <CallToAction/>
         <Blogs relatedBlogs={relatedBlogs} />
       </aside>
-    </section>
+    </main>
   );
 };
 

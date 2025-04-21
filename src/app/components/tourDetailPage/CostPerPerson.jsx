@@ -1,7 +1,8 @@
 const CostPerPerson = ({ tours }) => {
     return (
       <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2 underline underline-offset-4">
+        <h2 className="font-bold text-gray-800 text-2xl mb-5">Total Cost of {tours.title} </h2>
+          <h2 className=" font-semibold text-gray-800 mb-2 underline underline-offset-4">
         Price Per Person – International Tourists
       </h2>
   
@@ -12,7 +13,7 @@ const CostPerPerson = ({ tours }) => {
             </caption>
             <thead>
               <tr className="bg-cyan-600 text-white">
-                <th className="p-4 text-left">Tour Name</th>
+                <th className="p-4 text-left">Package Name</th>
                 <th className="p-4 text-left">Cost 2 Persons</th>
                 <th className="p-4 text-left">Cost 3 Persons</th>
                 <th className="p-4 text-left">Cost 4 Persons</th>
@@ -21,7 +22,7 @@ const CostPerPerson = ({ tours }) => {
             </thead>
             <tbody>
               <tr className="border-t text-sm lg:text-xs font-semibold">
-                <td className="p-4">{tours.title}</td>
+                <td className="p-4">Standard Package</td>
                 <td className="p-4">$ {tours.International2Persons}</td>
                 <td className="p-4">$ {tours.International3Persons}</td>
                 <td className="p-4">$ {tours.International4Persons}</td>
@@ -30,19 +31,19 @@ const CostPerPerson = ({ tours }) => {
                 </td>
               </tr>
               <tr className="border-t text-sm lg:text-xs font-semibold">
-                <td className="p-4">Luxury Package</td>
-                <td className="p-4">$ {tours.International2Persons}</td>
-                <td className="p-4">$ {tours.International3Persons}</td>
-                <td className="p-4">$ {tours.International4Persons}</td>
+                <td className="p-4">Premium Package</td>
+                <td className="p-4">$ {tours.International2PersonsLuxury}</td>
+                <td className="p-4">$ {tours.International3PersonsLuxury}</td>
+                <td className="p-4">$ {tours.International4PersonsLuxury}</td>
                 <td className="p-4 hidden lg:block">
-                  $ {tours.International5Persons}
+                  $ {tours.International5PersonsLuxury}
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
   
-        <h2 className="text-xl font-semibold text-gray-800 mt-8 mb-2 underline underline-offset-4">
+        <h2 className="font-semibold text-gray-800 mt-8 mb-2 underline underline-offset-4">
         Price Per Person – Domestic Tourists
       </h2>
   
@@ -53,7 +54,7 @@ const CostPerPerson = ({ tours }) => {
             </caption>
             <thead>
               <tr className="bg-cyan-600 text-white">
-                <th className="p-4 text-left">Tour Name</th>
+                <th className="p-4 text-left">Package Name</th>
                 <th className="p-4 text-left">Cost 2 Persons</th>
                 <th className="p-4 text-left">Cost 3 Persons</th>
                 <th className="p-4 text-left">Cost 4 Persons</th>
@@ -62,12 +63,21 @@ const CostPerPerson = ({ tours }) => {
             </thead>
             <tbody>
               <tr className="border-t text-sm lg:text-xs font-semibold">
-                <td className="p-4">{tours.title}</td>
+                <td className="p-4">Standard Package</td>
                 <td className="p-4">PKR {tours.Domestic2Persons}</td>
                 <td className="p-4">PKR {tours.Domestic3Persons}</td>
                 <td className="p-4">PKR {tours.Domestic4Persons}</td>
                 <td className="p-4 hidden lg:block">
                   PKR {tours.Domestic5Persons}
+                </td>
+              </tr>
+              <tr className="border-t text-sm lg:text-xs font-semibold">
+                <td className="p-4">Premium Package</td>
+                <td className="p-4">PKR {tours.Domestic2PersonsLuxury}</td>
+                <td className="p-4">PKR {tours.Domestic3PersonsLuxury}</td>
+                <td className="p-4">PKR {tours.Domestic4PersonsLuxury}</td>
+                <td className="p-4 hidden lg:block">
+                  PKR {tours.Domestic5PersonsLuxury}
                 </td>
               </tr>
             </tbody>
