@@ -33,18 +33,17 @@ const BlogCards = async () => {
             </div>
           </div>
         </div>
-        {/* className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-14 lg:mx-20 */}
-        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className=" grid grid-cols-1 md:grid-cols-3">
           {blogs?.map((blog, index) => {
             return (
               <div key={index} className="w-full  px-4">
-                <div className="max-w-[370px] mx-auto mb-10">
-                  <div className="rounded overflow-hidden mb-4">
+                <div className="w-full mx-auto mb-10">
+                  <div className="rounded  mb-4">
                     <Image
                       src={urlFor(
                         blog.featuredImage && blog.featuredImage
                       ).url()}
-                      alt={blog._id}
+                      alt={blog.title}
                       width={300}
                       height={300}
                     />

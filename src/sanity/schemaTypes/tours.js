@@ -1,3 +1,5 @@
+import { validation } from "sanity";
+
 export const tours = {
     name: "tour",
     title: "Tour",
@@ -18,6 +20,12 @@ export const tours = {
           maxLength: 200,
         },
         validation: (Rule) => Rule.required(),
+      },
+      {
+        name:"metaTitle",
+        title:"Meta Title",
+        type:"string",
+        validation:(Rule)=>Rule.required()
       },
       {
         name: "Metadescription",

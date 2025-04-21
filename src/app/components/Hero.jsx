@@ -4,7 +4,7 @@ import SearchForm from "./SearchForm"
 
 const Hero = () => {
   return (
-    <section className="relative mt-4 h-[20rem] lg:mx-40 lg:h-[28rem] bg-cover bg-center rounded-full">
+    <section className="relative mt-4 h-[20rem] md:mx-auto  lg:mx-40 lg:h-[28rem] bg-cover bg-center rounded-full">
 
     <Image
       src={bgImage}

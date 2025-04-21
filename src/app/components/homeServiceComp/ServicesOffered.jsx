@@ -19,14 +19,13 @@ const ServicesOffered = () => {
 
       {/* <!-- Feature Box Section --> */}
       <section className="pb-24 font-sans bg-slate-300">
-        <div className="relative container flex flex-col items-start px-12 lg:px-24  mx-auto  md:flex-row md:space-x-7">
-          {/* <!-- Horizontal Line --> */}
-          <div className="hidden absolute top-24 w-10/12 left-32 h-4 bg-cyan-600 md:block"></div>
+        <div className="relative container flex flex-col items-start px-12 lg:px-24 mx-auto lg:flex-row md:space-x-7">
+          
           {/* <!-- Vertical Line --> */}
-          <div className="absolute w-2 left-1/2 h-full -ml-1 bg-cyan-700 md:hidden"></div>
+          {/* <div className="absolute w-2 left-1/2 h-full -ml-1 bg-cyan-700 md:hidden"></div> */}
 
           {/* <!-- Box 1 --> */}
-          <div className="relative flex flex-col p-6 space-y-4 bg-white rounded-lg md:w-1/3">
+          <div className="relative flex flex-col p-6 space-y-4 bg-white rounded-lg md:w-72 lg:w-1/3">
             {/* <!-- Image Positioning --> */}
             <div className="absolute -ml-10 left-1/2 -top-10 md:left-16">
               {/* <!-- Image Container For Background & Center --> */}
@@ -45,7 +44,7 @@ const ServicesOffered = () => {
           </div>
 
           {/* <!-- Box 2 --> */}
-          <div className="relative flex flex-col mt-24 p-6 bg-white space-y-4 rounded-lg md:mt-8 md:w-1/3">
+          <div className="relative flex flex-col mt-24 p-6 bg-white space-y-4 rounded-lg md:mt-8 md:w-72 lg:w-1/3">
             {/* <!-- Image Positioning --> */}
             <div className="absolute -ml-10 left-1/2 -top-10 md:left-16">
               {/* <!-- Image Container For Background & Center --> */}
@@ -67,7 +66,7 @@ const ServicesOffered = () => {
           </div>
 
           {/* <!-- Box 3 --> */}
-          <div className="relative flex flex-col mt-24 p-6 space-y-4 bg-white rounded-lg md:mt-16 md:w-1/3">
+          <div className="relative flex flex-col mt-24 p-6 space-y-4 bg-white rounded-lg md:mt-16 md:w-72 lg:w-1/3">
             {/* <!-- Image Positioning --> */}
             <div className="absolute -ml-10 left-1/2 -top-10 md:left-16">
               {/* <!-- Image Container For Background & Center --> */}

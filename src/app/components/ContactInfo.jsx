@@ -9,7 +9,7 @@ export const metadata ={
 
 const ContactInfo = () => {
   return (
-    <div className="font-sans border-t md:mt-20 border-b-2  py-6  md:mx-28 md:mb-10 md:border-t-0 md:rounded-full md:border-8 border-[#3f9fac] md:shadow-2xl ">
+    <div className="font-sans border-t md:mt-12 lg:mt-20 border-b-2  py-6  lg:mx-28  lg:mb-10 md:border-t-0 md:rounded-full md:border-8 border-[#3f9fac] md:shadow-2xl ">
       
       <div className="text-sm container grid grid-cols-2 gap-y-6 md:grid-cols-4  lg:pl-10 text-gray-800">
         {/* Visit Us */}
