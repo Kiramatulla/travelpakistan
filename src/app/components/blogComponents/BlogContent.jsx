@@ -2,13 +2,13 @@ import { PortableText } from "next-sanity";
 const PortableTextComponents = {
   block: {
     h1: ({ children }) => (
-      <h1 className="text-4xl font-bold mt-6 mb-2 text-cyan-700">{children}</h1>
+      <h1 className="text-4xl font-bold mt-6 mb-2">{children}</h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-2xl font-bold mt-6 mb-2 text-cyan-600">{children}</h2>
+      <h2 className="text-2xl font-bold mt-6 mb-2">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-xl font-semibold mt-5 mb-1 text-cyan-500">{children}</h3>
+      <h3 className="text-xl font-semibold mt-5 mb-1 ">{children}</h3>
     ),
     normal: ({ children }) => (
       <p className="mb-4 text-gray-700">{children}</p>
