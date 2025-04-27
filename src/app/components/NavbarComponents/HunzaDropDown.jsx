@@ -15,19 +15,19 @@ const HunzaDropDown = () => {
         All Tours
       </Link>
       <Link
-        href="#"
+        href="/tours/hunza-valley-tour-packages"
         className="block px-4 py-2 hover:bg-cyan-950 hover:text-white"
       >
         Hunza Valley Tours
       </Link>
       <Link
-       href="#"
+       href="/tours/skardu-tour-packages"
         className="block px-4 py-2 hover:bg-cyan-950 hover:text-white"
       >
         Skardu Valley Tour
       </Link>
       <Link
-        href="#"
+        href="/tours/fairy-meadows-nanga-parbat-base-camp-trek"
         className="block px-4 py-2 hover:bg-cyan-950 hover:text-white"
       >
         Fairy Meadow And Nanga Parbat
