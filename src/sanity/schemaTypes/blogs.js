@@ -53,14 +53,6 @@ export const blogs = {
           {
             type: "image",
             options: { hotspot: true },
-            fields: [
-              {
-                name: "alt",
-                type: "string",
-                title: "Alt text",
-                description: "Alternative text for screen readers and SEO",
-              },
-            ],
           },
         ],
       }

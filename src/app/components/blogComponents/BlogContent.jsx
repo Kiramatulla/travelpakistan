@@ -1,5 +1,26 @@
+import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
+import Image from "next/image";
+
 const PortableTextComponents = {
+  types: {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) {
+        return null;
+      }
+      return (
+        <div className="my-6 flex justify-center">
+          <Image 
+            src={urlFor(value).url()} 
+            alt={value.alt || "Blog Image"}
+            width={800} // Keeps original width for Next.js optimization
+            height={300} // Keeps original height for Next.js optimization
+            className="w-full sm:h-[20rem] lg:h-[25rem]  lg:rounded-xl object-cover"
+          />
+        </div>
+      );
+    },
+  },
   block: {
     h1: ({ children }) => (
       <h1 className="text-4xl font-bold mt-6 mb-2">{children}</h1>
@@ -8,7 +29,7 @@ const PortableTextComponents = {
       <h2 className="text-2xl font-bold mt-6 mb-2">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-xl font-semibold mt-5 mb-1 ">{children}</h3>
+      <h3 className="text-xl font-semibold mt-5 mb-1">{children}</h3>
     ),
     normal: ({ children }) => (
       <p className="mb-4 text-gray-700">{children}</p>
@@ -30,7 +51,7 @@ const PortableTextComponents = {
       <li className="mb-1">{children}</li>
     ),
   },
-}
+};
 
 const BlogContent = ({ blogs }) => {
   return (
