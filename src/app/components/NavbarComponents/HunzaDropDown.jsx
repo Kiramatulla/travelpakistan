@@ -66,7 +66,7 @@ const HunzaDropDown = () => {
         href="#"
         className="block px-4 py-2 hover:bg-cyan-950 hover:text-white"
       >
-        Karachi One Day
+        Karachi One Day Tour
       </Link>
     </div>
   </div>
