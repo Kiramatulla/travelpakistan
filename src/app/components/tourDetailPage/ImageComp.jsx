@@ -64,7 +64,7 @@ const ImageComp = ({ tours }) => {
       </div>
 
       {/* Thumbnails */}
-      <div className="flex gap-2 mt-6 overflow-x-auto px-4">
+      <div className="flex gap-2 mt-2 overflow-x-auto px-4">
         {tours.images.map((img, index) => (
           <div
             key={index}
