@@ -1,5 +1,7 @@
 "use client"
 
+import { FiArrowLeftCircle } from "react-icons/fi";
+import { FiArrowRightCircle } from "react-icons/fi";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
@@ -39,7 +41,7 @@ const ImageComp = ({ tours }) => {
           onClick={handlePrev}
           className="absolute left-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
         >
-          ◀️
+          <FiArrowLeftCircle size={24}/>
         </button>
 
         {/* Main Image */}
@@ -59,7 +61,7 @@ const ImageComp = ({ tours }) => {
           onClick={handleNext}
           className="absolute right-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
         >
-          ▶️
+          <FiArrowRightCircle size={24}/>
         </button>
       </div>
 
