@@ -39,7 +39,7 @@ const ImageComp = ({ tours }) => {
         {/* Prev Button */}
         <button
           onClick={handlePrev}
-          className="absolute left-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
+          className="absolute left-2 md:left-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
         >
           <FiArrowLeftCircle size={24}/>
         </button>
@@ -59,7 +59,7 @@ const ImageComp = ({ tours }) => {
         {/* Next Button */}
         <button
           onClick={handleNext}
-          className="absolute right-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
+          className="absolute right-2 md:right-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
         >
           <FiArrowRightCircle size={24}/>
         </button>

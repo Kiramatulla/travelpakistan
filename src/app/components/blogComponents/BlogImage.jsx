@@ -1,5 +1,6 @@
 "use client"
-
+import { FiArrowLeftCircle } from "react-icons/fi";
+import { FiArrowRightCircle } from "react-icons/fi";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
@@ -37,9 +38,9 @@ const BlogImage = ({ blogs }) => {
         {/* Prev Button */}
         <button
           onClick={handlePrev}
-          className="absolute left-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
+          className="absolute left-2 md:left-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
         >
-          ◀️
+          <FiArrowLeftCircle size={24}/>
         </button>
 
         {/* Main Image */}
@@ -57,14 +58,14 @@ const BlogImage = ({ blogs }) => {
         {/* Next Button */}
         <button
           onClick={handleNext}
-          className="absolute right-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
+          className="absolute right-2 md:right-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
         >
-          ▶️
+          <FiArrowRightCircle size={24}/>
         </button>
       </div>
 
       {/* Thumbnails */}
-      <div className="flex gap-2 mt-6 overflow-x-auto px-4">
+      <div className="flex gap-2 mt-2 overflow-x-auto px-4">
         {blogs.featuredImage.map((img, index) => (
           <div
             key={index}
