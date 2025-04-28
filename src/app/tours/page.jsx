@@ -26,37 +26,33 @@ const Page = async ({ searchParams }) => {
   return (
     <section className="font-sans flex flex-col items-center">
       <header className="mx-4 max-w-screen-md text-center">
-        <h1 className="text-3xl text-slate-600 font-bold mt-10 mb-2 md:mb-2">
+        <h1 className="text-3xl text-slate-600 font-bold mt-8 mb-2 md:mb-2">
           Pakistan Tours 2025 - Explore New Horizons
         </h1>
-        <p className=" text-gray-500 text-center md:mb-10">
+        <p className=" text-gray-500 text-center mb-8">
           Below are the best Pakistan Tour for 2025- Each Pakistan Tour offers
           cultural, heritages and adventure trips to Pakistan. Our tours to
           Pakistan covers everthing from Gilgit-Baltistans towering mountains to
           the rich history of the cities.
         </p>
-        
-        <div>
-  <form
-    action="/search"
-    method="GET"
-    className="flex items-center space-x-4 border-2 bg-white rounded-full shadow-lg overflow-hidden w-full max-w-md mx-auto"
-  >
-    <input
-      type="text"
-      name="query"
-      placeholder="Search..."
-      className="py-6 px-4 text-black outline-none w-full"
-    />
-    <button
-      type="submit"
-      className="text-black pr-4 py-2 rounded-full"
-    >
-      <IoSearchOutline size={20} />
-    </button>
-  </form>
-</div>
 
+        <div>
+          <form
+            action="/search"
+            method="GET"
+            className="flex items-center space-x-4 border-2 bg-white rounded-full shadow-lg overflow-hidden w-full max-w-md mx-auto"
+          >
+            <input
+              type="text"
+              name="query"
+              placeholder="Search..."
+              className="py-6 px-4 text-black outline-none w-full"
+            />
+            <button type="submit" className="text-black pr-4 py-2 rounded-full">
+              <IoSearchOutline size={20} />
+            </button>
+          </form>
+        </div>
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-14 lg:mx-20 md:gap-4">
