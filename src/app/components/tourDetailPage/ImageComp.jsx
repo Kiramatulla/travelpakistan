@@ -6,9 +6,6 @@ import { urlFor } from "@/sanity/lib/image";
 
 const ImageComp = ({ tours }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  if (!tours?.images || tours.images.length === 0) return null; // Prevent errors
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % tours.images.length);
@@ -16,6 +13,10 @@ const ImageComp = ({ tours }) => {
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, [tours.images.length]);
+
+  if (!tours?.images || tours.images.length === 0) return null; // Prevent errors
+
+ 
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % tours.images.length);

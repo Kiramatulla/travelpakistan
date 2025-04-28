@@ -7,8 +7,6 @@ import { urlFor } from "@/sanity/lib/image";
 const BlogImage = ({ blogs }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  if (!blogs?.featuredImage || blogs.featuredImage.length === 0) return null;
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % blogs.featuredImage.length);
@@ -16,6 +14,9 @@ const BlogImage = ({ blogs }) => {
 
     return () => clearInterval(interval);
   }, [blogs.featuredImage.length]);
+  if (!blogs?.featuredImage || blogs.featuredImage.length === 0) return null;
+
+  
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % blogs.featuredImage.length);
