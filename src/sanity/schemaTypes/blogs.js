@@ -26,8 +26,9 @@ export const blogs = {
       {
         name: "featuredImage",
         title: "Featured Image",
-        type: "image",
+        type:'array',
         options: { hotspot: true },
+        of:[{type:'image'}],
         validation: (Rule) => Rule.required(),
       },
       {

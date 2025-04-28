@@ -41,12 +41,20 @@ const BlogCards = async () => {
                   <div className="rounded  mb-4">
                     <Image
                       src={urlFor(
-                        blog.featuredImage && blog.featuredImage
+                        blog.featuredImage && blog.featuredImage[0]
                       ).url()}
                       alt={blog.title}
                       width={300}
                       height={300}
                     />
+                    {/* <Image
+                                src={urlFor(tour.images && tour.images[0]).url()}
+                                alt={tour.name}
+                                width={300}
+                                height={300}
+                                className="shadow-2xl object-cover w-full h-full"
+                                priority={false} // Prevents unnecessary preloading
+                              /> */}
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold mb-2">
