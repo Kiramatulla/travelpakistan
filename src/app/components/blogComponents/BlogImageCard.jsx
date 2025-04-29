@@ -1,46 +1,36 @@
-import { urlFor } from '@/sanity/lib/image'
-import Image from 'next/image'
-import Link from 'next/link'
+import { urlFor } from "@/sanity/lib/image";
+import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
+const BlogImageCard = ({ blog }) => {
+  return (
+    <Link href={`/blogs/${blog.slug.current}`}>
+      <div className="w-full mx-auto mb-8 md:mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-lg rounded-xl overflow-hidden bg-white">
+        {/* Blog Image */}
+        <div className="w-full h-48 relative">
+          <Image
+            src={urlFor(blog.featuredImage && blog.featuredImage[0]).url()}
+            alt={blog.title}
+            fill
+            className="object-cover"
+            
+          />
+        </div>
 
-const BlogImageCard = ({blog}) => {
- return(
-    <Link
-    href={`/blogs/${blog.slug.current}`}
-    >
-    <div className="w-full  px-4">
-    <div className="w-full mx-auto mb-10">
-      <div className="rounded  mb-4">
-        {/* <Image
-          src={urlFor(blog.featuredImage && blog.featuredImage[0]).url()}
-          alt={blog.title}
-          width={300}
-          height={300}
-        /> */}
-     <Image
-     src={urlFor(blog.featuredImage && blog.featuredImage[0]).url()}
-     alt={blog.title}
-     width={300}
-     height={300}
-     />
+        {/* Blog Content */}
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-slate-700 mb-2 line-clamp-2">
+            {blog.title}
+          </h3>
+          <p className="text-sm text-cyan-700 hover:text-orange-500 font-medium inline-flex items-center group">
+            Read Post
+            <FaArrowRightLong className="ml-1 mt-[2px] transition-transform duration-150 group-hover:translate-x-1" />
+          </p>
+        </div>
       </div>
-      <div>
-        <h3 className="text-sm font-semibold mb-2">
-          {" "}
-          {blog.title}
-        </h3>
-        <p
-         
-          className="lg:text-sm pb-2 hover:text-orange-500 inline-flex items-center "
-        >
-          Read Post <FaArrowRightLong className="pl-1 pt-1" />
-        </p>
-      </div>
-    </div>
-  </div>
-  </Link>
- )   
-}
+    </Link>
+  );
+};
 
-export default BlogImageCard
+export default BlogImageCard;
