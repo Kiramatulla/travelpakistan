@@ -8,11 +8,12 @@ const BlogImageCard = ({ blog }) => {
     <Link href={`/blogs/${blog.slug.current}`}>
       <div className="w-full mx-auto mb-8 md:mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-lg rounded-xl overflow-hidden bg-white">
         {/* Blog Image */}
-        <div className="w-full h-48 relative">
+        <div className="w-full">
           <Image
             src={urlFor(blog.featuredImage && blog.featuredImage[0]).url()}
             alt={blog.title}
-            fill
+            height={300}
+            width={300}
             className="object-cover"
             
           />
@@ -20,7 +21,7 @@ const BlogImageCard = ({ blog }) => {
 
         {/* Blog Content */}
         <div className="p-4">
-          <h3 className="text-lg font-semibold text-slate-700 mb-2 line-clamp-2">
+          <h3 className="font-semibold text-slate-700 mb-2 line-clamp-2">
             {blog.title}
           </h3>
           <p className="text-sm text-cyan-700 hover:text-orange-500 font-medium inline-flex items-center group">
