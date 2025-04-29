@@ -15,7 +15,7 @@ const BlogCards = async () => {
           <p className="text-gray-600 text-base md:text-sm max-w-2xl mx-auto">
             Learn more about your favorite destinations in our blog section —
             from history and tourist attractions to local activities, travel distances,
-            and drive times. We've got everything covered.
+            and drive times. We have got everything covered.
           </p>
         </div>
 
