@@ -1,10 +1,9 @@
-import { client } from "@/sanity/lib/client"
-import Link from "next/link"
-import CardComp from "./CardComp"
+import { client } from "@/sanity/lib/client";
+import Link from "next/link";
+import CardComp from "./CardComp";
 
-const HomeCard = async() => {
-
-    const tours = await client.fetch(`*[_type == "tour" && featured == true]`)
+const HomeCard = async () => {
+  const tours = await client.fetch(`*[_type == "tour" && featured == true]`);
   return (
     <section className="font-sans flex flex-col items-center">
       {/* Section Header */}
@@ -13,7 +12,10 @@ const HomeCard = async() => {
           Explore Pakistans Tour Packages - 2025
         </h1>
         <p className=" text-gray-500 text-center md:mb-10">
-        Discover Pakistan tour packages for 2025, designed just for you. Whether you want to explore the mountains of Hunza valley, the deserts of Cholistan, or the culture of Lahore — weve got a trip that fits your style, budget, and time
+          Below are our Pakistan tour packages for 2025, designed for you. We
+          organize tours in Pakistan. Explore the mountains of Hunza Valley, the
+          deserts of Cholistan, and the culture of Lahore.We have a trip that
+          fits your style, budget, and time.
         </p>
       </header>
 
@@ -32,7 +34,7 @@ const HomeCard = async() => {
         Load All Tours
       </Link>
     </section>
-  )
-}
+  );
+};
 
-export default HomeCard
+export default HomeCard;
