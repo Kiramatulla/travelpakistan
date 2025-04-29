@@ -39,14 +39,12 @@ const BlogCards = async () => {
               <div key={index} className="w-full  px-4">
                 <div className="w-full mx-auto mb-10">
                   <div className="rounded  mb-4">
-                    <Image
-                      src={urlFor(
-                        blog.featuredImage && blog.featuredImage[0]
-                      ).url()}
+                    {/* <Image
+                      src={urlFor(blog.featuredImage && blog.featuredImage[0]).url()}
                       alt={blog.title}
                       width={300}
                       height={300}
-                    />
+                    /> */}
                     {/* <Image
                                 src={urlFor(tour.images && tour.images[0]).url()}
                                 alt={tour.name}

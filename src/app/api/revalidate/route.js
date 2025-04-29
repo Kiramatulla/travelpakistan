@@ -9,38 +9,32 @@ export async function POST(req) {
     return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
   }
 
-  let body;
   try {
-    body = await req.json();
-  } catch (err) {
-    return NextResponse.json({ message: 'Invalid or missing JSON body' }, { status: 400 });
-  }
+    const body = await req.json();
+    const slug = body?.slug;
+    const type = body?.type;
 
-  const slug = body?.slug;
-  const type = body?.type;
+    if (!slug || !type) {
+      return NextResponse.json({ message: 'Missing slug or type' }, { status: 400 });
+    }
 
-  if (!slug || !type) {
-    return NextResponse.json({ message: 'Missing slug or type' }, { status: 400 });
-  }
+    const staticPaths = ['/', '/tours', '/trekking', '/blogs'];
+    const pathMap = {
+      tour: `/tours/${slug}`,
+      trekking: `/trekking/${slug}`,
+      blog: `/blogs/${slug}`,
+    };
 
-  const staticPaths = ['/', '/tours', '/trekking', '/blogs'];
-  const pathMap = {
-    tour: `/tours/${slug}`,
-    trekking: `/trekking/${slug}`,
-    blog: `/blogs/${slug}`,
-  };
+    const dynamicPath = pathMap[type];
+    const revalidatedPaths = [...staticPaths, dynamicPath];
 
-  const dynamicPath = pathMap[type];
-  const revalidatedPaths = [...staticPaths, dynamicPath];
-
-  try {
     for (const path of revalidatedPaths) {
-      revalidatePath(path);
+      revalidatePath(path); // This actually triggers revalidation
     }
 
     return NextResponse.json({ revalidated: true, paths: revalidatedPaths });
   } catch (err) {
     console.error('Revalidation error:', err);
-    return NextResponse.json({ message: 'Error revalidating paths' }, { status: 500 });
+    return NextResponse.json({ message: 'Error revalidating' }, { status: 500 });
   }
 }
