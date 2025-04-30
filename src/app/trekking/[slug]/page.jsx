@@ -1,8 +1,8 @@
 import TrekDetailPage from "@/app/components/trekingComponents/TrekDetailPage";
 import { client } from "@/sanity/lib/client";
 
-export const dynamicParams = true;
-export const revalidate = 0;
+// export const dynamicParams = true;
+// export const revalidate = 0;
 
 export async function generateStaticParams() {
   const query = `*[_type == "treks"]{ "slug": slug.current }`;
