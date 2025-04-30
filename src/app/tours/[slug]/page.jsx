@@ -1,18 +1,7 @@
 import TourDetailsPage from "@/app/components/tourDetailPage/TourDetailsPage";
 import { client } from "@/sanity/lib/client";
 
-// export const dynamicParams = true;
-// export const revalidate = 0;
 
-// ✅ This will generate static pages for each tour at build time
-export async function generateStaticParams() {
-  const query = `*[_type == "tour"]{ "slug": slug.current }`;
-  const tours = await client.fetch(query);
-
-  return tours.map((tour) => ({
-    slug: tour.slug,
-  }));
-}
 
 export async function generateMetadata(props) {
   const params = await props.params;
