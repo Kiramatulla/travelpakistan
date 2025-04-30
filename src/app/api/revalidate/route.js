@@ -1,40 +1,12 @@
+// app/api/revalidate/route.js
 import { revalidatePath } from 'next/cache';
 import { NextResponse } from 'next/server';
 
-export async function POST(req) {
-  const secret = 'trav3lpakist0n';
-  const { searchParams } = new URL(req.url);
-
-  if (searchParams.get('secret') !== secret) {
-    return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
-  }
-
+export async function POST() {
   try {
-    const body = await req.json();
-    const slug = body?.slug;
-    const type = body?.type;
-
-    if (!slug || !type) {
-      return NextResponse.json({ message: 'Missing slug or type' }, { status: 400 });
-    }
-
-    const staticPaths = ['/', '/tours', '/trekking', '/blogs'];
-    const pathMap = {
-      tour: `/tours/${slug}`,
-      trekking: `/trekking/${slug}`,
-      blog: `/blogs/${slug}`,
-    };
-
-    const dynamicPath = pathMap[type];
-    const revalidatedPaths = [...staticPaths, dynamicPath];
-
-    for (const path of revalidatedPaths) {
-      revalidatePath(path); // This actually triggers revalidation
-    }
-
-    return NextResponse.json({ revalidated: true, paths: revalidatedPaths });
+    revalidatePath('/'); // ✅ Revalidates the home page
+    return NextResponse.json({ revalidated: true, now: Date.now() });
   } catch (err) {
-    console.error('Revalidation error:', err);
-    return NextResponse.json({ message: 'Error revalidating' }, { status: 500 });
+    return NextResponse.json({ revalidated: false, error: err.message });
   }
 }
