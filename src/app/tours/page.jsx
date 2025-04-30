@@ -11,7 +11,8 @@ export const metadata = {
     "Looking for a once-in-a-lifetime adventure? Discover 20+ handpicked Pakistan tour packages for 2025, designed just for you. Whether you want to explore the mountains of Hunza, the deserts of Cholistan, or the culture of Lahore — weve got a trip that fits your style, budget, and time",
 };
 
-const Page = async ({ searchParams }) => {
+const Page = async props => {
+  const searchParams = await props.searchParams;
   const currentPage = parseInt(searchParams.page || "1");
   const start = (currentPage - 1) * PAGE_SIZE;
   const end = start + PAGE_SIZE;

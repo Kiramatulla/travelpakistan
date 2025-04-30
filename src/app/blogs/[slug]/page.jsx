@@ -4,7 +4,8 @@ import { client } from "@/sanity/lib/client";
 export const dynamicParams = true;
 export const revalidate = 0;
 
-const page = async ({ params }) => {
+const page = async props => {
+  const params = await props.params;
   const blogs = await client.fetch(
     `*[_type =="blogs" && slug.current == '${params.slug}'][0]`
   );

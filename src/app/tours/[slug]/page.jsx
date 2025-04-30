@@ -14,7 +14,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const query = `*[_type == "tour" && slug.current == $slug][0]{
     title,
     Metadescription
@@ -34,7 +35,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const page = async ({ params }) => {
+const page = async props => {
+  const params = await props.params;
   const query = `*[_type == "tour" && slug.current == '${params.slug}'][0]`;
   const tours = await client.fetch(query);
 

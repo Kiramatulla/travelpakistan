@@ -10,7 +10,8 @@ export const metadata ={
   
 }
 
-const Page = async ({ searchParams }) => {
+const Page = async props => {
+  const searchParams = await props.searchParams;
   const currentPage = parseInt(searchParams.page || "1");
   const start = (currentPage - 1) * PAGE_SIZE;
   const end = start + PAGE_SIZE;
