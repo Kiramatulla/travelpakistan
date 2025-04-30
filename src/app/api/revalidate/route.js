@@ -1,27 +1,22 @@
-import { NextResponse } from "next/server";
-import { revalidatePath } from "next/cache";
-import { isValidSignature, SIGNATURE_HEADER_NAME } from "@sanity/webhook";
+import { revalidatePath } from 'next/cache';
 
-export async function POST(req) {
-  const signature = req.headers.get(SIGNATURE_HEADER_NAME);
-  const body = await req.text();
 
-  const valid = isValidSignature(body, signature, process.env.SANITY_WEBHOOK_SECRET);
+export async function GET(request) {
+  const path = request.nextUrl.searchParams.get('path');
+  const secret = request.nextUrl.searchParams.get('secret');
 
-  if (!valid) {
-    return NextResponse.json({ msg: "Invalid signature" }, { status: 401 });
+  if (secret !== process.env.REVALIDATE_SECRET) {
+    return Response.json({ message: 'Invalid secret' }, { status: 401 });
   }
 
-  const json = JSON.parse(body);
-  const slug = json.slug;
-
-  if (!slug) {
-    return NextResponse.json({ msg: "Missing slug" }, { status: 400 });
+  if (path) {
+    revalidatePath(path);
+    return Response.json({ revalidated: true, now: Date.now() });
   }
 
-  const dynamicPath = `/tours/${slug}`;
-  revalidatePath(dynamicPath);
-  revalidatePath("/tours");
-
-  return NextResponse.json({ revalidated: true, paths: [dynamicPath, "/tours"] });
+  return Response.json({
+    revalidated: false,
+    now: Date.now(),
+    message: 'Missing path to revalidate',
+  });
 }
