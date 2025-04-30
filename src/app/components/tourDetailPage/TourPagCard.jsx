@@ -15,7 +15,7 @@ const TourPagCard = ({tour}) => {
                   <div className="relative h-48 mx-2 -mt-6 overflow-hidden shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
                     <Image
                       src={urlFor(tour.images && tour.images[0]).url()}
-                      alt={tour.name}
+                      alt={tour.title}
                       width={300}
                       height={300}
                       className="shadow-2xl object-cover w-full h-full"

@@ -15,7 +15,7 @@ const CardComp = ({tour}) => {
         <figure className="relative h-48 mx-2 -mt-6 overflow-hidden shadow-lg bg-clip-border rounded-xl">
           <Image
             src={urlFor(tour.images && tour.images[0]).url()}
-            alt={tour.name}
+            alt={tour.title || "tour Images"}
             width={300}
             height={300}
             className="shadow-2xl object-cover w-full h-full"
