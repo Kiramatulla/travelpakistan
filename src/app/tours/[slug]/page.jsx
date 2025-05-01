@@ -1,5 +1,6 @@
 import TourDetailsPage from "@/app/components/tourDetailPage/TourDetailsPage";
 import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
 export const dynamicParams = true;
 export const revalidate = 0;
@@ -17,21 +18,22 @@ export async function generateStaticParams() {
 export async function generateMetadata(props) {
   const params = await props.params;
   const query = `*[_type == "tour" && slug.current == $slug][0]{
-    title,
-    Metadescription
+    metaTitle,
+    Metadescription,
+    images
   }`;
   const tour = await client.fetch(query, { slug: params.slug });
 
-  if (!tour) {
-    return {
-      title: "Tour not found",
-      description: "This tour does not exist or has been removed.",
-    };
-  }
-
   return {
-    title: tour.title,
+    title: tour.metaTitle,
     description: tour.Metadescription,
+    openGraph: {
+      images: [
+        {
+          url: urlFor(tour.images && tour.images[0]).url(),
+        },
+      ],
+    }
   };
 }
 
