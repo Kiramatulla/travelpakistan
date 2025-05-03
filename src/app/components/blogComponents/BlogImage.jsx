@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { FiArrowLeftCircle } from "react-icons/fi";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { useState, useEffect } from "react";
@@ -10,21 +10,27 @@ const BlogImage = ({ blogs }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % blogs.featuredImage.length);
+      setCurrentIndex(
+        (prevIndex) => (prevIndex + 1) % blogs.featuredImage.length
+      );
     }, 7000);
 
     return () => clearInterval(interval);
   }, [blogs.featuredImage.length]);
   if (!blogs?.featuredImage || blogs.featuredImage.length === 0) return null;
 
-  
-
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % blogs.featuredImage.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex + 1) % blogs.featuredImage.length
+    );
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + blogs.featuredImage.length) % blogs.featuredImage.length);
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + blogs.featuredImage.length) %
+        blogs.featuredImage.length
+    );
   };
 
   const handleThumbnailClick = (index) => {
@@ -40,18 +46,22 @@ const BlogImage = ({ blogs }) => {
           onClick={handlePrev}
           className="absolute left-2 md:left-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
         >
-          <FiArrowLeftCircle size={24}/>
+          <FiArrowLeftCircle size={24} />
         </button>
 
         {/* Main Image */}
         <figure className="w-full flex justify-center items-center">
-          <Image
-            src={urlFor(blogs.featuredImage[currentIndex]).url()}
-            alt={blogs.title || "Blog Image"}
-            width={700}
-            height={300}
-            className="w-full sm:h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
-          />
+          {blogs.featuredImage && blogs.featuredImage[currentIndex] ? (
+            <Image
+              src={urlFor(blogs.featuredImage[currentIndex]).url()}
+              alt={blogs.title || "Blog Image"}
+              width={700}
+              height={300}
+              className="w-full sm:h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
+            />
+          ) : (
+            <span>Blog Images</span> // You can also use a fallback image here if needed
+          )}
         </figure>
 
         {/* Next Button */}
@@ -59,7 +69,7 @@ const BlogImage = ({ blogs }) => {
           onClick={handleNext}
           className="absolute right-2 md:right-5 z-10 bg-white/70 p-2 rounded-full shadow hover:bg-white"
         >
-          <FiArrowRightCircle size={24}/>
+          <FiArrowRightCircle size={24} />
         </button>
       </div>
 
@@ -89,15 +99,8 @@ const BlogImage = ({ blogs }) => {
 
 export default BlogImage;
 
-
-
-
-
-
-
 // import { urlFor } from "@/sanity/lib/image";
 // import Image from "next/image";
-
 
 // const BlogImage = ({ blogs }) => {
 
@@ -106,10 +109,10 @@ export default BlogImage;
 //       <Image
 //         src={urlFor(blogs.featuredImage && blogs.featuredImage).url()}
 //         alt={blogs.title || "Tour Image"}
-//         width={700} 
-//         height={300} 
+//         width={700}
+//         height={300}
 //         className="w-full sm:h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
-//         priority 
+//         priority
 //       />
 //     </figure>
 //   );
