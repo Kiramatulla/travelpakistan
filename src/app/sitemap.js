@@ -8,7 +8,7 @@ const sitemap = async () => {
 
   const postEntries = posts.map((post) => ({
     url: `https://travelpakistan.vercel.app//${post.slug.current}`,
-    lastModified: post._updatedAt
+    lastModified: post._createdAt
   }))
 
   return postEntries
