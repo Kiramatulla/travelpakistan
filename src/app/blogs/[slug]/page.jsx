@@ -5,27 +5,31 @@ import { urlFor } from "@/sanity/lib/image";
 export const dynamicParams = true;
 export const revalidate = 0;
 
-export async function generateMetadata(props){
+export async function generateMetadata(props) {
   const params = await props.params;
   const query = `*[_type == "blogs" && slug.current == $slug][0]{
     title,
     Metadescription,
-  featuredImage
+    featuredImage
   }`;
 
   const blogs = await client.fetch(query, { slug: params.slug });
+
+  // Safely get image URL or fallback
+  const imageUrl =
+    blogs.featuredImage && blogs.featuredImage[0]
+      ? urlFor(blogs.featuredImage[0]).url()
+      : "Blog Images"; 
+
   return {
-      title: blogs.title,
-      description: blogs.Metadescription,
-      openGraph: {
-        images: [
-          {
-            url: urlFor(blogs.featuredImage && blogs.featuredImage[0]).url(),
-          },
-        ],
-      },
-    };
+    title: blogs.title,
+    description: blogs.Metadescription,
+    openGraph: {
+      images: [{ url: imageUrl }],
+    },
+  };
 }
+
 
 const page = async props => {
   const params = await props.params;
