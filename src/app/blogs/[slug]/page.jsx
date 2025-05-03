@@ -10,7 +10,7 @@ export async function generateMetadata(props){
   const query = `*[_type == "blogs" && slug.current == $slug][0]{
     title,
     Metadescription,
-   images
+  
   }`;
 
   const blogs = await client.fetch(query, { slug: params.slug });

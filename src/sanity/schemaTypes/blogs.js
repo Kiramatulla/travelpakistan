@@ -29,7 +29,6 @@ export const blogs = {
         type:'array',
         options: { hotspot: true },
         of:[{type:'image'}],
-        validation: (Rule) => Rule.required(),
       },
       {
         name: "category",
