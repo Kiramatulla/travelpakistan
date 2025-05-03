@@ -51,7 +51,6 @@ const BlogImage = ({ blogs }) => {
             width={700}
             height={300}
             className="w-full sm:h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
-            priority
           />
         </figure>
 
