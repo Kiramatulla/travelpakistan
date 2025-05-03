@@ -1,8 +1,31 @@
 import BlogDetailComponent from "@/app/components/blogComponents/BlogDetailComponent";
 import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
 export const dynamicParams = true;
 export const revalidate = 0;
+
+export async function generateMetadata(props){
+  const params = await props.params;
+  const query = `*[_type == "blogs" && slug.current == $slug][0]{
+    title,
+    Metadescription,
+   images
+  }`;
+
+  const blogs = await client.fetch(query, { slug: params.slug });
+  return {
+      title: blogs.title,
+      description: blogs.Metadescription,
+      openGraph: {
+        images: [
+          {
+            url: urlFor(blogs.images && blogs.images[0]).url(),
+          },
+        ],
+      },
+    };
+}
 
 const page = async props => {
   const params = await props.params;

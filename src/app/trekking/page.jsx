@@ -5,7 +5,7 @@ import { client } from "@/sanity/lib/client";
 const PAGE_SIZE = 12; 
 
 export const metadata ={
-  title:"Pakistan Tour Packages 2025",
+  title:"Trekking in Pakistan, K2 Basecamp, Gondogoro La",
   description:"Looking for a once-in-a-lifetime adventure? Discover 20+ handpicked Pakistan tour packages for 2025, designed just for you. Whether you want to explore the mountains of Hunza, the deserts of Cholistan, or the culture of Lahore — weve got a trip that fits your style, budget, and time",
   
 }

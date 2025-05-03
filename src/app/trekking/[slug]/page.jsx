@@ -1,5 +1,6 @@
 import TrekDetailPage from "@/app/components/trekingComponents/TrekDetailPage";
 import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
 export const dynamicParams = true;
 export const revalidate = 0;
@@ -18,46 +19,29 @@ export async function generateMetadata(props) {
   const query = `*[_type == "treks" && slug.current == $slug][0]{
     title,
     Metadescription,
-    mainImage {
-      asset-> {
-        url
-      }
-    }
+   images
   }`;
 
   const treks = await client.fetch(query, { slug: params.slug });
-
-  if (!treks) {
-    return {
-      title: "Trek not found",
-      description: "This trek does not exist or has been removed.",
-    };
-  }
 
   return {
     title: treks.title,
     description: treks.Metadescription,
     openGraph: {
-      title: treks.title,
-      description: treks.Metadescription,
       images: [
         {
-          url: treks.mainImage?.asset?.url, 
-          width: 1200,
-          height: 630,
-          alt: `${treks.title} - Cover Image`,
+          url: urlFor(treks.images && treks.images[0]).url(),
         },
       ],
     },
   };
 }
 
-
-const page = async props => {
+const page = async (props) => {
   const params = await props.params;
   const treks = await client.fetch(
-      `*[_type == "treks" && slug.current == '${params.slug}'][0]`
-    );
+    `*[_type == "treks" && slug.current == '${params.slug}'][0]`
+  );
 
   const relatedTreks = await client.fetch(
     `*[_type == "treks" && category._ref == '${treks.category._ref}' && slug.current != '${params.slug}']`
@@ -76,6 +60,6 @@ const page = async props => {
       />
     </div>
   );
-}
+};
 
-export default page
+export default page;
