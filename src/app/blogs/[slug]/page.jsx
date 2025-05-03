@@ -10,7 +10,7 @@ export async function generateMetadata(props){
   const query = `*[_type == "blogs" && slug.current == $slug][0]{
     title,
     Metadescription,
-  
+  featuredImage
   }`;
 
   const blogs = await client.fetch(query, { slug: params.slug });
@@ -20,7 +20,7 @@ export async function generateMetadata(props){
       openGraph: {
         images: [
           {
-            url: urlFor(blogs.images && blogs.images[0]).url(),
+            url: urlFor(blogs.featuredImage && blogs.featuredImage[0]).url(),
           },
         ],
       },
