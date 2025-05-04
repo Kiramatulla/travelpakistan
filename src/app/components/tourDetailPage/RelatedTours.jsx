@@ -8,11 +8,11 @@ const RelatedTours = ({ relatedTours }) => {
   });
   return (
     <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 mt-8">
-      <h2 className="pl-2 bg-cyan-600 text-white shadow-xl font-semibold font-sans py-4 rounded-md lg:pl-2">
+      <h2 className="pl-2 font-bold text-2xl text-gray-800 font-serif py-2 rounded-md lg:pl-2">
       Similar Tour Packages and Pricing
       </h2>
 
-      <div className="text-sm lg:text-xs pt-4 pl-4 font-sans">
+      <div className="text-sm lg:text-xs pl-4 font-sans">
         <p>
           <span className="font-bold">Note:</span> Below in the related Tours,
           the prices mentioned at Standard and Premium blocks are calculated
