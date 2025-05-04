@@ -20,7 +20,9 @@ const Navbar = () => {
     <header className="relative mt-3 mx-5 lg:mx-20 md:border md:rounded-full md:shadow-2xl md:py-2 lg:py-2 ">
       {/* Background Image */}
       <div className="absolute inset-x-0 top-0 w-full -z-10 translate-y-[-80%]">
-        <Image src={headerBg} alt="Header Background" className="w-full" />
+        <Image 
+        src={headerBg} alt="Header Background" 
+        className="w-full" />
       </div>
 
       <nav

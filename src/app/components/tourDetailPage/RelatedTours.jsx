@@ -7,9 +7,9 @@ const RelatedTours = ({ relatedTours }) => {
     return daysA - daysB;
   });
   return (
-    <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 mt-8">
-      <h2 className="pl-2 bg-cyan-600 text-white shadow-xl font-semibold font-sans py-4 rounded lg:pl-2">
-        Other Similar and Related Tours
+    <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 mt-8">
+      <h2 className="pl-2 bg-cyan-600 text-white shadow-xl font-semibold font-sans py-4 rounded-md lg:pl-2">
+      Similar Tour Packages and Pricing
       </h2>
 
       <div className="text-sm lg:text-xs pt-4 pl-4 font-sans">
@@ -49,7 +49,7 @@ const RelatedTours = ({ relatedTours }) => {
           </tbody>
         </table>
       </div>
-    </section>
+    </div>
   );
 };
 

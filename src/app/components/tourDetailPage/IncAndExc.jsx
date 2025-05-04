@@ -16,7 +16,7 @@ const IncAndExc = ({ tours }) => {
     },
   };
   return (
-    <section className="mx-2 lg:mx-0 mt-6 lg:pl-8 lg:pr-8">
+    <article className="mx-2 lg:mx-0 mt-6 lg:pl-8 lg:pr-8">
       <h2 className="font-sans font-semibold lg:text-sm rounded bg-cyan-600 text-white py-4 pl-2 ">
         Services We Are Providing
       </h2>
@@ -26,7 +26,7 @@ const IncAndExc = ({ tours }) => {
           components={portableTextComponents}
         />
       </section>
-    </section>
+    </article>
   );
 };
 

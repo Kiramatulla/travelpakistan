@@ -35,7 +35,7 @@ const ImageComp = ({ tours }) => {
   return (
     <div className="flex flex-col items-center">
       {/* Banner Image */}
-      <div className="relative w-full flex justify-center items-center mt-10">
+      <div className="relative w-full flex justify-center items-center mt-8">
         {/* Prev Button */}
         <button
           onClick={handlePrev}
@@ -51,7 +51,7 @@ const ImageComp = ({ tours }) => {
             alt={tours.title || "Tour Image"}
             width={700}
             height={300}
-            className="w-full sm:h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
+            className="w-full sm:h-[20rem] md:h-[26rem] lg:h-[26rem] px-2 lg:px-10 lg:rounded-xl object-cover"
             priority
           />
         </figure>

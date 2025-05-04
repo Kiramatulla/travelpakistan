@@ -9,13 +9,11 @@ import RelatedTours from "./RelatedTours";
 import UserGuide from "./UserGuide";
 import VisaAndRefund from "./VisaAndRefund";
 
-
-
-const TourDetailPage =  ({ tours, relatedTours, relatedBlogs }) => {
+const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
   return (
-    <main className="lg:flex lg:flex-row lg:ml-16">
+    <div className="lg:flex lg:flex-row lg:ml-16">
       {/* Main Tour Content */}
-      <section className="lg:w-[65%] lg:pl-2 lg:ml-8 pb-20 rounded-lg">
+      <div className="lg:w-[65%] lg:pl-2 lg:ml-8 pb-20 rounded-lg">
         <section>
           <ImageComp tours={tours} />
         </section>
@@ -26,10 +24,10 @@ const TourDetailPage =  ({ tours, relatedTours, relatedBlogs }) => {
           <CostPerPerson tours={tours} />
         </section>
         <section>
-          <Itinerary tours={tours} />
+          <RelatedTours relatedTours={relatedTours} />
         </section>
         <section>
-          <RelatedTours relatedTours={relatedTours} />
+          <Itinerary tours={tours} />
         </section>
         <section>
           <IncAndExc tours={tours} />
@@ -37,15 +35,15 @@ const TourDetailPage =  ({ tours, relatedTours, relatedBlogs }) => {
         <section>
           <VisaAndRefund />
         </section>
-      </section>
+      </div>
 
       {/* Sidebar Section */}
       <aside className="p-8 lg:w-[27%] lg:p-8 lg:sticky lg:top-8 lg:mt-34">
         <UserGuide />
-        <CallToAction/>
+        <CallToAction />
         <Blogs relatedBlogs={relatedBlogs} />
       </aside>
-    </main>
+    </div>
   );
 };
 
