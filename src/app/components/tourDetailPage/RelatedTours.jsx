@@ -1,3 +1,5 @@
+import { urlFor } from "@/sanity/lib/image";
+import Image from "next/image";
 import Link from "next/link";
 
 const RelatedTours = ({ relatedTours }) => {
@@ -9,7 +11,7 @@ const RelatedTours = ({ relatedTours }) => {
   return (
     <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 mt-8">
       <h2 className="pl-2 font-bold text-2xl text-gray-800 font-serif py-2 rounded-md lg:pl-2">
-      Similar Tour Packages and Pricing
+        Similar Tour Packages and Pricing
       </h2>
 
       <div className="text-sm lg:text-xs pl-4 font-sans">
@@ -35,10 +37,23 @@ const RelatedTours = ({ relatedTours }) => {
             {sortedTours.map((relatedTour) => (
               <tr
                 key={relatedTour._id}
-                className="border-t text-xs font-semibold border-b border-slate-300"
+                className="border-t text-xs  font-semibold border-b border-slate-300"
               >
-                <td className="p-4 transition-transform hover:scale-95 hover:text-blue-500">
-                  <Link href={`/tours/${relatedTour.slug.current}`}>
+                <td className="p-2 transition-transform hover:scale-95 hover:text-blue-500">
+                  <Link
+                    href={`/tours/${relatedTour.slug.current}`}
+                    className="flex items-center"
+                  >
+                    <Image
+                      src={urlFor(
+                        relatedTour.images && relatedTour.images[0]
+                      ).url()}
+                      alt={relatedTour.title}
+                      width={300}
+                      height={300}
+                      className="hidden md:block md:w-16 md:h-12 md:object-cover md:rounded-md mr-4"
+                    />
+
                     {relatedTour.title}
                   </Link>
                 </td>
@@ -55,4 +70,10 @@ const RelatedTours = ({ relatedTours }) => {
 
 export default RelatedTours;
 
-
+{
+  /* <td className="p-4 transition-transform hover:scale-95 hover:text-blue-500">
+<Link href={`/tours/${relatedTour.slug.current}`}>
+  {relatedTour.title}
+</Link>
+</td> */
+}

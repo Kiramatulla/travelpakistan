@@ -28,10 +28,10 @@ const SearchItems = ({ tours }) => {
                   >
                     <Image
                       src={urlFor(tour.images && tour.images[0]).url()}
-                      alt={tour.name}
+                      alt={tour.title}
                       width={300}
                       height={300}
-                      className="lg:w-16 lg:h-12 lg:object-cover lg:rounded-md mr-4"
+                      className="hidden md:block md:w-16 md:h-12 md:object-cover md:rounded-md mr-4"
                     />
 
                     {tour.title}
