@@ -6,11 +6,11 @@ import Link from "next/link"
 const TrekPagCard =({trek}) => {
      
   return (
-    <section>
+    
         <Link href={`/trekking/${trek.slug.current}`}>
-      <div className="flex flex-col justify-center space-y-5 md:flex-row md:space-y-0  mt-7 mb-8">
+      <article className="flex flex-col justify-center space-y-5 md:flex-row md:space-y-0  mt-7 mb-8">
         <div className="max-w-sm lg:max-w-[300px]">
-          <div>
+          <figure>
             <Image
               src={urlFor(trek.images && trek.images[0]).url()}
               alt="background Image"
@@ -18,7 +18,7 @@ const TrekPagCard =({trek}) => {
               height={300}
               className="rounded-2xl w-full h-full"
             />
-          </div>
+          </figure>
           <div className="mt-2">
             <h3 className=" mb-3 font-bold text-center">
               {trek.title}
@@ -34,9 +34,9 @@ const TrekPagCard =({trek}) => {
             </button>
           </div>
         </div>
-      </div>
+      </article>
     </Link>
-    </section>
+  
   )
 }
 

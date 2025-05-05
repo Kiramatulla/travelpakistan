@@ -5,8 +5,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const BlogImageCard = ({ blog }) => {
   return (
+    
     <Link href={`/blogs/${blog.slug.current}`}>
-      <div className="w-full mx-auto mb-8 md:mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-lg rounded-xl overflow-hidden bg-white">
+      <article className="w-full mx-auto mb-8 md:mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-lg rounded-xl overflow-hidden bg-white">
         {/* Blog Image */}
         <div className="w-full">
           <Image
@@ -29,8 +30,9 @@ const BlogImageCard = ({ blog }) => {
             <FaArrowRightLong className="ml-1 mt-[2px] transition-transform duration-150 group-hover:translate-x-1" />
           </p>
         </div>
-      </div>
+      </article>
     </Link>
+    
   );
 };
 

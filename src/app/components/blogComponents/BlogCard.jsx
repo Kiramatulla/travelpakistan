@@ -5,10 +5,10 @@ const BlogCards = async () => {
   const blogs = await client.fetch(`*[_type == "blogs"]`);
 
   return (
-    <section className="py-12 lg:py-12 font-sans bg-white">
+    <div className="py-12 lg:py-12 font-sans bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
+        <header className="text-center mb-12">
           <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-4">
             Our Recent Blogs
           </h2>
@@ -17,7 +17,7 @@ const BlogCards = async () => {
             from history and tourist attractions to local activities, travel distances,
             and drive times. We have got everything covered.
           </p>
-        </div>
+        </header>
 
         {/* Blog Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -26,7 +26,7 @@ const BlogCards = async () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

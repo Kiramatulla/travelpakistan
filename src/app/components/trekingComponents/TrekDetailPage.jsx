@@ -11,19 +11,32 @@ const TrekDetailPage = ({ treks, relatedTreks, relatedBlogs }) => {
   return (
     <div className=" lg:flex lg:flex-row lg:ml-16">
       <div className=" lg:w-[65%] lg:pl-2 lg:ml-8 pb-20">
-        {/* render detail here */}
-
-        <TrekImage treks={treks} />
-        <TrekOverview treks={treks} />
-        <DepartureDates treks={treks} />
-        <RelatedTreks relatedTreks={relatedTreks} />
-        <TrekItinerary treks={treks} />
-        <TrekInclusionAndExclusion treks={treks} />
-        <VisaAndRefund />
+        <section>
+          <TrekImage treks={treks} />
+        </section>
+        <section>
+          <TrekOverview treks={treks} />
+        </section>
+        <section>
+          <DepartureDates treks={treks} />
+        </section>
+        <section>
+          <RelatedTreks relatedTreks={relatedTreks} />
+        </section>
+        <section>
+          <TrekItinerary treks={treks} />
+        </section>
+        <section>
+          <TrekInclusionAndExclusion treks={treks} />
+        </section>
+        <section>
+          <VisaAndRefund />
+        </section>
       </div>
       <div className="p-8 lg:w-[27%] lg:p-8 lg:sticky lg:top-8 lg:mt-34">
-        {/* Render your sidebar details here */}
-        <TrekkingBlogs relatedBlogs={relatedBlogs} />
+        <aside>
+          <TrekkingBlogs relatedBlogs={relatedBlogs} />
+        </aside>
       </div>
     </div>
   );

@@ -9,18 +9,23 @@ const BlogDetailComponent = ({ blogs, relatedTours, relatedBlogs }) => {
   return (
     <div className=" lg:flex lg:flex-row lg:ml-16">
       <div className=" lg:w-[65%] lg:pl-2 lg:ml-8 pb-6 rounded-lg">
-        {/* render detail here */}
-        <BlogImage blogs={blogs} />
-        <BlogOverview blogs={blogs} />
-        <BlogContent blogs={blogs} />
-        <RelatedTours relatedTours={relatedTours} />
-        
+        <section>
+          <BlogImage blogs={blogs} />
+        </section>
+        <section>
+          <BlogOverview blogs={blogs} />
+        </section>
+        <section>
+          <BlogContent blogs={blogs} />
+        </section>
+        <section>
+          <RelatedTours relatedTours={relatedTours} />
+        </section>
       </div>
-      <div className="p-8 lg:w-[27%] lg:p-8 lg:sticky lg:top-8 lg:mt-34">
-        {/* Render your sidebar details here */}
-      <CallToAction/>
+      <aside className="p-8 lg:w-[27%] lg:p-8 lg:sticky lg:top-8 lg:mt-34">
+        <CallToAction />
         <Blogs relatedBlogs={relatedBlogs} />
-      </div>
+      </aside>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Page = async props => {
   const totalPages = Math.ceil(totalTours / PAGE_SIZE);
 
   return (
-    <section className="font-sans flex flex-col items-center">
+    <main className="font-sans flex flex-col items-center">
       <header className="mx-4 max-w-screen-md text-center">
         <h1 className="text-3xl text-slate-600 font-bold mt-8 mb-2 md:mb-2">
           Pakistan Tours 2025 - Explore New Horizons
@@ -56,11 +56,11 @@ const Page = async props => {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-14 lg:mx-20 md:gap-4">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-14 lg:mx-20 md:gap-4">
         {tours.map((tour) => (
           <TourPagCard key={tour._id} tour={tour} />
         ))}
-      </div>
+      </section>
 
       {/* Pagination controls */}
       <div className="flex justify-center gap-4 mt-10 mb-20">
@@ -96,7 +96,7 @@ const Page = async props => {
           </Link>
         )}
       </div>
-    </section>
+    </main>
   );
 };
 

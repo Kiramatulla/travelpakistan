@@ -9,16 +9,16 @@ export const metadata ={
 
 const page = () => {
   return (
-    <div>
+    <main>
       <div className=" flex ">
        <section className="hidden md:flex">
        <BlogCategory />
        </section> 
-        <main className=" lg:p-4">
+        <section className=" lg:p-4">
           <BlogCards />
-        </main>
+        </section>
       </div>
-    </div>
+    </main>
   );
 };
 

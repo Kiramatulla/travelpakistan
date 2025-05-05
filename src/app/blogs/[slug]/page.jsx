@@ -43,13 +43,13 @@ const page = async props => {
     `*[_type =="blogs" && category._ref == '${blogs.category._ref}' && slug.current != '${params.slug}']`
   );
   return (
-    <div className=" mt-5 lg:mt-2 mb-20">
+    <main className=" mt-5 lg:mt-2 mb-20">
       <BlogDetailComponent
         blogs={blogs}
         relatedTours={relatedTours}
         relatedBlogs={relatedBlogs}
       />
-    </div>
+    </main>
   );
 };
 

@@ -52,13 +52,13 @@ const page = async (props) => {
   );
 
   return (
-    <div className=" mt-5 mb-20">
+    <main className=" mt-5 mb-20">
       <TrekDetailPage
         treks={treks}
         relatedTreks={relatedTreks}
         relatedBlogs={relatedBlogs}
       />
-    </div>
+    </main>
   );
 };
 

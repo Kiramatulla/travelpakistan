@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const DepartureDates = ({ treks }) => {
   return (
-    <section className="px-6 lg:pl-8 lg:pr-8">
-      <div className="">
+    <div className="px-6 lg:pl-8 lg:pr-8">
+      <div >
         {treks.schedule?.length > 0 ? (
           // ✅ If Fixed Departure Treks Exist (Show Table with Dates & Prices)
           <div>
@@ -86,7 +86,7 @@ const DepartureDates = ({ treks }) => {
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 

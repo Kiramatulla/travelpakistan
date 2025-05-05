@@ -7,7 +7,7 @@ const RelatedTreks = ({ relatedTreks }) => {
     return daysA - daysB;
   });
   return (
-    <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 py-8">
+    <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 py-8">
       <h2 className="pl-2 bg-cyan-600 text-white shadow-xl font-semibold font-sans py-4 rounded lg:pl-2">
         Other Similar and Related Tours
       </h2>
@@ -49,7 +49,7 @@ const RelatedTreks = ({ relatedTreks }) => {
           </tbody>
         </table>
       </div>
-    </section>
+    </div>
   );
 };
 
