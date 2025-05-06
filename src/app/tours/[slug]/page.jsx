@@ -42,7 +42,7 @@ const page = async props => {
   const query = `*[_type == "tour" && slug.current == '${params.slug}'][0]`;
   const tours = await client.fetch(query);
 
-  if (!tours) return null;
+  if (!tours) return "No Tours Found";
 
   const relatedQuery = `{
     "relatedTours": *[_type == "tour" && category._ref == '${tours.category._ref}' && slug.current != '${params.slug}'],

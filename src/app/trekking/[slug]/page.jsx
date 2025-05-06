@@ -43,6 +43,8 @@ const page = async (props) => {
     `*[_type == "treks" && slug.current == '${params.slug}'][0]`
   );
 
+  if (!treks) return "No Treks Found";
+
   const relatedTreks = await client.fetch(
     `*[_type == "treks" && category._ref == '${treks.category._ref}' && slug.current != '${params.slug}']`
   );
