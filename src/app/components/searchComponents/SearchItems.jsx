@@ -22,7 +22,7 @@ const SearchItems = ({ tours }) => {
               >
                 <td className="p-2 transition-transform hover:scale-95 hover:text-blue-500">
                   <Link
-                    href={`/${tour._type === "tour" ? "tours" : "treks"}/${tour.slug.current}`}
+                    href={`/${tour._type === "tour" ? "tours" : "trekking"}/${tour.slug.current}`}
                     className="flex items-center"
                   >
                     {tour.images?.length > 0 && (
