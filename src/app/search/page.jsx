@@ -8,7 +8,14 @@ export default async function SearchPage(props) {
 
   // Fetch matching tours from Sanity
   const tours = await client.fetch(
-    `*[_type == "tour" && title match "${searchQuery}*"] { title, slug,images,tourPriceStandardHotels,tourPriceBestHotels }`
+    `*[(_type == "tour" || _type == "treks") && title match "${searchQuery}*"] { _type,
+    title, 
+    slug,
+    images,
+    tourPriceStandardHotels,
+    tourPriceBestHotels,
+    trekPrice,
+    trekPrice1 }`
   );
 
   return (
