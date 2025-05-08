@@ -7,7 +7,7 @@ export default async function SearchPage(props) {
   const searchQuery = searchParams?.query || ""; // Get search query from URL
 
   // Fetch matching tours from Sanity
-  const tours = await client.fetch(
+  const results = await client.fetch(
     `*[(_type == "tour" || _type == "treks") && title match "${searchQuery}*"] { _type,
     title, 
     slug,
@@ -22,7 +22,7 @@ export default async function SearchPage(props) {
     <div className="p-6  rounded-lg lg:mx-52 my-14 font-sans ">
       <SearchForms searchQuery={searchQuery} />
       {/* Search Results */}
-      <SearchItems tours={tours} />
+      <SearchItems results={results} />
     </div>
   );
 }

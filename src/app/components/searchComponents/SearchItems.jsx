@@ -2,10 +2,10 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 
-const SearchItems = ({ tours }) => {
+const SearchItems = ({ results }) => {
   return (
     <div className="my-4 mx-6 bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      {tours.length > 0 ? (
+      {results.length > 0 ? (
         <table className="w-full text-sm font-sans">
           <thead>
             <tr className="bg-[#3f9fac] text-white">
@@ -15,44 +15,44 @@ const SearchItems = ({ tours }) => {
             </tr>
           </thead>
           <tbody>
-            {tours.map((tour) => (
+            {results.map((result) => (
               <tr
-                key={tour.slug.current}
+                key={result.slug.current}
                 className="border-t text-xs font-semibold"
               >
                 <td className="p-2 transition-transform hover:scale-95 hover:text-blue-500">
                   <Link
-                    href={`/${tour._type === "tour" ? "tours" : "trekking"}/${tour.slug.current}`}
+                    href={`/${result._type === "tour" ? "tours" : "trekking"}/${result.slug.current}`}
                     className="flex items-center"
                   >
-                    {tour.images?.length > 0 && (
+                    {result.images?.length > 0 && (
                       <Image
-                        src={urlFor(tour.images[0]).url()}
-                        alt={tour.title}
+                        src={urlFor(result.images[0]).url()}
+                        alt={result.title}
                         width={300}
                         height={300}
                         className="hidden md:block md:w-16 md:h-12 md:object-cover md:rounded-md mr-4"
                       />
                     )}
-                    {tour.title}
+                    {result.title}
                   </Link>
                 </td>
                 <td className="p-2">
-                  {tour._type === "tour"
-                    ? tour.tourPriceStandardHotels
-                      ? `$ ${tour.tourPriceStandardHotels}`
+                  {result._type === "tour"
+                    ? result.tourPriceStandardHotels
+                      ? `$ ${result.tourPriceStandardHotels}`
                       : "N/A"
-                    : tour.trekPrice
-                      ? `$ ${tour.trekPrice}`
+                    : result.trekPrice
+                      ? `$ ${result.trekPrice}`
                       : "N/A"}
                 </td>
                 <td className="p-2">
-                  {tour._type === "tour"
-                    ? tour.tourPriceBestHotels
-                      ? `$ ${tour.tourPriceBestHotels}`
+                  {result._type === "tour"
+                    ? result.tourPriceBestHotels
+                      ? `$ ${result.tourPriceBestHotels}`
                       : "N/A"
-                    : tour.trekPrice1
-                      ? `$ ${tour.trekPrice1}`
+                    : result.trekPrice1
+                      ? `$ ${result.trekPrice1}`
                       : "N/A"}
                 </td>
               </tr>
