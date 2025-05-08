@@ -52,7 +52,7 @@ const page = async props => {
   const { relatedTours, relatedBlogs } = await client.fetch(relatedQuery);
 
   return (
-    <main className="mt-5 mb-20">
+    <main className="mt-5 mb-20 ">
       <TourDetailsPage
         tours={tours}
         relatedTours={relatedTours}
