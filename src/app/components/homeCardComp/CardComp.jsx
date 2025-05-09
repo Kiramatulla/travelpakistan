@@ -1,4 +1,5 @@
 import { urlFor } from '@/sanity/lib/image'
+import { PortableText } from 'next-sanity'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -28,9 +29,9 @@ const CardComp = ({tour}) => {
           <header>
             <h5 className="mb-2 font-bold ">{tour.title}</h5>
           </header>
-          <p className="font-sans overflow-hidden text-sm">
-            {tour.tourOverview}
-          </p>
+          <section className="font-sans overflow-hidden text-sm">
+            <PortableText value={tour.tourOverviews} />
+          </section>
         </div>
 
         {/* Read More Button */}

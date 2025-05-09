@@ -1,4 +1,5 @@
 import { urlFor } from '@/sanity/lib/image'
+import { PortableText } from 'next-sanity'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -23,9 +24,9 @@ const TourPagCard = ({tour}) => {
                   </figure>
                   <div className="p-4 flex-1 overflow-hidden">
                     <h5 className="mb-2 font-bold">{tour.title}</h5>
-                    <p className="font-sans overflow-hidden text-sm">
-                      {tour.tourOverviews}
-                    </p>
+                    <section className="font-sans overflow-hidden text-sm">
+                     <PortableText value={tour.tourOverviews} />
+                    </section>
                   </div>
                   <div className="p-6 pt-0 flex items-center justify-center">
                     <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 mt-2 rounded-lg bg-cyan-600 text-white hover:text-orange-600 shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none">
