@@ -66,9 +66,10 @@ export const tours = {
         validation: (Rule) => Rule.required(),
       },
       {
-        name: "tourOverview",
-        title: "Tour Overview",
-        type: "text",
+        name: "tourOverviews",
+        title: "Main Highlights",
+        type: "array",
+        of: [{ type: "block" }],
       },
       {
         name: "itinerary",
@@ -188,12 +189,6 @@ export const tours = {
       {
         name: "inclusionExclusion",
         title: "Inclusion & Exclusion",
-        type: "array",
-        of: [{ type: "block" }],
-      },
-      {
-        name: "mainHighlights",
-        title: "Main Highlights",
         type: "array",
         of: [{ type: "block" }],
       },

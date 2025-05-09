@@ -1,4 +1,4 @@
-import { PortableText } from "next-sanity";
+import { PortableText } from 'next-sanity'
 
 const PortableTextComponents = {
 
@@ -33,19 +33,15 @@ const PortableTextComponents = {
     ),
   },
 };
-
-const Itinerary = ({ tours }) => {
-
+const TourOverviews = ({tours}) => {
   return (
     <article className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 font-sans">
-      <h2 className="bg-cyan-600 py-4 rounded mb-4 text-white shadow-xl font-bold pl-2 lg:pl-2">
-        Detailed Tour Plan
-      </h2>
-      <section className="font-sans text-justify lg:text-start px-4 lg:px-0 lg:text-sm lg:leading-6">
-        <PortableText value={tours.itinerary} components={PortableTextComponents}/>
-      </section>
-    </article>
-  );
-};
+         <h1 className="font-bold text-2xl text-gray-800 font-serif mb-4">{tours.title}</h1>
+          <section className="font-sans text-black text-justify lg:text-start px-4 lg:px-0 lg:text-sm lg:leading-7">
+            <PortableText value={tours.tourOverviews} components={PortableTextComponents}/>
+          </section>
+        </article>
+  )
+}
 
-export default Itinerary;
+export default TourOverviews
