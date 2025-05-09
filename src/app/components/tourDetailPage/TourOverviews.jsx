@@ -13,7 +13,7 @@ const PortableTextComponents = {
       <h3 className="text-lg font-serif text-slate-700 mt-5 mb-1">{children}</h3>
     ),
     normal: ({ children }) => (
-      <p className="mb-4 ">{children}</p>
+      <div className="mb-4 ">{children}</div>
     ),
   },
   list: {
