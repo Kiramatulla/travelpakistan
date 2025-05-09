@@ -24,7 +24,7 @@ const TourPagCard = ({tour}) => {
                   <div className="p-4 flex-1 overflow-hidden">
                     <h5 className="mb-2 font-bold">{tour.title}</h5>
                     <p className="font-sans overflow-hidden text-sm">
-                      {tour.tourOverview}
+                      {tour.tourOverviews}
                     </p>
                   </div>
                   <div className="p-6 pt-0 flex items-center justify-center">

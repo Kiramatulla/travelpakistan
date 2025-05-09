@@ -67,7 +67,7 @@ export const tours = {
       },
       {
         name: "tourOverviews",
-        title: "Main Highlights",
+        title: "Tour Overview",
         type: "array",
         of: [{ type: "block" }],
       },
