@@ -26,7 +26,7 @@ const RelatedTours = ({ relatedTours }) => {
       <div className="my-4 bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
         <table className="w-full lg:text-sm font-sans">
           <thead>
-            <tr className="bg-cyan-600 text-white">
+            <tr className="bg-cyan-600 text-white font-serif">
               <th className="p-4 text-left">Tour Name</th>
               <th className="p-4 text-left">Standard Price</th>
               <th className="p-4 text-left">Premium Price</th>

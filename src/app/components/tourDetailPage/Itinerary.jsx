@@ -10,7 +10,7 @@ const PortableTextComponents = {
       <h2 className="text-2xl font-bold mt-6 mb-2">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-lg font-serif text-slate-700 mt-5 mb-1">{children}</h3>
+      <h3 className="text-lg font-serif text-sky-700	 mt-5 mb-1">{children}</h3>
     ),
     normal: ({ children }) => (
       <div>
@@ -38,8 +38,8 @@ const PortableTextComponents = {
 const Itinerary = ({ tours }) => {
 
   return (
-    <article className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 font-sans">
-      <h2 className="bg-cyan-600 py-4 rounded mb-4 text-white shadow-xl font-bold pl-2 lg:pl-2">
+    <article className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
+      <h2 className="bg-cyan-600 font-serif py-4 rounded mb-4 text-white shadow-xl font-bold pl-2 lg:pl-2">
         Detailed Tour Plan
       </h2>
       <section className="font-sans text-justify lg:text-start px-4 lg:px-0 lg:text-sm lg:leading-6">

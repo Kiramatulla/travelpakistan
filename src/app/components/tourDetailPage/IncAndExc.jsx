@@ -17,7 +17,7 @@ const IncAndExc = ({ tours }) => {
   };
   return (
     <article className="mx-2 lg:mx-0 mt-6 lg:pl-8 lg:pr-8">
-      <h2 className="font-sans font-semibold lg:text-sm rounded bg-cyan-600 text-white py-4 pl-2 ">
+      <h2 className="font-serif font-bold lg:text-lg rounded bg-cyan-600 text-white py-4 pl-2 ">
         Services We Are Providing
       </h2>
       <section className="px-4 lg:mx-0 lg:p-2  text-justify font-sans lg:text-sm bg-slate-200 rounded-xl">
