@@ -1,4 +1,5 @@
 import CallToAction from "../CallToAction";
+import AboutTour from "./AboutTour";
 import Blogs from "./Blogs";
 import CostPerPerson from "./CostPerPerson";
 import ImageComp from "./ImageComp";
@@ -7,7 +8,7 @@ import Itinerary from "./Itinerary";
 import RelatedTours from "./RelatedTours";
 import TourOverviews from "./TourOverviews";
 import UserGuide from "./UserGuide";
-import VisaAndRefund from "./VisaAndRefund";
+
 
 const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
   return (
@@ -36,7 +37,7 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
           <IncAndExc tours={tours} />
         </section>
         <section>
-          <VisaAndRefund />
+          <AboutTour tours={tours}/>
         </section>
       </div>
 

@@ -195,7 +195,8 @@ export const tours = {
       {
         name: "regionHistory",
         title: "Region History",
-        type: "text",
+        type: "array",
+        of:[{type:"block"}]
       },
     ],
   };

@@ -52,7 +52,7 @@ const ImageComp = ({ tours }) => {
             width={700}
             height={300}
             className="w-full sm:h-[20rem] md:h-[26rem] lg:h-[26rem] px-2 lg:px-10 lg:rounded-xl object-cover"
-            priority
+            loading="lazy"
           />
         </figure>
 
