@@ -2,19 +2,16 @@ import CallToAction from "../CallToAction";
 import Blogs from "../tourDetailPage/Blogs";
 import RelatedTours from "../tourDetailPage/RelatedTours";
 import BlogContent from "./BlogContent";
-import BlogImage from "./BlogImage";
-import BlogOverview from "./BlogOverview";
+import BlogHeader from "./BlogHeader";
+
 
 const BlogDetailComponent = ({ blogs, relatedTours, relatedBlogs }) => {
   return (
     <div className=" lg:flex lg:flex-row lg:ml-16">
       <div className=" lg:w-[65%] lg:pl-2 lg:ml-8 pb-6 rounded-lg">
-        <section>
-          <BlogImage blogs={blogs} />
-        </section>
-        <section>
-          <BlogOverview blogs={blogs} />
-        </section>
+       <section>
+       <BlogHeader blogs={blogs}/>
+       </section>
         <section>
           <BlogContent blogs={blogs} />
         </section>

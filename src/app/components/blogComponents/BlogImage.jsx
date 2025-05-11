@@ -40,7 +40,7 @@ const BlogImage = ({ blogs }) => {
   return (
     <div className="flex flex-col items-center">
       {/* Banner Image */}
-      <div className="relative w-full flex justify-center items-center mt-10">
+      <div className="relative w-full flex justify-center items-center mt-6">
         {/* Prev Button */}
         <button
           onClick={handlePrev}
@@ -54,7 +54,7 @@ const BlogImage = ({ blogs }) => {
           {blogs.featuredImage && blogs.featuredImage[currentIndex] ? (
             <Image
               src={urlFor(blogs.featuredImage[currentIndex]).url()}
-              alt={blogs.title || "Blog Image"}
+              alt={blogs.title}
               width={700}
               height={300}
               className="w-full sm:h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
@@ -74,7 +74,7 @@ const BlogImage = ({ blogs }) => {
       </div>
 
       {/* Thumbnails */}
-      <div className="flex gap-2 mt-2 overflow-x-auto px-4">
+      {/* <div className="flex gap-2 mt-2 overflow-x-auto px-4">
         {blogs.featuredImage.map((img, index) => (
           <div
             key={index}
@@ -92,7 +92,7 @@ const BlogImage = ({ blogs }) => {
             />
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
