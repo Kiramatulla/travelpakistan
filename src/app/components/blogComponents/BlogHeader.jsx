@@ -12,7 +12,7 @@ const BlogHeader = ({ blogs }) => {
         <div>
           <BlogImage blogs={blogs} />
         </div>
-        <p className="px-8 text-gray-700 py-5 text-base leading-8">
+        <p className="px-6 lg:px-8 text-gray-700 py-5 text-base leading-8">
           {blogs.blogOverview}
         </p>
         <div className="px-8 pb-8 text-sm font-regular text-gray-900 flex">

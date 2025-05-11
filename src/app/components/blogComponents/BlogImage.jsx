@@ -57,7 +57,7 @@ const BlogImage = ({ blogs }) => {
               alt={blogs.title}
               width={700}
               height={300}
-              className="w-full sm:h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
+              className="w-full h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
             />
           ) : (
             <span>Blog Images</span> // You can also use a fallback image here if needed
