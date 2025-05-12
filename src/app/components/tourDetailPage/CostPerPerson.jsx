@@ -31,20 +31,20 @@ const CostPerPerson = ({ tours }) => {
           <tbody>
             <tr className="border-t font-serif text-sm lg:text-xs font-semibold">
               <td className="p-4 ">Standard Package</td>
-              <td className="p-4">$ {tours.International2Persons.toLocaleString()}</td>
-              <td className="p-4">$ {tours.International3Persons.toLocaleString()}</td>
-              <td className="p-4">$ {tours.International4Persons.toLocaleString()}</td>
+              <td className="p-4">$ {tours?.International2Persons ? tours.International2Persons.toLocaleString(): ""}</td>
+              <td className="p-4">$ {tours?.International3Persons ? tours.International3Persons.toLocaleString(): ""}</td>
+              <td className="p-4">$ {tours?.International4Persons ? tours.International4Persons.toLocaleString(): ""}</td>
               <td className="p-4 hidden lg:block">
-                $ {tours.International5Persons.toLocaleString()}
+                $ {tours?.International5Persons ?tours.International5Persons.toLocaleString():""}
               </td>
             </tr>
             <tr className="border-t font-serif text-sm lg:text-xs font-semibold">
               <td className="p-4">Premium Package</td>
-              <td className="p-4">$ {tours.International2PersonsLuxury.toLocaleString()}</td>
-              <td className="p-4">$ {tours.International3PersonsLuxury.toLocaleString()}</td>
-              <td className="p-4">$ {tours.International4PersonsLuxury.toLocaleString()}</td>
+              <td className="p-4">$ {tours?.International2PersonsLuxury?tours.International2PersonsLuxury.toLocaleString():""}</td>
+              <td className="p-4">$ {tours?.International3PersonsLuxury?tours.International3PersonsLuxury.toLocaleString():""}</td>
+              <td className="p-4">$ {tours?.International4PersonsLuxury?tours.International4PersonsLuxury.toLocaleString():""}</td>
               <td className="p-4 hidden lg:block">
-                $ {tours.International5PersonsLuxury.toLocaleString()}
+                $ {tours?.International5PersonsLuxury?tours.International5PersonsLuxury.toLocaleString():""}
               </td>
             </tr>
           </tbody>
@@ -72,20 +72,20 @@ const CostPerPerson = ({ tours }) => {
           <tbody>
             <tr className="border-t font-serif text-sm lg:text-xs font-semibold">
               <td className="p-4">Standard Package</td>
-              <td className="p-4">PKR {tours.Domestic2Persons.toLocaleString()}</td>
-              <td className="p-4">PKR {tours.Domestic3Persons.toLocaleString()}</td>
-              <td className="p-4">PKR {tours.Domestic4Persons.toLocaleString()}</td>
+              <td className="p-4">PKR {tours?.Domestic2Persons?tours.Domestic2Persons.toLocaleString():""}</td>
+              <td className="p-4">PKR {tours?.Domestic3Persons?tours.Domestic3Persons.toLocaleString():""}</td>
+              <td className="p-4">PKR {tours?.Domestic4Persons?tours.Domestic4Persons.toLocaleString():""}</td>
               <td className="p-4 hidden lg:block">
-                PKR {tours.Domestic5Persons.toLocaleString()}
+                PKR {tours?.Domestic5Persons?tours.Domestic5Persons.toLocaleString():""}
               </td>
             </tr>
             <tr className="border-t font-serif text-sm lg:text-xs font-semibold">
               <td className="p-4">Premium Package</td>
-              <td className="p-4">PKR {tours.Domestic2PersonsLuxury.toLocaleString()}</td>
-              <td className="p-4">PKR {tours.Domestic3PersonsLuxury.toLocaleString()}</td>
-              <td className="p-4">PKR {tours.Domestic4PersonsLuxury.toLocaleString()}</td>
+              <td className="p-4">PKR {tours?.Domestic2PersonsLuxury?tours.Domestic2PersonsLuxury.toLocaleString():""}</td>
+              <td className="p-4">PKR {tours?.Domestic3PersonsLuxury?tours.Domestic3PersonsLuxury.toLocaleString():""}</td>
+              <td className="p-4">PKR {tours?.Domestic4PersonsLuxury?tours.Domestic4PersonsLuxury.toLocaleString():""}</td>
               <td className="p-4 hidden lg:block">
-                PKR {tours.Domestic5PersonsLuxury.toLocaleString()}
+                PKR {tours?.Domestic2PersonsLuxury?tours.Domestic5PersonsLuxury.toLocaleString():""}
               </td>
             </tr>
           </tbody>
