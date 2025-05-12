@@ -39,8 +39,8 @@ const SearchItems = ({ results }) => {
                 </td>
                 <td className="p-2">
                   {result._type === "tour"
-                    ? result.tourPriceStandardHotels
-                      ? `$ ${result.tourPriceStandardHotels}`
+                    ? result.International2Persons
+                      ? `$ ${result.International2Persons}`
                       : "N/A"
                     : result.trekPrice
                       ? `$ ${result.trekPrice}`
@@ -48,8 +48,8 @@ const SearchItems = ({ results }) => {
                 </td>
                 <td className="p-2">
                   {result._type === "tour"
-                    ? result.tourPriceBestHotels
-                      ? `$ ${result.tourPriceBestHotels}`
+                    ? result.International2PersonsLuxury
+                      ? `$ ${result.International2PersonsLuxury}`
                       : "N/A"
                     : result.trekPrice1
                       ? `$ ${result.trekPrice1}`

@@ -79,14 +79,8 @@ export const tours = {
       },
       
       {
-        name: "tourPriceBestHotels",
-        title: "Tour Price Best Hotels",
-        type: "number",
-        validation: (Rule) => Rule.min(0),
-      },
-      {
-        name: "tourPriceStandardHotels",
-        title: "Tour Price Standard Hotels",
+        name: "numberOfDays",
+        title: "Number of Days",
         type: "number",
         validation: (Rule) => Rule.min(0),
       },

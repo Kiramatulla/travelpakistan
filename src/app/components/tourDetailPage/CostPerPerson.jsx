@@ -1,10 +1,10 @@
 const CostPerPerson = ({ tours }) => {
   return (
-    <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
+    <section className="mx-6 lg:mx-0 lg:pl-8 lg:pr-8">
       <h2 className="font-bold font-serif text-gray-800 text-xl mb-1">
         Total Cost of {tours.title}{" "}
       </h2>
-      <p className="text-xs mb-4">
+      <p className="text-xs mb-4 mx-2">
         Please note that the price listed below may vary depending on the
         services selected, as client preferences are our top priority. The
         choice of hotels, adding or subtracting tour days and other options may result in slight differences from

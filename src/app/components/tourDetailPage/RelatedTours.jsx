@@ -57,8 +57,8 @@ const RelatedTours = ({ relatedTours }) => {
                     {relatedTour.title}
                   </Link>
                 </td>
-                <td className="p-4">${relatedTour.tourPriceStandardHotels}</td>
-                <td className="p-4">${relatedTour.tourPriceBestHotels}</td>
+                <td className="p-4">${relatedTour.International2Persons}</td>
+                <td className="p-4">${relatedTour.International2PersonsLuxury}</td>
               </tr>
             ))}
           </tbody>
