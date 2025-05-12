@@ -12,8 +12,8 @@ export default async function SearchPage(props) {
     title, 
     slug,
     images,
-    tourPriceStandardHotels,
-    tourPriceBestHotels,
+    International2Persons,
+    International2PersonsLuxury,
     trekPrice,
     trekPrice1 }`
   );
