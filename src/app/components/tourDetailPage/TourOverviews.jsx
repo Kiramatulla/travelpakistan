@@ -37,7 +37,7 @@ const PortableTextComponents = {
 const TourOverviews = ({ tours }) => {
   return (
     <article className="px-6 text-justify lg:text-start mt-8 mb-6 lg:pl-8 lg:pr-8">
-      <h1 className="font-bold text-2xl text-gray-900 font-serif mb-4">
+      <h1 className="font-bold text-2xl text-gray-800 font-serif mb-4">
         {tours.title}
       </h1>
       <section className="font-sans text-black text-justify lg:text-start px-2 lg:px-0 lg:text-sm lg:leading-7">
@@ -48,11 +48,11 @@ const TourOverviews = ({ tours }) => {
       </section>
       <div className="flex gap-1 md:gap-6 text-sm text-green-800 font-sans py-2 text-start">
         <div className="flex items-center justify-center">
-          <GiCommercialAirplane size={28} className="text-cyan-800 " />
-          <span className="font-bold px-2"> Number of Days: </span> 7 Days
+          <LuAlarmClockCheck size={28} className="text-orange-900" />
+          <span className="font-bold px-2"> Number of Days: </span> {tours.numberOfDays}
         </div>
         <div className="flex items-center justify-center">
-          <LuAlarmClockCheck size={28} className="text-cyan-800 " />
+          <GiCommercialAirplane size={28} className="text-orange-700" />
           <span className="font-bold px-2"> Travel Mode: </span> {tours.travelMode}
         </div>
       </div>
