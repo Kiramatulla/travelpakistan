@@ -1,5 +1,7 @@
 import { PortableText } from "next-sanity";
-import { GiCommercialAirplane } from "react-icons/gi";
+import { FaCalendarAlt, FaChild, FaLanguage, FaStar, FaTools } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa6";
+import { GiBinoculars, GiCommercialAirplane } from "react-icons/gi";
 import { LuAlarmClockCheck } from "react-icons/lu";
 
 const PortableTextComponents = {
@@ -46,16 +48,44 @@ const TourOverviews = ({ tours }) => {
           components={PortableTextComponents}
         />
       </section>
-      <div className="flex gap-1 md:gap-6 text-sm text-green-800 font-sans py-2 text-start">
-        <div className="flex items-center justify-center">
-          <LuAlarmClockCheck size={28} className="text-orange-900" />
-          <span className="font-bold px-2"> Number of Days: </span> {tours.numberOfDays}
-        </div>
-        <div className="flex items-center justify-center">
-          <GiCommercialAirplane size={28} className="text-orange-700" />
-          <span className="font-bold px-2"> Travel Mode: </span> {tours.travelMode}
-        </div>
-      </div>
+   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white text-sm font-sans mt-6">
+  {/* Highlights */}
+  <div className="flex items-center gap-3 bg-blue-900/80 p-4 rounded-xl shadow-md">
+    <GiBinoculars size={24} className="text-white" />
+    <div>
+      <p className="text-xs uppercase text-gray-300">Travel Mode</p>
+      <p className="font-semibold">Travel {tours.travelMode}</p>
+    </div>
+  </div>
+
+  {/* Guide Language */}
+  <div className="flex items-center gap-3 bg-blue-900/80 p-4 rounded-xl shadow-md">
+    <FaLanguage size={24} className="text-white" />
+    <div>
+      <p className="text-xs uppercase text-gray-300">Number of Days</p>
+      <p className="font-semibold">Total Days {tours.numberOfDays}</p>
+    </div>
+  </div>
+
+  {/* Family Friendly */}
+  <div className="flex items-center gap-3 bg-blue-900/80 p-4 rounded-xl shadow-md">
+    <FaChild size={24} className="text-white" />
+    <div>
+      <p className="text-xs uppercase text-gray-300">Suitability</p>
+      <p className="font-semibold">Family Friendly</p>
+    </div>
+  </div>
+
+  {/* Customizable */}
+  <div className="flex items-center gap-3 bg-blue-900/80 p-4 rounded-xl shadow-md">
+    <FaTools size={24} className="text-white" />
+    <div>
+      <p className="text-xs uppercase text-gray-300">Custom Option</p>
+      <p className="font-semibold">Itinerary Flexible</p>
+    </div>
+  </div>
+</div>
+
     </article>
   );
 };

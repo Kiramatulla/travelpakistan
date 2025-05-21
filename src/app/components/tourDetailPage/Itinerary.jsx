@@ -7,10 +7,10 @@ const PortableTextComponents = {
       <h1 className="text-4xl font-bold mt-6 mb-2">{children}</h1>
     ),
     h2: ({ children }) => (
-      <h2 className="bg-cyan-600 font-serif text-xl py-4 rounded mb-4 text-white shadow-xl font-bold pl-2 lg:pl-2">{children}</h2>
+      <h2 className="font-serif text-gray-800 underline underline-offset-8 text-xl rounded font-bold pl-2 lg:pl-0">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-lg font-serif text-sky-700	 mt-5 mb-1">{children}</h3>
+      <h3 className="text-base font-serif text-green-900 mt-5 mb-1">{children}</h3>
     ),
     normal: ({ children }) => (
       <div>
