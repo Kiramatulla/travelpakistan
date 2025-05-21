@@ -15,9 +15,9 @@ const Blogs = ({ relatedBlogs }) => {
           className="group transition-all duration-300"
         >
           <Link href={`/blogs/${relatedBlog.slug.current}`}>
-            <article className="bg-gray-200 hover:bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
+            <article className="bg-gray-300 hover:bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
               {/* Blog Title */}
-              <h3 className="text-base lg:text-sm font-serif font-bold text-gray-700 group-hover:text-orange-500">
+              <h3 className="text-base font-semibold text-gray-700">
                 {relatedBlog.title}
               </h3>
 

@@ -14,13 +14,13 @@ const CostPerPerson = ({ tours }) => {
         Price Per Person – International Tourists
       </h2>
 
-      <div className="my-6  bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-        <table className="w-full text-sm font-sans">
+      <div className="my-6  bg-slate-100 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <table className="w-full text-sm font-sans ">
           <caption className="sr-only">
             Pricing details for international tourists based on group size.
           </caption>
           <thead>
-            <tr className="bg-cyan-600 font-serif text-white">
+            <tr className="bg-blue-950 font-serif text-white">
               <th className="p-4 text-left">Package Name</th>
               <th className="p-4 text-left">Cost 2 Persons</th>
               <th className="p-4 text-left">Cost 3 Persons</th>
@@ -28,7 +28,7 @@ const CostPerPerson = ({ tours }) => {
               <th className="hidden lg:block p-4 text-left">Cost 5 Persons</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-gray-400">
             <tr className="border-t font-serif text-sm lg:text-xs font-semibold">
               <td className="p-4 ">Standard Package</td>
               <td className="p-4">$ {tours?.International2Persons ? tours.International2Persons.toLocaleString(): ""}</td>
@@ -55,13 +55,13 @@ const CostPerPerson = ({ tours }) => {
         Price Per Person – Domestic Tourists
       </h2>
 
-      <div className="my-6 bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <div className="my-6 bg-slate-100 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
         <table className="w-full text-sm font-sans">
           <caption className="sr-only">
             Pricing details for domestic tourists based on group size.
           </caption>
           <thead>
-            <tr className="bg-cyan-600 font-serif text-white">
+            <tr className="bg-blue-950 font-serif text-white">
               <th className="p-4 text-left">Package Name</th>
               <th className="p-4 text-left">Cost 2 Persons</th>
               <th className="p-4 text-left">Cost 3 Persons</th>
@@ -69,7 +69,7 @@ const CostPerPerson = ({ tours }) => {
               <th className="p-4 text-left hidden lg:block">Cost 5 Persons</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-gray-400">
             <tr className="border-t font-serif text-sm lg:text-xs font-semibold">
               <td className="p-4">Standard Package</td>
               <td className="p-4">PKR {tours?.Domestic2Persons?tours.Domestic2Persons.toLocaleString():""}</td>

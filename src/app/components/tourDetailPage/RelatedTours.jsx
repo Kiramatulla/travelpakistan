@@ -36,7 +36,7 @@ const RelatedTours = ({ relatedTours }) => {
         <div className="bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <table className="w-full lg:text-sm font-sans">
             <thead>
-              <tr className="bg-cyan-600 text-white font-serif">
+              <tr className="bg-blue-950 text-white font-serif">
                 <th className="p-4 text-left">Tour Name</th>
                 <th className="p-4 text-left">Standard Price</th>
                 <th className="p-4 text-left">Premium Price</th>
@@ -100,10 +100,3 @@ const RelatedTours = ({ relatedTours }) => {
 
 export default RelatedTours;
 
-{
-  /* <td className="p-4 transition-transform hover:scale-95 hover:text-blue-500">
-<Link href={`/tours/${relatedTour.slug.current}`}>
-  {relatedTour.title}
-</Link>
-</td> */
-}

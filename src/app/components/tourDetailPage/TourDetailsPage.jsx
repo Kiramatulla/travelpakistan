@@ -12,9 +12,9 @@ import UserGuide from "./UserGuide";
 
 const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
   return (
-    <div className="lg:flex lg:flex-row lg:ml-16">
+    <div className="lg:flex lg:flex-row lg:ml-16 ">
       {/* Main Tour Content */}
-      <div className="lg:w-[65%] lg:pl-2 lg:ml-8 pb-20 rounded-lg ">
+      <div className="lg:w-[65%] lg:pl-2 lg:ml-8 pb-20 bg-slate-200 rounded-lg ">
         <section>
           <ImageComp tours={tours} />
         </section>
