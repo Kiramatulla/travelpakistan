@@ -34,7 +34,7 @@ const Navbar = () => {
             href="/"
             className="relative h-20 w-32 md:w-24 md:h-16 lg:h-20 lg:w-36"
           >
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Viola Tours</span>
             <Image
               className="absolute inset-y-0 left-0 my-auto "
               src={viola_logo}
