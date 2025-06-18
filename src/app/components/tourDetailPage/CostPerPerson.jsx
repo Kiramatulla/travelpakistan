@@ -1,6 +1,6 @@
 const CostPerPerson = ({ tours }) => {
   return (
-    <section className="mx-6 lg:mx-0 lg:pl-8 lg:pr-8">
+    <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
       <h2 className="font-bold font-serif underline underline-offset-8 text-gray-800 text-xl mb-2">
         Total Cost of {tours.title}{" "}
       </h2>
