@@ -2,10 +2,12 @@ import { TiTick } from "react-icons/ti";
 
 const UserGuide = () => {
   const guidePoints = [
-    "We offer 4 options based on the category of hotel and services: Premium, Mid Range, Standard, and Basic.",
-    "The price mentioned in the 'Price Per Person' section is for Standard Services. For other options, please contact our agents.",
-    "The price per person decreases as the number of participants increases.",
-    "The side section(when viewed on laptop) provides additional information about the regions histroy, culture and top tourist hotspots in the area.",
+    "We offer four pricing options based on the hotel category and included services: Standard, Mid-Range, Luxury, and Premium.",
+    "The prices shown in the cost section represent the Standard and Luxury categories. For Mid-Range and Premium pricing, please contact our support team.",
+    "The per-person price depends on the number of rooms and selected services. Fewer rooms typically result in a lower overall cost, and vice versa.",
+    "Related tours showcase similar travel experiences you might find interesting. Click on any of them to explore more details.",
+    "The side section (visible on laptops) provides helpful insights about the region you are planning to visit. On mobile view you will find it at the bottom.",
+    "Please note that all our tours are private and fully customizable. You are welcome to share your travel plans with us— Its our pleasure to shape the tour around your interests and comfort.",
   ];
 
   return (
