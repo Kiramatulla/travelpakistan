@@ -8,6 +8,7 @@ import { useState } from "react";
 import HunzaDropDown from "./NavbarComponents/HunzaDropDown";
 import CompanyPolicy from "./NavbarComponents/CompanyPolicy";
 import logo from "../assets/logoo.png";
+import viola_logo from "@/app/assets/viola_logo.png";
 
 const Navbar = () => {
   const [showCart, setShowCart] = useState(false);
@@ -20,9 +21,7 @@ const Navbar = () => {
     <header className="relative mt-3 mx-5 lg:mx-20 md:border md:rounded-full md:shadow-2xl md:py-2 lg:py-2 ">
       {/* Background Image */}
       <div className="absolute inset-x-0 top-0 w-full -z-10 translate-y-[-80%]">
-        <Image 
-        src={headerBg} alt="Header Background" 
-        className="w-full" />
+        <Image src={headerBg} alt="Header Background" className="w-full" />
       </div>
 
       <nav
@@ -31,16 +30,18 @@ const Navbar = () => {
       >
         {/* Logo */}
         <div className="flex flex-1 justify-start relative">
-          <Link href="/" className="relative h-20 w-32 md:w-24 md:h-16 lg:h-20 lg:w-32">
+          <Link
+            href="/"
+            className="relative h-20 w-32 md:w-24 md:h-16 lg:h-20 lg:w-36"
+          >
             <span className="sr-only">Your Company</span>
             <Image
               className="absolute inset-y-0 left-0 my-auto "
-              src={logo}
+              src={viola_logo}
               alt="Company Logo"
               width={130}
               height={80}
               priority
-              
             />
           </Link>
         </div>
@@ -70,7 +71,9 @@ const Navbar = () => {
 
         {/* Right Side */}
         <div className="flex flex-1  md:justify-center justify-end items-center gap-6">
-          <span className="hidden md:inline md:text-sm lg:font-semibold ">License No. 000</span>
+          <span className="hidden md:inline md:text-sm lg:font-semibold ">
+            License No. 000
+          </span>
           {/* Hamburger Menu - for Mobile */}
           <button
             className="md:hidden text-black text-2xl p-2"
