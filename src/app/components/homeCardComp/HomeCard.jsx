@@ -13,9 +13,9 @@ const HomeCard = async () => {
         </h1>
         <p className=" text-gray-500 text-center md:mb-10">
           Below are our Pakistan tour packages for 2025, designed for you. We
-          organize tours in Pakistan. Explore the mountains of Hunza Valley, the
-          deserts of Cholistan, and the culture of Lahore.We have a trip that
-          fits your style, budget, and time.
+          organize tours in Pakistan. We help you explore the mountains of Hunza
+          Valley, the deserts of Cholistan, and the culture of Lahore.We have a
+          trip that fits your style, budget, and time.
         </p>
       </header>
 
