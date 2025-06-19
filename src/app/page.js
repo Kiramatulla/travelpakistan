@@ -27,9 +27,6 @@ export default function Home() {
       <section>
         <ServicesOffered />
       </section>
-      <section>
-        <ContactHomeComp/>
-      </section>
   </main>
   );
 }

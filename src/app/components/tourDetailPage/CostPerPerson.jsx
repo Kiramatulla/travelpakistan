@@ -22,10 +22,10 @@ const CostPerPerson = ({ tours }) => {
           <thead>
             <tr className="bg-blue-900/80 font-serif text-white lg:text-center">
               <th className="p-4 text-left">Package Name</th>
-              <th className="p-4 text-left">Cost 2 Persons</th>
-              <th className="p-4 text-left">Cost 3 Persons</th>
-              <th className="p-4 text-left">Cost 4 Persons</th>
-              <th className="hidden lg:block p-4 text-left">Cost 5 Persons</th>
+              <th className="p-4 text-left">Per Person-2</th>
+              <th className="p-4 text-left">Per Person-3</th>
+              <th className="p-4 text-left">Per Person-4</th>
+              <th className="hidden lg:block p-4 text-left">Per Person-5</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-400">
@@ -99,10 +99,10 @@ const CostPerPerson = ({ tours }) => {
           <thead>
             <tr className="bg-blue-900/80 font-serif text-white lg:text-center">
               <th className="p-4 text-left">Package Name</th>
-              <th className="p-4 text-left">Cost 2 Persons</th>
-              <th className="p-4 text-left">Cost 3 Persons</th>
-              <th className="p-4 text-left">Cost 4 Persons</th>
-              <th className="p-4 text-left hidden lg:block">Cost 5 Persons</th>
+              <th className="p-4 text-left">Per Person-2</th>
+              <th className="p-4 text-left">Per Person-3</th>
+              <th className="p-4 text-left">Per Person-4</th>
+              <th className="p-4 text-left hidden lg:block">Per Person-5</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-400">
