@@ -1,4 +1,3 @@
-import ContactHomeComp from "./components/contactComponents/ContactHomeComp";
 import ContactInfo from "./components/ContactInfo";
 import Hero from "./components/Hero";
 import HomeCard from "./components/homeCardComp/HomeCard";
