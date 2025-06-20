@@ -1,13 +1,10 @@
-import { urlFor } from "@/sanity/lib/image"
-import Image from "next/image"
-import Link from "next/link"
+import { urlFor } from "@/sanity/lib/image";
+import Image from "next/image";
+import Link from "next/link";
 
-
-const TrekPagCard =({trek}) => {
-     
+const TrekPagCard = ({ trek }) => {
   return (
-    
-        <Link href={`/trekking/${trek.slug.current}`}>
+    <Link href={`/trekking/${trek.slug.current}`}>
       <article className="flex flex-col justify-center space-y-5 md:flex-row md:space-y-0  mt-7 mb-8">
         <div className="max-w-sm lg:max-w-[300px]">
           <figure>
@@ -20,9 +17,7 @@ const TrekPagCard =({trek}) => {
             />
           </figure>
           <div className="mt-2">
-            <h3 className=" mb-3 font-bold text-center">
-              {trek.title}
-            </h3>
+            <h3 className=" mb-3 font-bold text-center">{trek.title}</h3>
 
             {/* ✅ Limit height & truncate overflow text */}
             <p className="text-sm text-center h-[58px] overflow-hidden ">
@@ -36,8 +31,7 @@ const TrekPagCard =({trek}) => {
         </div>
       </article>
     </Link>
-  
-  )
-}
+  );
+};
 
-export default TrekPagCard
+export default TrekPagCard;

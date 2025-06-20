@@ -2,7 +2,6 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 
-
 const TrekCard = ({ trek }) => {
   return (
     <Link href={`/trekking/${trek.slug.current}`}>
@@ -18,9 +17,7 @@ const TrekCard = ({ trek }) => {
             />
           </div>
           <div className="mt-2">
-            <h3 className=" mb-3 font-bold text-center">
-              {trek.title}
-            </h3>
+            <h3 className=" mb-3 font-bold text-center">{trek.title}</h3>
 
             {/* ✅ Limit height & truncate overflow text */}
             <p className="text-sm text-center  h-[58px] overflow-hidden ">
@@ -38,5 +35,3 @@ const TrekCard = ({ trek }) => {
 };
 
 export default TrekCard;
-
-

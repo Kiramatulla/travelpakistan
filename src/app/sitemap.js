@@ -7,7 +7,7 @@ const sitemap = async () => {
   }`)
 
   const postEntries = posts.map((post) => ({
-    url: `https://www.violatourspk.com///${post.slug.current}`,
+    url: `https://www.violatourspk.com/${post.slug.current}`,
     lastModified: post._createdAt
   }))
 
