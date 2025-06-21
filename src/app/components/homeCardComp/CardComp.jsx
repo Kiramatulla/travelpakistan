@@ -9,7 +9,7 @@ const CardComp = ({ tour }) => {
       href={`/tours/${tour.slug.current}`}
       className="flex justify-center items-center font-sans mb-8"
     >
-      <article className="group w-[18rem] md:w-[16rem] lg:w-[17rem] h-[24rem] bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 border border-gray-200">
+      <article className="w-[18rem] md:w-[16rem] lg:w-[17rem] h-[24rem] bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 border border-gray-200">
         {/* Card Image */}
         <div className="relative w-full h-40">
           <Image
