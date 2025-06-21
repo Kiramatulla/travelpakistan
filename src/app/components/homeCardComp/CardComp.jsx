@@ -21,7 +21,7 @@ const CardComp = ({ tour }) => {
         </div>
 
         {/* Card Content */}
-        <div className="flex flex-col justify-between h-[calc(100%-10rem)] p-4">
+        <div className="flex flex-col justify-between h-[calc(100%-10rem)] p-4 border-2 border-gray-300 border-t-0">
           <div className="flex-1">
             <h3 className="text-base font-bold text-gray-800 mb-2 leading-tight break-words">
               {tour.title}
