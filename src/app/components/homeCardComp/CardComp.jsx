@@ -26,7 +26,7 @@ const CardComp = ({ tour }) => {
             <h3 className="text-base font-bold text-gray-800 mb-2 leading-tight break-words">
               {tour.title}
             </h3>
-            <div className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+            <div className="text-gray-600 text-sm leading-relaxed line-clamp-4">
               <PortableText value={tour.tourOverviews} />
             </div>
           </div>
