@@ -32,7 +32,7 @@ const ContactInfo = () => {
             <IoCallOutline size={28} className="text-teal-600 mt-1" />
             <div>
               <h3 className="text-lg font-semibold mb-1">Call Us</h3>
-              <p className="text-sm text-gray-600">+92 342 5952863</p>
+              <p className="text-sm text-gray-600">+92 341 2141434</p>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ const ContactInfo = () => {
             <MdOutlineEmail size={26} className="text-teal-600 mt-1" />
             <div>
               <h3 className="text-lg font-semibold mb-1">Email Us</h3>
-              <p className="text-sm text-gray-600">violatours@gmail.com</p>
+              <p className="text-sm text-gray-600">info@violatourspk.com</p>
             </div>
           </div>
         </div>
