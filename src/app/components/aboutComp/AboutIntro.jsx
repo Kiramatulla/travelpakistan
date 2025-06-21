@@ -30,8 +30,8 @@ export default function AboutIntro() {
             Gilgit Baltistan particularly from Hunza Valley
           </span>{" "}
           , united by a single purpose: to help people discover the beauty and
-          diversity of Pakistan in the most authentic and meaningful way
-          possible.
+          diversity of Pakistan and specially the Northern Pakistan in the most
+          authentic and meaningful way possible.
         </p>
 
         <p>
