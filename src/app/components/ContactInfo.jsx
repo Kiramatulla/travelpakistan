@@ -17,7 +17,7 @@ const ContactInfo = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-gray-800">
           {/* Card: Visit Us */}
-          <div className="bg-white shadow-lg p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
+          <div className="bg-white shadow-2xl p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
             <CiLocationOn size={32} className="text-teal-600 mt-1" />
             <div>
               <h3 className="text-lg font-semibold mb-1">Visit Us</h3>
@@ -28,7 +28,7 @@ const ContactInfo = () => {
           </div>
 
           {/* Card: Call Us */}
-          <div className="bg-white shadow-lg p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
+          <div className="bg-white shadow-2xl p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
             <IoCallOutline size={28} className="text-teal-600 mt-1" />
             <div>
               <h3 className="text-lg font-semibold mb-1">Call Us</h3>
@@ -37,7 +37,7 @@ const ContactInfo = () => {
           </div>
 
           {/* Card: Working Hours */}
-          <div className="bg-white shadow-lg p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
+          <div className="bg-white shadow-2xl p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
             <GoClock size={28} className="text-teal-600 mt-1" />
             <div>
               <h3 className="text-lg font-semibold mb-1">Working Hours</h3>
@@ -46,7 +46,7 @@ const ContactInfo = () => {
           </div>
 
           {/* Card: Email Us */}
-          <div className="bg-white shadow-lg p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
+          <div className="bg-white shadow-2xl p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
             <MdOutlineEmail size={26} className="text-teal-600 mt-1" />
             <div>
               <h3 className="text-lg font-semibold mb-1">Email Us</h3>
