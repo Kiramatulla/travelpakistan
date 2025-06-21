@@ -52,7 +52,7 @@ export default function AboutPage() {
         </p>
         <ul className="space-y-6 text-gray-700">
           <li className="flex items-start gap-4">
-            <FaUsers className="text-teal-600 text-xl mt-1" />
+            <FaUsers size={36} className="text-teal-600 text-xl mt-1" />
             <div>
               <p className="font-semibold text-gray-800">Group Tours</p>
               <p className="text-sm text-gray-600">
@@ -63,7 +63,7 @@ export default function AboutPage() {
           </li>
 
           <li className="flex items-start gap-4">
-            <FaMapMarkedAlt className="text-teal-600 text-xl mt-1" />
+            <FaMapMarkedAlt size={36} className="text-teal-600 text-xl mt-1" />
             <div>
               <p className="font-semibold text-gray-800">Private Itineraries</p>
               <p className="text-sm text-gray-600">
@@ -74,7 +74,7 @@ export default function AboutPage() {
           </li>
 
           <li className="flex items-start gap-4">
-            <FaHiking className="text-teal-600 text-xl mt-1" />
+            <FaHiking size={36} className="text-teal-600 text-xl mt-1" />
             <div>
               <p className="font-semibold text-gray-800">Trekking Adventures</p>
               <p className="text-sm text-gray-600">
@@ -85,7 +85,7 @@ export default function AboutPage() {
           </li>
 
           <li className="flex items-start gap-4">
-            <FaLandmark className="text-teal-600 text-xl mt-1" />
+            <FaLandmark size={36} className="text-teal-600 text-xl mt-1" />
             <div>
               <p className="font-semibold text-gray-800">Cultural Trips</p>
               <p className="text-sm text-gray-600">
@@ -96,7 +96,10 @@ export default function AboutPage() {
           </li>
 
           <li className="flex items-start gap-4">
-            <FaChalkboardTeacher className="text-teal-600 text-xl mt-1" />
+            <FaChalkboardTeacher
+              size={36}
+              className="text-teal-600 text-xl mt-1"
+            />
             <div>
               <p className="font-semibold text-gray-800">
                 Corporate & Educational
