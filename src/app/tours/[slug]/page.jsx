@@ -33,11 +33,11 @@ export async function generateMetadata(props) {
           url: urlFor(tour.images && tour.images[0]).url(),
         },
       ],
-    }
+    },
   };
 }
 
-const page = async props => {
+const page = async (props) => {
   const params = await props.params;
   const query = `*[_type == "tour" && slug.current == '${params.slug}'][0]`;
   const tours = await client.fetch(query);
