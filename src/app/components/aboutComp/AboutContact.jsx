@@ -19,6 +19,7 @@ export default function TravelTogetherSection() {
           <div className="mt-8 space-y-4">
             <div className="flex items-center gap-4">
               <FaPhoneAlt className="text-teal-600 text-xl" />
+              Phone:
               <span className="text-gray-800 font-medium">+92 341 2141434</span>
             </div>
             <div className="flex items-center gap-4">
