@@ -31,6 +31,12 @@ export default function TravelTogetherSection() {
               </span>
             </div>
             <div className="flex items-center gap-4">
+              <FaEnvelope className="text-teal-600 text-xl" />
+              <span className="text-gray-800 font-medium">
+                karim@violatourspk.com
+              </span>
+            </div>
+            <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-teal-600 text-xl" />
               <span className="text-gray-800 font-medium">
                 Islamabad, Pakistan
