@@ -39,7 +39,7 @@ export default function TravelTogetherSection() {
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-teal-600 text-xl" />
               <span className="text-gray-800 font-medium">
-                Islamabad, Pakistan
+                Gilgit Baltistan Pakistan
               </span>
             </div>
           </div>
