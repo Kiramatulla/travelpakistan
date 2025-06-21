@@ -28,7 +28,7 @@ export const tours = {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "Metadescription",
+      name: "metaDescription",
       title: "Meta Description",
       type: "text",
       description:
