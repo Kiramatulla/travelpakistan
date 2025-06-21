@@ -24,8 +24,13 @@ export default function AboutIntro() {
           <span className="font-semibold text-black">Who We Are</span>
           <br />
           We&apos;re a passionate team of explorers, storytellers, and culture
-          lovers, united by a single purpose: to help people discover the beauty
-          and diversity of Pakistan in the most authentic and meaningful way
+          lovers from{" "}
+          <span className="text-orange-600 font-semibold">
+            {" "}
+            Gilgit Baltistan particularly from Hunza Valley
+          </span>{" "}
+          , united by a single purpose: to help people discover the beauty and
+          diversity of Pakistan in the most authentic and meaningful way
           possible.
         </p>
 
