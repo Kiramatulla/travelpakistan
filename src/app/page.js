@@ -5,6 +5,11 @@ import ServicesOffered from "./components/homeServiceComp/ServicesOffered";
 import TrekCardDetails from "./components/trekingComponents/TrekCardDetails";
 import VehicleCard from "./components/vehicleComponent/VehicleCard";
 
+export const metadata = {
+  title: "Viola Tours Pakistan",
+  description: "Top Pakistan tour packages to Hunza, Skardu, Fairy Meadows & more.",
+};
+
 export default function Home() {
   return (
   <main>
