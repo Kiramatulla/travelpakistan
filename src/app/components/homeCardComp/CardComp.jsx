@@ -1,52 +1,46 @@
-import { urlFor } from '@/sanity/lib/image'
-import { PortableText } from 'next-sanity'
-import Image from 'next/image'
-import Link from 'next/link'
+import { urlFor } from "@/sanity/lib/image";
+import { PortableText } from "next-sanity";
+import Image from "next/image";
+import Link from "next/link";
 
-
-const CardComp = ({tour}) => {
+const CardComp = ({ tour }) => {
   return (
     <Link
-    href={`/tours/${tour.slug.current}`}
-    className="flex justify-center items-center font-sans mb-10"
-  >
-    <article className="max-w-[700px] mx-auto transition-transform hover:scale-105">
-      <div className="relative flex flex-col mt-6 text-gray-700 bg-slate-50 border-4 border-b-8 border-slate-300 shadow-2xl bg-clip-border rounded-xl w-[19rem] md:w-[15rem] lg:w-[17rem] h-[26rem] lg:h-[26rem]">
+      href={`/tours/${tour.slug.current}`}
+      className="flex justify-center items-center font-sans mb-8"
+    >
+      <article className="group w-[18rem] md:w-[16rem] lg:w-[17rem] h-[24rem] bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 border border-gray-200">
         {/* Card Image */}
-        <figure className="relative h-48 mx-2 -mt-6 overflow-hidden shadow-lg bg-clip-border rounded-xl">
+        <div className="relative w-full h-40">
           <Image
             src={urlFor(tour.images && tour.images[0]).url()}
-            alt={tour.title || "tour Images"}
-            width={300}
-            height={300}
-            className="shadow-2xl object-cover w-full h-full"
-            priority={false} // Prevents unnecessary preloading
+            alt={tour.title || "Tour Image"}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-110 rounded-t-xl"
           />
-        </figure>
-
-        {/* Card Content */}
-        <div className="p-4 flex-1 overflow-hidden">
-          <header>
-            <h5 className="mb-2 font-bold ">{tour.title}</h5>
-          </header>
-          <section className="font-sans overflow-hidden text-sm">
-            <PortableText value={tour.tourOverviews} />
-          </section>
         </div>
 
-        {/* Read More Button */}
-        <footer className="p-6 pt-0 flex items-center justify-center">
-          <button
-            className="font-sans font-bold text-xs py-2 mt-2 px-4 rounded-lg bg-cyan-600 text-white hover:text-orange-500 shadow-md hover:shadow-lg"
-            type="button"
-          >
-            Read More
-          </button>
-        </footer>
-      </div>
-    </article>
-  </Link>
-  )
-}
+        {/* Card Content */}
+        <div className="flex flex-col justify-between h-[calc(100%-10rem)] p-4">
+          <div className="flex-1">
+            <h3 className="text-base font-bold text-gray-800 mb-2 leading-tight break-words">
+              {tour.title}
+            </h3>
+            <div className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+              <PortableText value={tour.tourOverviews} />
+            </div>
+          </div>
 
-export default CardComp
+          {/* Read More Button */}
+          <div className="mt-4 flex justify-center">
+            <span className="inline-block text-xs font-semibold text-white bg-teal-600 px-4 py-2 rounded-md hover:bg-orange-500 transition-all duration-300 shadow">
+              Read More
+            </span>
+          </div>
+        </div>
+      </article>
+    </Link>
+  );
+};
+
+export default CardComp;

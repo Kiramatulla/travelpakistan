@@ -1,56 +1,61 @@
-import {CiLocationOn} from "react-icons/ci"
+import { CiLocationOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
-import {GoClock} from "react-icons/go"
+import { GoClock } from "react-icons/go";
 import { MdOutlineEmail } from "react-icons/md";
 
-export const metadata ={
-  title:"Contact Us",
-}
+export const metadata = {
+  title: "Contact Us",
+};
 
 const ContactInfo = () => {
   return (
-    <div className="font-sans border-t md:mt-12 lg:mt-20 border-b-2  py-6  lg:mx-28  lg:mb-10 md:border-t-0 md:rounded-full md:border-8 border-[#3f9fac] md:shadow-2xl ">
-      
-      <div className="text-sm container grid grid-cols-2 gap-y-6 md:grid-cols-4  lg:pl-10 text-gray-800">
-        {/* Visit Us */}
-        <div className="flex items-center space-x-1">
-          <CiLocationOn size={34} className="text-gray-600" />
-          <div>
-            <h3 className="font-semibold ">Visit Us</h3>
-            <p className="lg:first-line:text-sm text-gray-500">
-              Noor Plaza, Near Serena Gilgit
-            </p>
-          </div>
-        </div>
+    <section className="font-sans py-10 bg-gradient-to-br from-blue-50 via-white to-teal-100">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+          Get in Touch
+        </h2>
 
-        {/* Call Us */}
-        <div className="flex items-center space-x-1">
-          <IoCallOutline size={28} className="text-gray-600" />
-          <div>
-            <h3 className="font-semibold">Call Us</h3>
-            <p className="text-sm text-gray-500">+92 342 5952863</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-gray-800">
+          {/* Card: Visit Us */}
+          <div className="bg-white shadow-lg p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
+            <CiLocationOn size={32} className="text-teal-600 mt-1" />
+            <div>
+              <h3 className="text-lg font-semibold mb-1">Visit Us</h3>
+              <p className="text-sm text-gray-600">
+                Noor Plaza, Near Serena Hotel, Gilgit
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Working Hours */}
-        <div className="flex items-center space-x-1">
-          <GoClock size={28} className="text-gray-600" />
-          <div>
-            <h3 className="font-semibold">Working Hours</h3>
-            <p className="text-sm text-gray-500">24/7 Customer Services</p>
+          {/* Card: Call Us */}
+          <div className="bg-white shadow-lg p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
+            <IoCallOutline size={28} className="text-teal-600 mt-1" />
+            <div>
+              <h3 className="text-lg font-semibold mb-1">Call Us</h3>
+              <p className="text-sm text-gray-600">+92 342 5952863</p>
+            </div>
           </div>
-        </div>
 
-        {/* Email Us */}
-        <div className="flex items-center space-x-1">
-          <MdOutlineEmail size={26} className="text-gray-600" />
-          <div>
-            <h3 className="font-semibold">Email Us</h3>
-            <p className="text-sm text-gray-500">violatours@gmail.com</p>
+          {/* Card: Working Hours */}
+          <div className="bg-white shadow-lg p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
+            <GoClock size={28} className="text-teal-600 mt-1" />
+            <div>
+              <h3 className="text-lg font-semibold mb-1">Working Hours</h3>
+              <p className="text-sm text-gray-600">24/7 Customer Support</p>
+            </div>
+          </div>
+
+          {/* Card: Email Us */}
+          <div className="bg-white shadow-lg p-6 rounded-xl flex items-start space-x-4 hover:shadow-xl transition">
+            <MdOutlineEmail size={26} className="text-teal-600 mt-1" />
+            <div>
+              <h3 className="text-lg font-semibold mb-1">Email Us</h3>
+              <p className="text-sm text-gray-600">violatours@gmail.com</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
