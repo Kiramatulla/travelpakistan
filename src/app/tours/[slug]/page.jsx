@@ -19,14 +19,14 @@ export async function generateMetadata(props) {
   const params = await props.params;
   const query = `*[_type == "tour" && slug.current == $slug][0]{
     metaTitle,
-    Metadescription,
+    metaDescription,
     images
   }`;
   const tour = await client.fetch(query, { slug: params.slug });
 
   return {
     title: tour.metaTitle,
-    description: tour.Metadescription,
+    description: tour.metaDescription,
     openGraph: {
       images: [
         {
