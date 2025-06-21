@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand / Contact Info */}
           <div>
             <h3 className="text-xl font-bold text-teal-600 mb-4">
-              Travel Pakistan
+              Viola Tours Pakisan
             </h3>
             <p className="text-sm leading-relaxed mb-4">
               Bringing you the best of Pakistans beauty — from Skardu valleys to
