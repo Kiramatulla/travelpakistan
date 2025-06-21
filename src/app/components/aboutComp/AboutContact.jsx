@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function TravelTogetherSection() {
@@ -44,9 +45,12 @@ export default function TravelTogetherSection() {
             </div>
           </div>
 
-          <button className="mt-6 inline-block bg-teal-600 hover:bg-teal-700 text-white font-medium px-6 py-3 rounded-full shadow-md transition duration-300">
+          <Link
+            href="/contact"
+            className="mt-6 inline-block bg-teal-600 hover:bg-teal-700 text-white font-medium px-6 py-3 rounded-full shadow-md transition duration-300"
+          >
             Plan Your Trip
-          </button>
+          </Link>
         </div>
 
         {/* RIGHT: DECORATIVE CARD */}
