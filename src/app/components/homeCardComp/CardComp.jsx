@@ -16,7 +16,7 @@ const CardComp = ({ tour }) => {
             src={urlFor(tour.images && tour.images[0]).url()}
             alt={tour.title || "Tour Image"}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110 rounded-t-xl"
+            className="object-cover rounded-t-xl"
           />
         </div>
 
