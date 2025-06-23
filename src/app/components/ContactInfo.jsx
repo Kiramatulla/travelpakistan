@@ -9,7 +9,7 @@ export const metadata = {
 
 const ContactInfo = () => {
   return (
-    <section className="font-sans py-10 bg-gradient-to-br from-blue-50 via-white to-teal-100">
+    <section className="font-sans py-10 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
           Get in Touch
