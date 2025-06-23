@@ -9,12 +9,11 @@ import RelatedTours from "./RelatedTours";
 import TourOverviews from "./TourOverviews";
 import UserGuide from "./UserGuide";
 
-
 const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
   return (
     <div className="lg:flex lg:flex-row lg:ml-16 ">
       {/* Main Tour Content */}
-      <div className="lg:w-[65%] lg:pl-2 lg:ml-8 pb-20 rounded-lg ">
+      <div className="lg:w-[65%] lg:pl-2 lg:ml-8 pb-20 rounded-lg bg-gradient-to-br from-blue-50 to-white">
         <section>
           <ImageComp tours={tours} />
         </section>
@@ -22,7 +21,7 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
           <OverView tours={tours} />
         </section> */}
         <section>
-          <TourOverviews tours={tours}/>
+          <TourOverviews tours={tours} />
         </section>
         <section>
           <CostPerPerson tours={tours} />
@@ -37,7 +36,7 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
           <IncAndExc tours={tours} />
         </section>
         <section>
-          <AboutTour tours={tours}/>
+          <AboutTour tours={tours} />
         </section>
       </div>
 
