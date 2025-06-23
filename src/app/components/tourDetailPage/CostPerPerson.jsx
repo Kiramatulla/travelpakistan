@@ -14,7 +14,7 @@ const CostPerPerson = ({ tours }) => {
         Price Per Person – International Tourists
       </h2>
 
-      <div className="my-6  bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <div className="my-6 bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
         <table className="w-full text-sm font-sans ">
           <caption className="sr-only">
             Pricing details for international tourists based on group size.
@@ -91,7 +91,7 @@ const CostPerPerson = ({ tours }) => {
         Price Per Person – Domestic Tourists
       </h2>
 
-      <div className="my-6 bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <div className="my-6 bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
         <table className="w-full text-sm font-sans">
           <caption className="sr-only">
             Pricing details for domestic tourists based on group size.

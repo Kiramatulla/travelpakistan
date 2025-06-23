@@ -11,7 +11,7 @@ const UserGuide = () => {
   ];
 
   return (
-    <div className="hidden md:block bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm space-y-4 mb-8 font-sans">
+    <div className="hidden md:block bg-gradient-to-br from-slate-200 to-white border border-gray-200 rounded-2xl p-6 shadow-sm space-y-4 mb-8 font-sans">
       <h3 className="text-xl font-semibold text-center underline decoration-2 underline-offset-4 text-gray-700">
         User Guide
       </h3>

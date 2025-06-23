@@ -33,7 +33,7 @@ const RelatedTours = ({ relatedTours }) => {
           {title}
         </h3>
 
-        <div className="bg-slate-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <table className="w-full lg:text-sm font-sans">
             <thead>
               <tr className="bg-blue-900/90 text-white font-serif">
@@ -48,7 +48,7 @@ const RelatedTours = ({ relatedTours }) => {
                   key={tour._id}
                   className="border-t text-xs font-semibold border-b border-slate-300"
                 >
-                  <td className="p-2 transition-transform hover:scale-95 text-blue-950 hover:text-blue-500">
+                  <td className="p-2 transition-transform hover:scale-95 text-orange-800 hover:text-blue-500">
                     <Link
                       href={`/tours/${tour.slug.current}`}
                       className="flex items-center"
@@ -60,11 +60,10 @@ const RelatedTours = ({ relatedTours }) => {
                         height={300}
                         className="hidden md:block md:w-16 md:h-12 md:object-cover md:rounded-md mr-4"
                       />
-                    {tour.title} ({tour.numberOfDays}-days)
-                     
+                      {tour.title} ({tour.numberOfDays}-days)
                     </Link>
                   </td>
-                  <td className="p-4">$ {tour.International2Persons}</td>
+                  <td className="p-4 ">$ {tour.International2Persons}</td>
                   <td className="p-4">$ {tour.International2PersonsLuxury}</td>
                 </tr>
               ))}
@@ -100,4 +99,3 @@ const RelatedTours = ({ relatedTours }) => {
 };
 
 export default RelatedTours;
-
