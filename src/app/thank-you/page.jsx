@@ -1,19 +1,20 @@
 import Image from "next/image";
-import notfound from "../app/assets/notfound.jpg";
+import notfound from "@/app/assets/thankyou.jpg";
 import Link from "next/link";
 
 const thankYou = () => {
   return (
-    <div className="h-screen  flex items-center">
+    <div className="h-screen  flex items-center bg-gradient-to-br from-blue-50 to-white">
       <div className="container flex flex-col md:flex-row items-center justify-center px-5 text-gray-700">
         <div className="max-w-md">
-          <div className="text-5xl font-dark font-bold">404</div>
+          <div className="text-5xl font-dark font-bold mb-4">Thank You</div>
           <p className="text-2xl md:text-3xl font-light leading-normal">
-            Thank You for Submitting the Form.{" "}
-          </p>
-          <p className="mb-8">
             One of our Tour Planner will get back to you with a detailed trip
             plan.
+          </p>
+          <p className="mt-8 mb-4">
+            Mean while visit our home page and explore more tours about Pakistan
+            below.
           </p>
 
           <Link
@@ -27,7 +28,7 @@ const thankYou = () => {
           <Image
             src={notfound}
             alt="not found image"
-            width={300}
+            width={400}
             height={300}
           />
         </div>
