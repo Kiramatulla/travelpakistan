@@ -1,30 +1,4 @@
-"use client";
-
-import { useState } from "react";
-
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    whatsapp: "",
-    country: "",
-    people: "",
-    days: "",
-    location: "",
-    startDate: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    alert("Form submitted!");
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center justify-center px-4 py-16">
       <div className="w-full max-w-5xl">
@@ -59,7 +33,20 @@ export default function ContactForm() {
           </div>
 
           {/* Right Side - Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            action="https://formsubmit.co/violatours.pk@gmail.com"
+            method="POST"
+            className="space-y-6"
+          >
+            {/* Hidden fields for FormSubmit options (optional) */}
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://www.violatourspk.com/thank-you"
+            />
+
             {[
               {
                 label: "Your Name",
@@ -122,8 +109,6 @@ export default function ContactForm() {
                   name={field.name}
                   id={field.name}
                   required={field.required}
-                  value={formData[field.name]}
-                  onChange={handleChange}
                   className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-800 focus:ring-2 focus:ring-teal-500 focus:outline-none text-base"
                 />
               </div>
@@ -142,8 +127,6 @@ export default function ContactForm() {
                 id="message"
                 rows={5}
                 required
-                value={formData.message}
-                onChange={handleChange}
                 className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-800 focus:ring-2 focus:ring-teal-500 focus:outline-none text-base resize-none"
               ></textarea>
             </div>
