@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.4",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.83.0",
     "@sanity/webhook": "^4.0.4",
-    "next": "15.3.1",
+    "next": "^15.3.4",
     "next-sanity": "^9.9.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
