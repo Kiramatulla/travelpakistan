@@ -34,7 +34,7 @@ const ContactInfo = () => {
             <IoCallOutline size={28} className="text-teal-600 mt-1" />
             <div>
               <h3 className="text-lg font-semibold mb-1 md:text-center lg:text-start">
-                Call Us
+                Call and WhatsApp
               </h3>
               <p className="text-sm text-gray-600 md:text-center lg:text-start">
                 +92 341 2141434
