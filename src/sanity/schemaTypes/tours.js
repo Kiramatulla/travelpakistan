@@ -201,12 +201,6 @@ export const tours = {
       validation: (Rule) => Rule.min(0),
     },
     {
-      name: "inclusionExclusion",
-      title: "Inclusion & Exclusion",
-      type: "array",
-      of: [{ type: "block" }],
-    },
-    {
       name: "regionHistory",
       title: "Region History",
       type: "array",

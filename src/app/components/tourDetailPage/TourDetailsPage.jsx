@@ -3,7 +3,6 @@ import AboutTour from "./AboutTour";
 import Blogs from "./Blogs";
 import CostPerPerson from "./CostPerPerson";
 import ImageComp from "./ImageComp";
-import IncAndExc from "./IncAndExc";
 import Itinerary from "./Itinerary";
 import RelatedTours from "./RelatedTours";
 import TourOverviews from "./TourOverviews";
@@ -32,9 +31,9 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         <section>
           <Itinerary tours={tours} />
         </section>
-        <section>
+        {/* <section>
           <IncAndExc tours={tours} />
-        </section>
+        </section> */}
         <section>
           <AboutTour tours={tours} />
         </section>
