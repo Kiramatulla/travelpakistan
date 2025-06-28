@@ -13,18 +13,18 @@ const ServicesOffered = () => {
           </h2>
           <p className="text-gray-600 text-base">
             From visa documentation and reliable guides to comfortable
-            accommodation and transport — we’ve got it all covered.
+            accommodation and transport — we have got it all covered.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="bg-white pb-24 px-4 font-sans">
-        <div className="max-w-6xl mx-auto grid gap-12 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        <div className="max-w-6xl mx-auto gap-y-20 grid gap-12 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
           {/* Card 1 */}
           <div className="relative bg-white shadow-xl rounded-xl pt-16 pb-8 px-6 text-center hover:shadow-2xl transition">
             <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
-              <div className="w-24 h-24 rounded-full bg-teal-600 flex items-center justify-center shadow-lg">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-teal-600 flex items-center justify-center shadow-lg">
                 <FaCcVisa size={48} className="text-white" />
               </div>
             </div>
@@ -41,7 +41,7 @@ const ServicesOffered = () => {
           {/* Card 2 */}
           <div className="relative bg-white shadow-xl rounded-xl pt-16 pb-8 px-6 text-center hover:shadow-2xl transition">
             <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
-              <div className="w-24 h-24 rounded-full bg-teal-600 flex items-center justify-center shadow-lg">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-teal-600 flex items-center justify-center shadow-lg">
                 <MdOutlineEmojiTransportation
                   size={48}
                   className="text-white"
@@ -61,7 +61,7 @@ const ServicesOffered = () => {
           {/* Card 3 */}
           <div className="relative bg-white shadow-xl rounded-xl pt-16 pb-8 px-6 text-center hover:shadow-2xl transition">
             <div className="absolute -top-12 left-1/2 transform -translate-x-1/2">
-              <div className="w-24 h-24 rounded-full bg-teal-600 flex items-center justify-center shadow-lg">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-teal-600 flex items-center justify-center shadow-lg">
                 <FaMapMarkedAlt size={48} className="text-white" />
               </div>
             </div>

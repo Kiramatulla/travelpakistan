@@ -1,26 +1,23 @@
-import {IoSearchOutline} from "react-icons/io5"
+import { IoSearchOutline } from "react-icons/io5";
 
 const SearchForm = () => {
   return (
     <form
       action="/search"
-      method="GET" // Redirects to /search?query=your-search-term
-      className="flex items-center md:space-x-24 bg-white rounded-full shadow-lg overflow-hidden"
+      method="GET"
+      className="flex items-center space-x-4 border-2 bg-white rounded-full shadow-lg overflow-hidden w-full max-w-md mx-auto"
     >
       <input
         type="text"
         name="query"
-        placeholder="Search Destinations, Tours or Activities..."
-        className="flex-grow  py-8 text-black outline-none pl-4"
+        placeholder="Search..."
+        className="py-3 px-4 md:py-6 md:px-4 text-black outline-none w-full"
       />
-      <button
-        type="submit"
-        className="text-black pr-4 py-2 rounded-full"
-      >
-        <IoSearchOutline size={30} />
+      <button type="submit" className="text-black pr-4 py-2 rounded-full">
+        <IoSearchOutline size={20} />
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default SearchForm
+export default SearchForm;
