@@ -24,7 +24,7 @@ const ContactInfo = () => {
                 Visit Us
               </h3>
               <p className="text-sm text-gray-600 md:text-center lg:text-start">
-                Noor Plaza, Near Serena Hotel, Gilgit
+                Gulmit Gojal Hunza, 56000, Pakistan
               </p>
             </div>
           </div>
