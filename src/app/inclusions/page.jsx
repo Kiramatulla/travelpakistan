@@ -98,7 +98,7 @@ export const tourCategories = [
         icon: <FaBus size={36} />,
         heading: "Transportation including Vehicle Fuel",
         paragraph:
-          "The cost includes air-conditioned vehicle including fuel cost. Our vehicles are cars, Parado, Grand Cabin and 4x4 Jeeps .",
+          "The cost includes air-conditioned vehicle with fuel cost. The vehicles we offer are cars, Parado, Grand Cabin and 4x4 Jeeps .",
       },
       {
         icon: <FaHotel size={36} />,
@@ -110,7 +110,7 @@ export const tourCategories = [
         icon: <FaMoneyBillAlt size={36} />,
         heading: "Forts, National Parks and Site Tickets",
         paragraph:
-          "For our International Tourist, each tour cost also includes fort tickets, national park tickets and other tourist site tickets as well.",
+          "For our International Tourist, each tour cost also includes fort tickets, national park tickets and other tourist site entry fees as well.",
       },
       {
         icon: <FaUtensils size={36} />,
@@ -128,13 +128,13 @@ export const tourCategories = [
         icon: <FaMapMarkedAlt size={36} />,
         heading: "Experienced Local Guide and Driver",
         paragraph:
-          "For the tour we hire local guide and driver, who knows the area well. This service is also included..",
+          "A local guide and driver, who know the area inside out, are part of your tour—this service is included.",
       },
       {
         icon: <FaPassport size={36} />,
         heading: "Visa Assistance",
         paragraph:
-          "Full documentation for visa application will be provided including invitation letter and itinerary on companys letterhead.",
+          "Full documentation for visa application will be provided including invitation letter and itinerary on companies letterhead.",
       },
     ],
     exclusions: [

@@ -46,7 +46,7 @@ const IncAndExc = ({ tourCategories }) => {
       </div>
 
       {/* Inclusions & Exclusions */}
-      <div className="flex flex-col md:flex-row gap-12">
+      <div className="flex flex-col md:flex-row gap-12 mb-16">
         {/* Inclusions */}
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
