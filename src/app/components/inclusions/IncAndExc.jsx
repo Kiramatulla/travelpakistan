@@ -13,7 +13,7 @@ const IncAndExc = ({ tourCategories }) => {
   return (
     <section className="p-6 max-w-6xl mx-auto md:mx-40">
       <h1 className="text-4xl md:text-4xl mt-8 font-bold text-black mb-10">
-        SERVICES INCLUDED AND EXCLUEDED .
+        SERVICES INCLUDED AND EXCLUDED .
       </h1>
       <div className="space-y-8 mb-10 text-gray-700 max-w-4xl leading-relaxed text-justify">
         <p className="">
