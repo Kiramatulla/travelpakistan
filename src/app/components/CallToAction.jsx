@@ -7,7 +7,8 @@ const CallToAction = () => {
     <aside className="font-sans bg-gradient-to-r from-cyan-600 to-blue-500 text-white rounded-2xl p-6 shadow-lg space-y-4 mb-8">
       <h2 className="text-xl font-bold text-center">Need Help Planning?</h2>
       <p className="text-sm text-center">
-        Reach out to our travel experts for custom itineraries, group deals, and more.
+        Reach out to our travel experts for custom itineraries, group deals, and
+        more.
       </p>
 
       <div className="space-y-3">
@@ -20,11 +21,11 @@ const CallToAction = () => {
 
         <div className="text-sm flex items-center gap-2 justify-center">
           <FaPhoneAlt className="text-white" />
-          <span>+92 300 1234567</span>
+          <span>+92 341 2141434</span>
         </div>
         <div className="text-sm flex items-center gap-2 justify-center">
           <MdOutlineMailOutline className="text-white text-lg" />
-          <span>info@yourtour.com</span>
+          <span>info@violatourspk.com</span>
         </div>
       </div>
     </aside>
