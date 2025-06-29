@@ -46,19 +46,21 @@ const IncAndExc = ({ tourCategories }) => {
       </div>
 
       {/* Inclusions & Exclusions */}
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col md:flex-row gap-12">
         {/* Inclusions */}
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             INCLUSIONS
           </h2>
           <p className="text-gray-600">
-            We offer a wide range of travel services and experiences, including:
+            We offer a wide range of travel services and experiences:
           </p>
           <ul className="space-y-6 text-gray-700">
             {selectedCategory?.inclusions?.map((item, idx) => (
               <li key={idx} className="flex items-start gap-4">
-                <div className="text-teal-600 mt-1 text-xl">{item.icon}</div>
+                <div className="bg-teal-100 text-teal-600 p-2 rounded-full mt-1 text-xl">
+                  {item.icon}
+                </div>
                 <div>
                   <p className="font-semibold text-gray-800">{item.heading}</p>
                   <p className="text-sm text-gray-600">{item.paragraph}</p>
@@ -79,7 +81,9 @@ const IncAndExc = ({ tourCategories }) => {
           <ul className="space-y-6 text-gray-700">
             {selectedCategory?.exclusions?.map((item, idx) => (
               <li key={idx} className="flex items-start gap-4">
-                <div className="text-teal-600 mt-1 text-xl">{item.icon}</div>
+                <div className="bg-rose-100 text-rose-600 p-2 rounded-full mt-1 text-xl">
+                  {item.icon}
+                </div>
                 <div>
                   <p className="font-semibold text-gray-800">{item.heading}</p>
                   <p className="text-sm text-gray-600">{item.paragraph}</p>
