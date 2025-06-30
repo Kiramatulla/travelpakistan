@@ -1,15 +1,20 @@
+import { AiFillInfoCircle } from "react-icons/ai";
+
 const CostPerPerson = ({ tours }) => {
   return (
     <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
       <h2 className="font-bold font-serif underline underline-offset-8 text-gray-800 text-xl mb-2">
         Total Cost of {tours.title}{" "}
       </h2>
-      <p className="text-xs mb-4 mx-2">
-        Please note that the price listed below may vary depending on the
-        services selected, as client preferences are our top priority. The
-        choice of hotels, adding or subtracting tour days and other options may
-        result in slight differences from the displayed price.
-      </p>
+      <div className="flex">
+        <AiFillInfoCircle size={30} className="text-rose-600" />
+        <p className="text-xs mb-4 mx-2">
+          Please note that the price listed below may vary depending on the
+          services selected, as client preferences are our top priority. The
+          choice of hotels, adding or subtracting tour days and other options
+          may result in slight differences from the displayed price.
+        </p>
+      </div>
       <h2 className=" font-semibold text-gray-800 mb-2 underline underline-offset-4">
         Price Per Person – International Tourists
       </h2>
