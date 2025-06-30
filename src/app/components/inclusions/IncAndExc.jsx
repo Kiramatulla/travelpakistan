@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 const IncAndExc = ({ tourCategories }) => {
-  const [selectedId, setSelectedId] = useState("Domestic");
+  const [selectedId, setSelectedId] = useState("Domestic Guests");
 
   const selectedCategory = tourCategories.find(
     (item) => item.id === selectedId

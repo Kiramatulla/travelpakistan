@@ -8,7 +8,7 @@ import { AiFillInfoCircle } from "react-icons/ai";
 const selectedTourType = "Domestic";
 
 const Inclusions = () => {
-  const [selectedId, setSelectedId] = useState("Domestic");
+  const [selectedId, setSelectedId] = useState("Domestic Guests");
   const categoryData = tourCategories.find((item) => item.id === selectedId);
   const categories = tourCategories.map((cat) => cat.id);
 
