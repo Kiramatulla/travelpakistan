@@ -2,18 +2,62 @@
 
 import { tourCategories } from "@/app/inclusions/page";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
+import { AiFillInfoCircle } from "react-icons/ai";
 
 const selectedTourType = "Domestic";
-const categoryData = tourCategories.find((cat) => cat.id === selectedTourType);
 
 const Inclusions = () => {
+  const [selectedId, setSelectedId] = useState("Domestic");
+  const categoryData = tourCategories.find((item) => item.id === selectedId);
+  const categories = tourCategories.map((cat) => cat.id);
+
   return (
-    <section className="mt-10 mx-6 lg:mx-0 lg:px-8">
+    <section className=" mx-6 lg:mx-0 lg:px-8">
+      <h1 className="text-4xl md:text-3xl mt-8 font-bold text-black mb-6">
+        SERVICES INCLUDED AND EXCLUDED .
+      </h1>
+      <div className="space-y-4 mb-4 text-gray-700 max-w-4xl leading-relaxed text-justify">
+        <div className="flex gap-4">
+          <AiFillInfoCircle size={50} className="text-rose-600" />
+          <p>
+            {" "}
+            Please note that the services we provide vary depending on the type
+            of guest—domestic or international and also differ based on the
+            nature of the tour, such as one-day trips, trekking tours, and more.
+          </p>
+        </div>
+        <div className="flex gap-4">
+          <AiFillInfoCircle size={50} className="text-rose-600" />
+          <p>
+            Below are just a few key points from the included and excluded
+            services. To view the complete list of what we offer, please click
+            on &apos;View Full List of Inclusions and Exclusions&apos; located
+            just below this section.
+          </p>
+        </div>
+      </div>
+      {/* Category Buttons */}
+      <div className="flex flex-wrap justify-center gap-3 mb-10">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelectedId(category)}
+            className={`px-5 py-2 rounded-full border-2 transition-all duration-300 ${
+              selectedId === category
+                ? "bg-green-900 text-white border-green-900"
+                : "bg-white text-green-900 border-green-300"
+            } hover:shadow-md`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
       <div className="flex flex-col md:flex-row gap-10">
         {/* Inclusions */}
         <div className="flex-1">
-          <h3 className="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 border-teal-300">
+          <h3 className="text-3xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-teal-300">
             Inclusions
           </h3>
           <ul className="space-y-6">
@@ -35,7 +79,7 @@ const Inclusions = () => {
 
         {/* Exclusions */}
         <div className="flex-1">
-          <h3 className="text-3xl font-bold text-gray-800 mb-6 border-b pb-2 border-rose-300">
+          <h3 className="text-3xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-rose-300">
             Exclusions
           </h3>
           <ul className="space-y-6">
