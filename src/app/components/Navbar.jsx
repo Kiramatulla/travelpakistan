@@ -32,14 +32,14 @@ const Navbar = () => {
         <div className="flex flex-1 justify-start relative">
           <Link
             href="/"
-            className="relative h-20 w-32 md:w-24 md:h-16 lg:h-20 lg:w-36"
+            className="relative h-20 w-40 md:w-24 md:h-16 lg:h-20 lg:w-36"
           >
             <span className="sr-only">Viola Tours</span>
             <Image
               className="absolute inset-y-0 left-0 my-auto "
               src={viola_logo}
               alt="Company Logo"
-              width={130}
+              width={140}
               height={80}
               priority
             />

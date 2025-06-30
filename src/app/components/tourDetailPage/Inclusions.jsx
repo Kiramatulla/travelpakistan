@@ -108,7 +108,7 @@ const Inclusions = () => {
           className="text-green-700 hover:text-amber-600 font-medium inline-flex items-center gap-1 transition-colors"
         >
           View full list of inclusions and exclusions{" "}
-          <FaArrowRight className="text-center" />
+          <FaArrowRight className="text-center " />
         </Link>
       </div>
     </section>
