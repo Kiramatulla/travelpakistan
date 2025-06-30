@@ -4,6 +4,7 @@ import { tourCategories } from "@/app/inclusions/page";
 import Link from "next/link";
 import { useState } from "react";
 import { AiFillInfoCircle } from "react-icons/ai";
+import { FaArrowRight } from "react-icons/fa";
 
 const selectedTourType = "Domestic";
 
@@ -106,7 +107,8 @@ const Inclusions = () => {
           href="/inclusions"
           className="text-green-700 hover:text-amber-600 font-medium inline-flex items-center gap-1 transition-colors"
         >
-          View full list of inclusions and exclusions →
+          View full list of inclusions and exclusions{" "}
+          <FaArrowRight className="text-center" />
         </Link>
       </div>
     </section>
