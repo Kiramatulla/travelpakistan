@@ -63,10 +63,10 @@ const HunzaDropDown = () => {
           Lahore One Day Tour
         </Link>
         <Link
-          href="/tours/karachi-tour"
+          href="/tours/pakistan-northern-area-tour-packages"
           className="block px-4 py-2 hover:bg-cyan-950 hover:text-white"
         >
-          Karachi One Day Tour
+          Northern Pakistan Tour
         </Link>
         <Link
           href="/tours/hunza-valley-and-patundas-trek"
