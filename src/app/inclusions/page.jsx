@@ -17,7 +17,7 @@ import IncAndExc from "../components/inclusions/IncAndExc";
 
 export const tourCategories = [
   {
-    id: "Domestic",
+    id: "Domestic Guests",
     label: "Domestic Tourists",
     inclusions: [
       {
@@ -91,7 +91,7 @@ export const tourCategories = [
   },
 
   {
-    id: "International",
+    id: "International Guests",
     label: "International Tourists",
     inclusions: [
       {
