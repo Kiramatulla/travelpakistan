@@ -18,7 +18,7 @@ export async function POST(req) {
       return NextResponse.json({ message: 'Missing slug or type' }, { status: 400 });
     }
 
-    const staticPaths = ['/', '/tours', '/trekking', '/blogs'];
+    const staticPaths = ['/', '/tours', '/trekking', '/blogs','/customitinerary'];
     const pathMap = {
       tour: `/tours/${slug}`,
       trekking: `/trekking/${slug}`,
