@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { client } from "@/sanity/lib/client";
 import RegionButton from "./RegionButton";
 import SightseeingSpot from "./SightseeingSpot";
 import ShortTrekSpot from "./ShortTrekSpot";
@@ -15,6 +16,7 @@ export default function CustomItineraryPage({ initialRegions }) {
   const [selectedSubregion, setSelectedSubregion] = useState(null);
   const [spots, setSpots] = useState([]);
   const [activeCategory, setActiveCategory] = useState("sightseeing");
+  const [loading, setLoading] = useState(false);
 
   const allCategories = [
     { title: "Sightseeing", value: "sightseeing" },
@@ -25,17 +27,16 @@ export default function CustomItineraryPage({ initialRegions }) {
     { title: "Restaurant", value: "restaurant" },
   ];
 
-  // 👇 Handle only state change here
   const handleSubregionClick = (subregion) => {
     setSelectedSubregion(subregion);
     setActiveCategory("sightseeing");
   };
 
-  // ✅ Fetch spots when subregion changes
   useEffect(() => {
     if (!selectedSubregion) return;
 
     const fetchSpots = async () => {
+      setLoading(true);
       try {
         const res = await fetch("/api/fetchSpots", {
           method: "POST",
@@ -50,6 +51,8 @@ export default function CustomItineraryPage({ initialRegions }) {
       } catch (error) {
         console.error("Failed to fetch spots:", error);
         setSpots([]);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -58,7 +61,7 @@ export default function CustomItineraryPage({ initialRegions }) {
 
   return (
     <div className="flex flex-col md:flex-row">
-      {/* Region Dropdown */}
+      {/* Mobile Region Dropdown */}
       <div className="md:hidden px-4 pt-4 bg-gradient-to-b from-white to-sky-50">
         <label className="block font-bold text-lg text-slate-700 pl-1 mb-4">
           Please Select a Region to Start
@@ -103,13 +106,14 @@ export default function CustomItineraryPage({ initialRegions }) {
       <div className="flex-1 p-6 md:p-10 bg-gradient-to-b from-white to-sky-100 overflow-y-auto">
         {selectedRegion ? (
           <>
-            {/* Header */}
             <div className="text-center mb-10">
               <h1 className="text-4xl font-extrabold text-slate-800">
                 Discover {selectedRegion.title}
               </h1>
               <p className="text-slate-600 mt-3 max-w-2xl mx-auto">
-                Click on a sub-region to explore popular tourist destinations.
+                To explore the villages and towns within this region, click on a
+                sub-region to discover popular tourist destinations in each
+                village — and feel free to share your itinerary with us.
               </p>
             </div>
 
@@ -138,13 +142,18 @@ export default function CustomItineraryPage({ initialRegions }) {
 
             {/* Spot Content */}
             {selectedSubregion && (
-              <>
+              <div>
                 <h3 className="text-xl font-semibold text-white rounded-2xl bg-teal-600 p-4 text-center mb-3">
-                  TOURIST SPOTS IN{" "}
+                  TOURIST SPOTS AND OTHER INFORMATIONS IN{" "}
                   <span className="text-black font-bold text-2xl uppercase">
                     {selectedSubregion.title}
                   </span>
                 </h3>
+
+                <p className="text-slate-700 text-center max-w-2xl mx-auto mb-5">
+                  Below are details about the village you selected. This
+                  includes tourist sites, treks, and more.
+                </p>
 
                 {/* Category Filters */}
                 <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -164,8 +173,16 @@ export default function CustomItineraryPage({ initialRegions }) {
                   ))}
                 </div>
 
-                {/* Spot Cards */}
-                {spots.length > 0 ? (
+                {/* Loading or No Results */}
+                {loading ? (
+                  <div className="text-center mt-16 text-slate-500 italic">
+                    Please wait while we fetch tourist spots...
+                  </div>
+                ) : spots.length === 0 ? (
+                  <div className="text-center mt-16 text-slate-500 italic">
+                    No tourist spots found in this subregion.
+                  </div>
+                ) : (
                   <div>
                     {spots
                       .filter((spot) => spot.type === activeCategory)
@@ -198,17 +215,14 @@ export default function CustomItineraryPage({ initialRegions }) {
                         }
                       })}
                   </div>
-                ) : (
-                  <div className="text-center mt-16 text-slate-500 italic">
-                    No tourist spots found in this subregion.
-                  </div>
                 )}
-              </>
+              </div>
             )}
           </>
         ) : (
           <div className="text-center mt-20 text-slate-500 italic">
-            Please select a region to begin.
+            Please click or select a region from the sidebar or dropdown to
+            begin.
           </div>
         )}
       </div>
