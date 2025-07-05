@@ -23,6 +23,8 @@ export async function POST(req) {
       tour: `/tours/${slug}`,
       trekking: `/trekking/${slug}`,
       blog: `/blogs/${slug}`,
+      region: `/customitinerary`,
+      subregion: `/customitinerary`,
     };
 
     const dynamicPath = pathMap[type];

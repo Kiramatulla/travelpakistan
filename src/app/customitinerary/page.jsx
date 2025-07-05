@@ -1,5 +1,7 @@
 import { client } from "@/sanity/lib/client";
 import CustomItineraryPage from "../components/itineraryInfo/CustomItineraryPage";
+export const dynamicParams = true;
+export const revalidate = 0;
 
 async function getRegions() {
   const query = `
