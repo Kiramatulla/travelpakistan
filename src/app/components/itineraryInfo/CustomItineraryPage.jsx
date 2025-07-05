@@ -26,13 +26,14 @@ export default function CustomItineraryPage({ initialRegions }) {
     { title: "Restaurant", value: "restaurant" },
   ];
 
-  // Fetch spots on subregion selection
+  // ✅ Stable GROQ-based spot fetch
   const handleSubregionClick = async (subregion) => {
     setSelectedSubregion(subregion);
     setActiveCategory("sightseeing");
 
     const query = `
-      *[_type == "subregion" && slug.current == "${subregion.slug.current}"][0]{
+      *[_type == "subregion" && slug.current == $slug][0]{
+        _id,
         "spots": *[_type == "spot" && references(^._id)]{
           title,
           description,
@@ -47,8 +48,16 @@ export default function CustomItineraryPage({ initialRegions }) {
         }
       }
     `;
-    const data = await client.fetch(query);
-    setSpots(data?.spots || []);
+
+    try {
+      const data = await client.fetch(query, {
+        slug: subregion.slug.current,
+      });
+      setSpots(data?.spots || []);
+    } catch (error) {
+      console.error("Failed to fetch spots:", error);
+      setSpots([]);
+    }
   };
 
   return (
@@ -195,7 +204,7 @@ export default function CustomItineraryPage({ initialRegions }) {
               </div>
             )}
 
-            {/* No Results */}
+            {/* No Spots */}
             {selectedSubregion && spots.length === 0 && (
               <div className="text-center mt-16 text-slate-500 italic">
                 No tourist spots found in this subregion.
