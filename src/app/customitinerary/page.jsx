@@ -17,6 +17,5 @@ async function getRegions() {
 
 export default async function CustomItinerary() {
   const regions = await getRegions();
-
   return <CustomItineraryPage initialRegions={regions} />;
 }

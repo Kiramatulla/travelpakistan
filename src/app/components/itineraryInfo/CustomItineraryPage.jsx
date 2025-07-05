@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { client } from "@/sanity/lib/client";
 import RegionButton from "./RegionButton";
 import SightseeingSpot from "./SightseeingSpot";
@@ -26,36 +26,40 @@ export default function CustomItineraryPage({ initialRegions }) {
     { title: "Restaurant", value: "restaurant" },
   ];
 
-  // ✅ Fetch spots when subregion is clicked
-  const handleSubregionClick = async (subregion) => {
-    setSelectedSubregion(subregion);
-    setActiveCategory("sightseeing");
+  // ✅ useEffect to fetch spots after subregion is selected
+  useEffect(() => {
+    if (!selectedSubregion) return;
 
-    const query = `
-      *[_type == "subregion" && slug.current == $slug][0]{
-        "spots": *[_type == "spot" && references(^._id)]{
-          title,
-          description,
-          type,
-          overview,
-          "images": images[]{
-            asset->{
-              _id,
-              url
+    const fetchSpots = async () => {
+      try {
+        const query = `
+          *[_type == "subregion" && slug.current == $slug][0]{
+            "spots": *[_type == "spot" && references(^._id)]{
+              title,
+              description,
+              type,
+              overview,
+              "images": images[]{
+                asset->{
+                  _id,
+                  url
+                }
+              }
             }
           }
-        }
+        `;
+        const data = await client.fetch(query, {
+          slug: selectedSubregion.slug.current,
+        });
+        setSpots(data?.spots || []);
+      } catch (error) {
+        console.error("Failed to fetch spots:", error);
+        setSpots([]);
       }
-    `;
+    };
 
-    try {
-      const data = await client.fetch(query, { slug: subregion.slug.current });
-      setSpots(data?.spots || []);
-    } catch (err) {
-      console.error("Failed to fetch spots:", err);
-      setSpots([]);
-    }
-  };
+    fetchSpots();
+  }, [selectedSubregion]);
 
   return (
     <div className="flex flex-col md:flex-row">
@@ -70,8 +74,8 @@ export default function CustomItineraryPage({ initialRegions }) {
           setActiveCategory("sightseeing");
         }}
         setSelectedSubregion={setSelectedSubregion}
-        setSpots={setSpots}
         setActiveCategory={setActiveCategory}
+        setSpots={setSpots}
       />
 
       {/* Main Content */}
@@ -97,7 +101,10 @@ export default function CustomItineraryPage({ initialRegions }) {
                 {selectedRegion.subregions.map((sub) => (
                   <button
                     key={sub.slug.current}
-                    onClick={() => handleSubregionClick(sub)}
+                    onClick={() => {
+                      setSelectedSubregion(sub);
+                      setActiveCategory("sightseeing");
+                    }}
                     className={`px-5 py-2 rounded-full text-sm font-semibold transition-all border ${
                       selectedSubregion?.slug.current === sub.slug.current
                         ? "bg-teal-600 text-white border-teal-600"
