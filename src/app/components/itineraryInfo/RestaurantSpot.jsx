@@ -4,6 +4,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 import { useState } from "react";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 export default function RestaurantSpot({ spot }) {
   const { title, images = [], description, overview } = spot;
@@ -12,7 +13,7 @@ export default function RestaurantSpot({ spot }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const mainImage = images[mainImageIndex];
-  if (!spot) return null;
+
   return (
     <div className="w-full bg-white border border-slate-200 shadow-sm overflow-hidden mb-10 transition hover:shadow-md">
       {/* Layout: Content left + Image right */}
@@ -40,29 +41,32 @@ export default function RestaurantSpot({ spot }) {
         {/* Left: Textual Content */}
         <div className="md:w-1/2 w-full p-6 md:p-8 flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">{title}</h2>
+            <h2 className="text-3xl font-bold text-slate-800">{title}</h2>
+          </div>
 
-            {/* Overview */}
+          {/* Tags / Description */}
+          {description?.length > 0 && (
+            <div className="flex flex-col gap-2">
+              {description.map((point, idx) => (
+                <span
+                  key={idx}
+                  className="bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 text-sm font-medium rounded-full"
+                >
+                  <div className="flex items-center gap-2">
+                    <FaRegCircleCheck />
+                    {point}
+                  </div>
+                </span>
+              ))}
+            </div>
+          )}
+          <div>
             {overview && (
               <div className="prose prose-sm md:prose-base text-slate-700 max-w-none mb-6">
                 <PortableText value={overview} />
               </div>
             )}
           </div>
-
-          {/* Tags / Description */}
-          {description?.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-4">
-              {description.map((point, idx) => (
-                <span
-                  key={idx}
-                  className="bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 text-xs font-medium rounded-full"
-                >
-                  {point}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
       </div>
 

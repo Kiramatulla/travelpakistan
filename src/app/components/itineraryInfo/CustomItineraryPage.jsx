@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { client } from "@/sanity/lib/client";
+
 import RegionButton from "./RegionButton";
 import SightseeingSpot from "./SightseeingSpot";
 import ShortTrekSpot from "./ShortTrekSpot";
