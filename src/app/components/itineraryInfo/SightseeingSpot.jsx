@@ -12,7 +12,7 @@ export default function SightseeingSpot({ spot }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const mainImage = images[mainImageIndex];
-  if (!spot) return null;
+
   return (
     <div className="w-full bg-white border border-slate-200 shadow-sm overflow-hidden mb-10 transition hover:shadow-md">
       {/* Layout: Content left + Image right */}
