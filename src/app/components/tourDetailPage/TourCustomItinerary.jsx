@@ -16,25 +16,37 @@ export default async function ItineraryRegionShowcase() {
   const regions = await client.fetch(query);
 
   return (
-    <section className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-md">
-      <div className="mb-10">
-        <h2 className="text-3xl text-center md:text-4xl font-extrabold text-slate-800 mb-4">
-          How Can I Create My Own Itinerary?
-        </h2>
-        <div className="flex gap-2 justify-start">
-          <TiInfoLargeOutline size={30} className="text-green-800" />
-          <p className="text-slate-600 text-base md:text-sm">
-            Customize your adventure by selecting your desired region and
-            exploring its beautiful subregions. Plan a journey that matches your
-            pace and interests.
+    <section className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 mb-6 shadow-md">
+      <h2 className="text-3xl text-center md:text-4xl font-extrabold text-slate-800 mb-4">
+        How Can I Create My Own Itinerary?
+      </h2>
+      <div className="mb-10 space-y-4">
+        <div className="flex items-start gap-2">
+          {/* Icon container with fixed size */}
+          <span className="flex-none w-8 h-8">
+            <TiInfoLargeOutline className="w-full h-full text-green-800" />
+          </span>
+          <p className="flex-1 text-slate-600 text-base md:text-sm">
+            <span className="font-bold">YES!</span> you can customize your own
+            Itinerary, even if you don&apos;t know the region at all. Please
+            note that below are just a few regions displayed. If your region
+            isn&apos;t here, use “Click for More Regions” at the end of this
+            section.
           </p>
         </div>
-        <div className="flex gap-2 justify-start">
-          <TiInfoLargeOutline size={30} className="text-green-800" />
-          <p className="text-slate-600 text-base md:text-sm">
-            Customize your adventure by selecting your desired region and
-            exploring its beautiful subregions. Plan a journey that matches your
-            pace and interests.
+
+        <div className="flex items-start gap-2">
+          <span className="flex-none w-8 h-8">
+            <TiInfoLargeOutline className="w-full h-full text-green-800" />
+          </span>
+          <p className="flex-1 text-slate-600 text-base md:text-sm">
+            For More Research, please choose the region you want to explore.
+            Each region provides infomations like{" "}
+            <span className="font-bold">
+              Sightseeing Places, Short and Long Treks, Hotels, Restaurants, and
+              more
+            </span>
+            .
           </p>
         </div>
       </div>
