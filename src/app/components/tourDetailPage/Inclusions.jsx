@@ -14,22 +14,21 @@ const Inclusions = () => {
   const categories = tourCategories.map((cat) => cat.id);
 
   return (
-    <section className=" mx-6 lg:mx-0 lg:px-8">
+    <section className="mx-6 lg:mx-0 lg:px-8">
       <h1 className="text-4xl md:text-3xl mt-8 font-bold text-black mb-6">
         SERVICES INCLUDED AND EXCLUDED .
       </h1>
       <div className="space-y-4 mb-4 text-gray-700 max-w-4xl leading-relaxed text-justify">
-        <div className="flex gap-4">
-          <AiFillInfoCircle size={50} className="text-rose-600" />
+        <div className="flex gap-4 text-sm">
+          <AiFillInfoCircle size={40} className="text-rose-600" />
           <p>
-            {" "}
             Please note that the services we provide vary depending on the type
             of guest—domestic or international and also differ based on the
             nature of the tour, such as one-day trips, trekking tours, and more.
           </p>
         </div>
-        <div className="flex gap-4">
-          <AiFillInfoCircle size={50} className="text-rose-600" />
+        <div className="flex gap-4 text-sm">
+          <AiFillInfoCircle size={40} className="text-rose-600" />
           <p>
             Below are just a few key points from the included and excluded
             services. To view the complete list of what we offer, please click

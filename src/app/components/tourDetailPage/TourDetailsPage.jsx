@@ -6,6 +6,7 @@ import ImageComp from "./ImageComp";
 import Inclusions from "./Inclusions";
 import Itinerary from "./Itinerary";
 import RelatedTours from "./RelatedTours";
+import TourCustomItinerary from "./TourCustomItinerary";
 import TourOverviews from "./TourOverviews";
 import UserGuide from "./UserGuide";
 
@@ -31,6 +32,9 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         </section>
         <section>
           <Inclusions />
+        </section>
+        <section>
+          <TourCustomItinerary />
         </section>
         <section>
           <Itinerary tours={tours} />
