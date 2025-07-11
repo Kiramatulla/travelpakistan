@@ -50,7 +50,7 @@ export default function SightseeingSpot({ spot }) {
           </div>
         </div>
         <div
-          className="relative cursor-pointer"
+          className="relative cursor-pointer flex items-center justify-center"
           onClick={() => setIsModalOpen(true)}
         >
           {mainImage && (
