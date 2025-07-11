@@ -103,7 +103,7 @@ export default function CustomItineraryPage({ initialRegions }) {
       />
 
       {/* Main Content */}
-      <div className="flex-1 p-6 md:p-10 bg-gradient-to-b from-white to-sky-100 overflow-y-auto">
+      <div className="flex-1 p-6 lg:p-10 bg-gradient-to-b from-white to-sky-100 overflow-y-auto">
         {selectedRegion ? (
           <>
             <div className="text-center mb-10">
@@ -145,7 +145,7 @@ export default function CustomItineraryPage({ initialRegions }) {
               <div>
                 <h3 className="text-xl font-semibold text-white rounded-2xl bg-teal-600 p-4 text-center mb-3">
                   TOURIST SPOTS AND OTHER INFORMATIONS IN{" "}
-                  <span className="text-black font-bold text-2xl uppercase">
+                  <span className="text-white font-bold text-2xl uppercase">
                     {selectedSubregion.title}
                   </span>
                 </h3>

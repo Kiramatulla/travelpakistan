@@ -17,46 +17,27 @@ export default function LongTrekSpot({ spot }) {
   return (
     <div className="w-full bg-white border border-slate-200 shadow-sm overflow-hidden mb-10 transition hover:shadow-md">
       {/* Layout: Content left + Image right */}
-      <div className="flex flex-col md:flex-row-reverse">
-        {/* Right: Main Image */}
-        <div
-          className="md:w-1/2 w-full aspect-[3/2] relative cursor-pointer"
-          onClick={() => setIsModalOpen(true)}
-        >
-          {mainImage && (
-            <Image
-              src={urlFor(mainImage).url()}
-              alt={`${title} main image`}
-              fill
-              className="object-cover w-full h-full"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
-          )}
-          <div className="absolute bottom-2 right-2 bg-white/80 text-xs px-2 py-1 rounded-md text-slate-700 shadow">
-            Click to enlarge
-          </div>
-        </div>
-
+      <div className="flex flex-col md:flex-row">
         {/* Left: Textual Content */}
         <div className="md:w-1/2 w-full p-6 md:p-8 flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl font-bold text-slate-800">{title}</h2>
+            <h2 className="text-3xl font-bold text-slate-800 underline underline-offset-8">
+              {title}
+            </h2>
           </div>
 
-          {/* Tags / Description */}
           {description?.length > 0 && (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1 py-6">
               {description.map((point, idx) => (
-                <span
+                <div
                   key={idx}
-                  className="bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 text-sm font-medium rounded-full"
+                  className="flex flex-row gap-2 text-blue-700 py-1 text-sm font-medium rounded-full"
                 >
                   <div className="flex items-center gap-2">
                     <FaRegCircleCheck />
-                    {point}
                   </div>
-                </span>
+                  <div>{point}</div>
+                </div>
               ))}
             </div>
           )}
@@ -66,6 +47,24 @@ export default function LongTrekSpot({ spot }) {
                 <PortableText value={overview} />
               </div>
             )}
+          </div>
+        </div>
+        <div
+          className="relative cursor-pointer"
+          onClick={() => setIsModalOpen(true)}
+        >
+          {mainImage && (
+            <Image
+              src={urlFor(mainImage).url()}
+              alt={`${title} main image`}
+              width={500}
+              height={500}
+              className="object-cover"
+              priority
+            />
+          )}
+          <div className="absolute bottom-2 right-2 bg-white/80 text-xs px-2 py-1 rounded-md text-slate-700 shadow">
+            Click to enlarge
           </div>
         </div>
       </div>

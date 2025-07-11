@@ -9,7 +9,7 @@ const RegionButton = ({
   regions,
 }) => {
   return (
-    <div className="hidden md:block w-64 bg-gradient-to-br from-blue-50 to-white h-[calc(100vh-20px)] p-4 overflow-y-auto">
+    <div className="hidden md:block md:w-52 lg:w-64 bg-gradient-to-br from-blue-50 to-white p-4 overflow-y-auto">
       <h2 className="text-xl font-bold text-gray-800 mb-6 tracking-wide">
         📍 Regions
       </h2>
