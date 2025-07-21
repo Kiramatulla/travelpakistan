@@ -1,6 +1,8 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { BiLogoTripAdvisor } from "react-icons/bi";
 import Link from "next/link";
+import Image from "next/image";
+import viola_logo from "@/app/assets/viola_logo.png";
 
 const Footer = () => {
   return (
@@ -9,9 +11,17 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-10 text-gray-700">
           {/* Brand / Contact Info */}
           <div>
-            <h3 className="text-xl font-bold text-teal-600 mb-4">
-              Viola Tours Pakisan
-            </h3>
+            <div className="">
+              {/* <Image
+                src={viola_logo}
+                alt="viola tour logo"
+                height={100}
+                width={100}
+              /> */}
+              <h3 className="text-xl font-bold text-teal-600 mb-4">
+                Viola Tours Pakisan
+              </h3>
+            </div>
             <p className="text-sm leading-relaxed mb-4">
               Bringing you the best of Pakistans beauty — from Skardu valleys to
               Hunza peaks. Start your journey with us.
