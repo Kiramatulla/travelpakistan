@@ -77,7 +77,7 @@ const RelatedTours = ({ relatedTours }) => {
 
   return (
     <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 mt-8">
-      <h2 className="pl-2 font-bold text-xl text-gray-800 underline underline-offset-8 font-serif py-2 rounded-md md:pl-0">
+      <h2 className="pl-2 font-bold text-xl text-gray-800 underline underline-offset-8 py-2 rounded-md md:pl-0">
         Similar Tour Packages and Pricing
       </h2>
       <div className="text-sm lg:text-xs font-sans flex gap-2">
