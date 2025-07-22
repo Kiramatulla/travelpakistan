@@ -24,7 +24,7 @@ export default async function ItineraryRegionShowcase() {
         <div className="flex items-start gap-2">
           {/* Icon container with fixed size */}
           <span className="flex-none w-5 h-5">
-            <TiInfoLargeOutline className="w-full h-full text-green-800" />
+            <TiInfoLargeOutline className="w-full h-full text-green-600" />
           </span>
           <p className="flex-1 text-slate-600 text-base md:text-sm">
             <span className="font-bold">YES!</span> you can customize your own
@@ -37,7 +37,7 @@ export default async function ItineraryRegionShowcase() {
 
         <div className="flex items-start gap-2">
           <span className="flex-none w-5 h-5">
-            <TiInfoLargeOutline className="w-full h-full text-green-800" />
+            <TiInfoLargeOutline className="w-full h-full text-green-600" />
           </span>
           <p className="flex-1 text-slate-600 text-base md:text-sm">
             For More Research, please choose the region you want to explore.
