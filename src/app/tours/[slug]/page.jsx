@@ -3,7 +3,6 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
 export const dynamicParams = true;
-export const revalidate = 0;
 
 // ✅ This will generate static pages for each tour at build time
 export async function generateStaticParams() {
