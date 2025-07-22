@@ -3,7 +3,6 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
 export const dynamicParams = true;
-export const revalidate = 0;
 
 export async function generateStaticParams() {
   const query = `*[_type == "treks"]{ "slug": slug.current }`;

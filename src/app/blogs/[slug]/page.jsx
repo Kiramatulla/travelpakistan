@@ -3,7 +3,6 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
 export const dynamicParams = true;
-export const revalidate = 0;
 
 export async function generateMetadata(props) {
   const params = await props.params;
@@ -19,7 +18,7 @@ export async function generateMetadata(props) {
   const imageUrl =
     blogs.featuredImage && blogs.featuredImage[0]
       ? urlFor(blogs.featuredImage[0]).url()
-      : "Blog Images"; 
+      : "Blog Images";
 
   return {
     title: blogs.title,
@@ -30,8 +29,7 @@ export async function generateMetadata(props) {
   };
 }
 
-
-const page = async props => {
+const page = async (props) => {
   const params = await props.params;
   const blogs = await client.fetch(
     `*[_type =="blogs" && slug.current == '${params.slug}'][0]`
