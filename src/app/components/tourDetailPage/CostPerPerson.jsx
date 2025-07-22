@@ -1,14 +1,14 @@
-import { AiFillInfoCircle } from "react-icons/ai";
+import { TiInfoLargeOutline } from "react-icons/ti";
 
 const CostPerPerson = ({ tours }) => {
   return (
     <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
-      <h2 className="font-bold underline underline-offset-8 text-gray-800 text-xl mb-2">
-        Total Cost of {tours.title}{" "}
+      <h2 className="font-bold text-lg underline underline-offset-8 text-gray-800 mb-2">
+        Total Cost of {tours.title}
       </h2>
       <div className="flex">
-        <AiFillInfoCircle size={30} className="text-rose-600" />
-        <p className="text-xs mb-4 mx-2">
+        <TiInfoLargeOutline size={35} className="text-green-600" />
+        <p className="text-sm mb-4 mx-2">
           Please note that the price listed below may vary depending on the
           services selected, as client preferences are our top priority. The
           choice of hotels, adding or subtracting tour days and other options
@@ -34,54 +34,54 @@ const CostPerPerson = ({ tours }) => {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-400">
-            <tr className="border-t  lg:text-center font-semibold">
+            <tr className="border-t text-sm lg:text-xs lg:text-center font-semibold">
               <td className="p-4">Standard Package</td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 ${" "}
                 {tours?.International2Persons
                   ? tours.International2Persons.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 ${" "}
                 {tours?.International3Persons
                   ? tours.International3Persons.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 ${" "}
                 {tours?.International4Persons
                   ? tours.International4Persons.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 hidden lg:block text-sm lg:text-xs">
+              <td className="p-4 hidden lg:block">
                 ${" "}
                 {tours?.International5Persons
                   ? tours.International5Persons.toLocaleString()
                   : ""}
               </td>
             </tr>
-            <tr className="border-t font-serif text-sm lg:text-xs lg:text-center font-semibold">
+            <tr className="border-t text-sm lg:text-xs lg:text-center font-semibold">
               <td className="p-4">Premium Package</td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 ${" "}
                 {tours?.International2PersonsLuxury
                   ? tours.International2PersonsLuxury.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 ${" "}
                 {tours?.International3PersonsLuxury
                   ? tours.International3PersonsLuxury.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 ${" "}
                 {tours?.International4PersonsLuxury
                   ? tours.International4PersonsLuxury.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 hidden lg:block text-sm lg:text-xs">
+              <td className="p-4 hidden lg:block">
                 ${" "}
                 {tours?.International5PersonsLuxury
                   ? tours.International5PersonsLuxury.toLocaleString()
@@ -111,7 +111,7 @@ const CostPerPerson = ({ tours }) => {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-400">
-            <tr className="border-t font-serif  lg:text-center font-semibold">
+            <tr className="border-t text-sm lg:text-xs lg:text-center font-semibold">
               <td className="p-4">Standard Package</td>
               <td className="p-4 text-sm lg:text-xs">
                 PKR{" "}
@@ -119,46 +119,46 @@ const CostPerPerson = ({ tours }) => {
                   ? tours.Domestic2Persons.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4 ">
                 PKR{" "}
                 {tours?.Domestic3Persons
                   ? tours.Domestic3Persons.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 PKR{" "}
                 {tours?.Domestic4Persons
                   ? tours.Domestic4Persons.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 hidden lg:block text-sm lg:text-xs">
+              <td className="p-4 hidden lg:block">
                 PKR{" "}
                 {tours?.Domestic5Persons
                   ? tours.Domestic5Persons.toLocaleString()
                   : ""}
               </td>
             </tr>
-            <tr className="border-t font-serif text-sm lg:text-xs lg:text-center font-semibold">
+            <tr className="border-t text-sm lg:text-xs lg:text-center font-semibold">
               <td className="p-4">Premium Package</td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4 ">
                 PKR{" "}
                 {tours?.Domestic2PersonsLuxury
                   ? tours.Domestic2PersonsLuxury.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 PKR{" "}
                 {tours?.Domestic3PersonsLuxury
                   ? tours.Domestic3PersonsLuxury.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4">
                 PKR{" "}
                 {tours?.Domestic4PersonsLuxury
                   ? tours.Domestic4PersonsLuxury.toLocaleString()
                   : ""}
               </td>
-              <td className="p-4 hidden lg:block text-sm lg:text-xs">
+              <td className="p-4 hidden lg:block">
                 PKR{" "}
                 {tours?.Domestic5PersonsLuxury
                   ? tours.Domestic5PersonsLuxury.toLocaleString()

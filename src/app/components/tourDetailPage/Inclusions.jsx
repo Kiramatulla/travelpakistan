@@ -3,8 +3,8 @@
 import { tourCategories } from "@/app/inclusions/page";
 import Link from "next/link";
 import { useState } from "react";
-import { AiFillInfoCircle } from "react-icons/ai";
 import { FaArrowRight } from "react-icons/fa";
+import { TiInfoLargeOutline } from "react-icons/ti";
 
 const selectedTourType = "Domestic";
 
@@ -15,25 +15,16 @@ const Inclusions = () => {
 
   return (
     <section className="mx-6 lg:mx-0 lg:px-8">
-      <h1 className="text-4xl md:text-3xl mt-8 font-bold text-black mb-6">
+      <h1 className="text-4xl md:text-xl mt-8 font-bold text-black mb-6">
         SERVICES INCLUDED AND EXCLUDED .
       </h1>
       <div className="space-y-4 mb-4 text-gray-700 max-w-4xl leading-relaxed text-justify">
         <div className="flex gap-4 text-sm">
-          <AiFillInfoCircle size={40} className="text-rose-600" />
+          <TiInfoLargeOutline size={35} className="text-green-600" />
           <p>
             Please note that the services we provide vary depending on the type
             of guest—domestic or international and also differ based on the
             nature of the tour, such as one-day trips, trekking tours, and more.
-          </p>
-        </div>
-        <div className="flex gap-4 text-sm">
-          <AiFillInfoCircle size={40} className="text-rose-600" />
-          <p>
-            Below are just a few key points from the included and excluded
-            services. To view the complete list of what we offer, please click
-            on &apos;View Full List of Inclusions and Exclusions&apos; located
-            just below this section.
           </p>
         </div>
       </div>
@@ -57,8 +48,8 @@ const Inclusions = () => {
       <div className="flex flex-col md:flex-row gap-10">
         {/* Inclusions */}
         <div className="flex-1">
-          <h3 className="text-3xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-teal-300">
-            Inclusions
+          <h3 className="text-xl font-bold text-gray-800 mb-6 border-b pb-2 border-teal-300">
+            INCLUSIONS
           </h3>
           <ul className="space-y-6">
             {categoryData?.inclusions.slice(0, 2).map((item, idx) => (
@@ -67,9 +58,7 @@ const Inclusions = () => {
                   {item.icon}
                 </div>
                 <div>
-                  <p className="text-lg font-semibold text-gray-800">
-                    {item.heading}
-                  </p>
+                  <p className="font-semibold text-gray-800">{item.heading}</p>
                   <p className="text-sm text-gray-600">{item.paragraph}</p>
                 </div>
               </li>
@@ -79,8 +68,8 @@ const Inclusions = () => {
 
         {/* Exclusions */}
         <div className="flex-1">
-          <h3 className="text-3xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2 border-rose-300">
-            Exclusions
+          <h3 className="text-xl font-bold text-gray-800 mb-6 border-b pb-2 border-rose-300">
+            EXCLUSIONS
           </h3>
           <ul className="space-y-6">
             {categoryData?.exclusions.slice(0, 2).map((item, idx) => (
@@ -89,9 +78,7 @@ const Inclusions = () => {
                   {item.icon}
                 </div>
                 <div>
-                  <p className="text-lg font-semibold text-gray-800">
-                    {item.heading}
-                  </p>
+                  <p className="font-semibold text-gray-800">{item.heading}</p>
                   <p className="text-sm text-gray-600">{item.paragraph}</p>
                 </div>
               </li>

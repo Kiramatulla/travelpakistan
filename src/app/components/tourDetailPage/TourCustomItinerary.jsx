@@ -17,13 +17,13 @@ export default async function ItineraryRegionShowcase() {
 
   return (
     <section className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 mb-6 shadow-md">
-      <h2 className="text-3xl text-center md:text-4xl font-extrabold text-slate-800 mb-4">
+      <h2 className="text-xl font-bold text-center mb-4">
         How Can I Create My Own Itinerary?
       </h2>
       <div className="mb-10 space-y-4">
         <div className="flex items-start gap-2">
           {/* Icon container with fixed size */}
-          <span className="flex-none w-8 h-8">
+          <span className="flex-none w-5 h-5">
             <TiInfoLargeOutline className="w-full h-full text-green-800" />
           </span>
           <p className="flex-1 text-slate-600 text-base md:text-sm">
@@ -36,7 +36,7 @@ export default async function ItineraryRegionShowcase() {
         </div>
 
         <div className="flex items-start gap-2">
-          <span className="flex-none w-8 h-8">
+          <span className="flex-none w-5 h-5">
             <TiInfoLargeOutline className="w-full h-full text-green-800" />
           </span>
           <p className="flex-1 text-slate-600 text-base md:text-sm">
@@ -60,7 +60,7 @@ export default async function ItineraryRegionShowcase() {
           >
             <div className="flex items-center gap-2 text-teal-700 font-semibold mb-3">
               <FaMapMarkedAlt className="text-xl" />
-              <h3 className="text-lg md:text-xl font-bold text-slate-800">
+              <h3 className="text-lg font-bold text-slate-800">
                 {region.title}
               </h3>
             </div>

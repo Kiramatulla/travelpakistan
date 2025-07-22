@@ -1,7 +1,7 @@
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillInfoCircle } from "react-icons/ai";
+import { TiInfoLargeOutline } from "react-icons/ti";
 
 const RelatedTours = ({ relatedTours }) => {
   // Sort by days (extracting number from title)
@@ -77,11 +77,11 @@ const RelatedTours = ({ relatedTours }) => {
 
   return (
     <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 mt-8">
-      <h2 className="pl-2 font-bold text-xl text-gray-800 underline underline-offset-8 py-2 rounded-md md:pl-0">
+      <h2 className="pl-2 font-bold text-lg text-gray-800 underline underline-offset-8 py-2 rounded-md md:pl-0">
         Similar Tour Packages and Pricing
       </h2>
-      <div className="text-sm lg:text-xs font-sans flex gap-2">
-        <AiFillInfoCircle size={30} className="text-rose-600" />
+      <div className="text-sm font-sans flex gap-2">
+        <TiInfoLargeOutline size={32} className="text-green-600" />
         <p>
           <span className="font-bold">Note:</span> Below in the related Tours,
           the prices mentioned at Standard and Premium blocks are calculated
