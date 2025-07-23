@@ -37,7 +37,7 @@ const RelatedTours = ({ relatedTours }) => {
         <div className="bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
           <table className="w-full lg:text-sm font-sans">
             <thead>
-              <tr className="bg-blue-900/90 text-white font-serif">
+              <tr className="bg-blue-900/90 text-sm text-white">
                 <th className="p-4 text-left">Tour Name</th>
                 <th className="p-4 text-left">Standard Price</th>
                 <th className="p-4 text-left">Premium Price</th>
@@ -49,7 +49,7 @@ const RelatedTours = ({ relatedTours }) => {
                   key={tour._id}
                   className="border-t text-xs font-semibold border-b border-slate-300"
                 >
-                  <td className="p-2 transition-transform hover:scale-95 text-orange-800 hover:text-blue-500">
+                  <td className="p-2 md:max-w-80 transition-transform hover:scale-95 text-orange-800 hover:text-blue-500">
                     <Link
                       href={`/tours/${tour.slug.current}`}
                       className="flex items-center"
