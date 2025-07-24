@@ -51,34 +51,25 @@ const page = async (props) => {
 
   const { relatedTours, relatedBlogs } = await client.fetch(relatedQuery);
 
-  const plainDescription = toPlainText(tours.tourOverviews || []);
-  const plainItinerary = toPlainText(tours.itinerary || []);
-  const images = tours.images?.map((img) => urlFor(img).url()) || [];
-
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
-    name: tours.title,
+    name: "Australia and New Zealand",
     description:
-      plainDescription || tours.tourOverviews || tours.Metadescription || "",
-    touristType: "Adventure",
-    image: images,
-    offers: {
-      "@type": "Offer",
-      price: tours.International5Persons || "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      validFrom: new Date().toISOString().split("T")[0],
-    },
-    itinerary: [
+      "This trip is modeled as two distinct Tourist Trips using the subTrip property.",
+    subTrip: [
       {
-        "@type": "TouristAttraction",
-        name: "Tour Itinerary",
-        description: plainItinerary,
+        "@type": "TouristTrip",
+        name: "Australia",
+        description: "This is a trip on its own.",
+      },
+      {
+        "@type": "TouristTrip",
+        name: "New Zealand",
+        description: "This is another trip nested inside the main one.",
       },
     ],
   };
-
   return (
     <main className="mt-5 mb-20 ">
       <script
