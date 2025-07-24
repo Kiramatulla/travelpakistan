@@ -58,7 +58,7 @@ const page = async (props) => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Trip",
+    "@type": "Product",
     name: tours.title,
     description:
       plainDescription || tours.tourOverviews || tours.Metadescription || "",
