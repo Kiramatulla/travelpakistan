@@ -51,7 +51,7 @@ const page = async (props) => {
 
   const { relatedTours, relatedBlogs } = await client.fetch(relatedQuery);
 
-  const plainDescription = toPlainText(tours.description || []);
+  const plainDescription = toPlainText(tours.tourOverviews || []);
   const plainItinerary = toPlainText(tours.itinerary || []);
   const images = tours.images?.map((img) => urlFor(img).url()) || [];
 
@@ -65,7 +65,7 @@ const page = async (props) => {
     image: images,
     offers: {
       "@type": "Offer",
-      price: tours.International2Persons || "0",
+      price: tours.International5Persons || "0",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       validFrom: new Date().toISOString().split("T")[0],
