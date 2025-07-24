@@ -2,7 +2,6 @@ import TourDetailsPage from "@/app/components/tourDetailPage/TourDetailsPage";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { toPlainText } from "@portabletext/react";
-import Head from "next/head";
 
 export const dynamicParams = true;
 
@@ -52,15 +51,18 @@ const page = async (props) => {
 
   const { relatedTours, relatedBlogs } = await client.fetch(relatedQuery);
 
-  const itineraryText = toPlainText(tours.itinerary || []);
+  const plainDescription = toPlainText(tours.description || []);
+  const plainItinerary = toPlainText(tours.itinerary || []);
+  const images = tours.images?.map((img) => urlFor(img).url()) || [];
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
     name: tours.title,
-    description: tours.tourOverviews || tours.Metadescription || "",
+    description:
+      plainDescription || tours.tourOverviews || tours.Metadescription || "",
     touristType: "Adventure",
-    image: tours.images?.map((img) => urlFor(img).url()) || [],
+    image: images,
     offers: {
       "@type": "Offer",
       price: tours.International2Persons || "0",
@@ -72,21 +74,17 @@ const page = async (props) => {
       {
         "@type": "TouristAttraction",
         name: "Tour Itinerary",
-        description: itineraryText,
+        description: plainItinerary,
       },
     ],
   };
 
   return (
     <main className="mt-5 mb-20 ">
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      ></script>
       <TourDetailsPage
         tours={tours}
         relatedTours={relatedTours}
