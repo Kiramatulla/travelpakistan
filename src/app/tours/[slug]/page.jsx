@@ -54,6 +54,7 @@ const page = async (props) => {
   const plainDescription = toPlainText(tours.tourOverviews || []);
   const plainItinerary = toPlainText(tours.itinerary || []);
   const images = tours.images?.map((img) => urlFor(img).url()) || [];
+  const plainAbout = toPlainText(tours.regionHistory || []);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -63,6 +64,10 @@ const page = async (props) => {
       plainDescription || tours.tourOverviews || tours.Metadescription || "",
     touristType: "Adventure",
     image: images,
+    brand: {
+      "@type": "Organization",
+      name: "Viola Tours Pakistan",
+    },
     offers: {
       "@type": "Offer",
       price: tours.International5Persons || "0",
@@ -70,11 +75,29 @@ const page = async (props) => {
       availability: "https://schema.org/InStock",
       validFrom: new Date().toISOString().split("T")[0],
     },
+    areaServed: {
+      "@type": "Country",
+      name: "Pakistan",
+    },
     itinerary: [
       {
         "@type": "TouristAttraction",
         name: "Tour Itinerary",
         description: plainItinerary,
+      },
+    ],
+    additionalProperty: [
+      {
+        "@type": "PropertyValue",
+        name: "About the Region",
+        value: plainAbout,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Related Tours",
+        value:
+          relatedTours?.map((t) => t.title).join(", ") ||
+          "See related packages",
       },
     ],
   };
