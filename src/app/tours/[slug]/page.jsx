@@ -1,6 +1,8 @@
 import TourDetailsPage from "@/app/components/tourDetailPage/TourDetailsPage";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import { toPlainText } from "@portabletext/react";
+import Head from "next/head";
 
 export const dynamicParams = true;
 
@@ -50,8 +52,41 @@ const page = async (props) => {
 
   const { relatedTours, relatedBlogs } = await client.fetch(relatedQuery);
 
+  const itineraryText = toPlainText(tours.itinerary || []);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    name: tours.title,
+    description: tours.tourOverviews || tours.Metadescription || "",
+    touristType: "Adventure",
+    image: tours.images?.map((img) => urlFor(img).url()) || [],
+    offers: {
+      "@type": "Offer",
+      price: tours.International2Persons || "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      validFrom: new Date().toISOString().split("T")[0],
+    },
+    itinerary: [
+      {
+        "@type": "TouristAttraction",
+        name: "Tour Itinerary",
+        description: itineraryText,
+      },
+    ],
+  };
+
   return (
     <main className="mt-5 mb-20 ">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </Head>
       <TourDetailsPage
         tours={tours}
         relatedTours={relatedTours}

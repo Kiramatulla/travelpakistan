@@ -6,6 +6,7 @@ import ImageComp from "./ImageComp";
 import Inclusions from "./Inclusions";
 import Itinerary from "./Itinerary";
 import RelatedTours from "./RelatedTours";
+import SocialShare from "./SocialShare";
 import TourCustomItinerary from "./TourCustomItinerary";
 import TourOverviews from "./TourOverviews";
 import UserGuide from "./UserGuide";
@@ -41,6 +42,9 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         </section>
         <section>
           <AboutTour tours={tours} />
+        </section>
+        <section>
+          <SocialShare tours={tours} />
         </section>
       </div>
 
