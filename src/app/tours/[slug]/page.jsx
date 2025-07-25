@@ -64,7 +64,7 @@ const page = async (props) => {
       plainDescription || tours.tourOverviews || tours.Metadescription || "",
     touristType: "Adventure",
     image: images,
-    brand: {
+    Provider: {
       "@type": "Organization",
       name: "Viola Tours Pakistan",
     },
@@ -75,10 +75,11 @@ const page = async (props) => {
       availability: "https://schema.org/InStock",
       validFrom: new Date().toISOString().split("T")[0],
     },
-    areaServed: {
-      "@type": "Country",
-      name: "Pakistan",
-    },
+    subjectOf: relatedTours.map((t) => ({
+      "@type": "TouristTrip",
+      name: t.title,
+      url: `https://www.violatourspk.com/tours/${t.slug}`,
+    })),
     itinerary: [
       {
         "@type": "TouristAttraction",
@@ -91,13 +92,6 @@ const page = async (props) => {
         "@type": "PropertyValue",
         name: "About the Region",
         value: plainAbout,
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Related Tours",
-        value:
-          relatedTours?.map((t) => t.title).join(", ") ||
-          "See related packages",
       },
     ],
   };
