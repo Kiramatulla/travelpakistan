@@ -62,7 +62,7 @@ const page = async (props) => {
     name: tours.title,
     description:
       plainDescription || tours.tourOverviews || tours.Metadescription || "",
-    touristType: "Adventure",
+    touristType: ["Adventure", "Family", "Road Trip", "Historical"],
     image: images,
     Provider: {
       "@type": "Organization",
