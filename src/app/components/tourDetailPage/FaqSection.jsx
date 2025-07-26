@@ -8,7 +8,7 @@ export default function FaqSection({ tours }) {
       <h2 className="text-3xl font-bold mb-8 text-center">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-2">
         {tours.faqs.map((faq, index) => (
           <FaqItem key={index} question={faq.question} answer={faq.answer} />
         ))}

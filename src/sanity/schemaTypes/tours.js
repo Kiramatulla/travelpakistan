@@ -207,28 +207,29 @@ export const tours = {
       of: [{ type: "block" }],
     },
     {
-  name: 'faqs',
-  title: 'FAQs',
-  type: 'array',
-  of: [
-    {
-      type: 'object',
-      fields: [
+      name: "faqs",
+      title: "FAQs",
+      type: "array",
+      of: [
         {
-          name: 'question',
-          title: 'Question',
-          type: 'string',
-          validation: Rule => Rule.required()
+          type: "object",
+          fields: [
+            {
+              name: "question",
+              title: "Question",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+             {
+          name: "answer",
+          title: "Answer",
+          type: "array",
+          of: [{ type: "block" }],
+          validation: (Rule) => Rule.required(),
         },
-        {
-          name: 'answer',
-          title: 'Answer',
-          type: 'text',
-          validation: Rule => Rule.required()
-        }
-      ]
-    }
-  ]
-}
+          ],
+        },
+      ],
+    },
   ],
 };
