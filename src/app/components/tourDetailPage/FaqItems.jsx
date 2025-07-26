@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { PortableText } from "@portabletext/react";
 
 export default function FaqItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +19,9 @@ export default function FaqItem({ question, answer }) {
     <div className="border border-gray-200 rounded-xl shadow-md bg-white transition-all">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center px-6 py-4 text-left rounded-xl bg-slate-200 hover:bg-gray-50 "
+        className="w-full flex justify-between items-center px-6 py-4 text-left rounded-xl bg-slate-200 hover:bg-gray-50"
       >
-        <h4 className="text-base md:text-sm font-medium ">{question}</h4>
+        <h4 className="text-base md:text-sm font-medium">{question}</h4>
         <IoIosArrowDown
           className={`w-6 h-6 text-gray-500 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
@@ -33,7 +34,9 @@ export default function FaqItem({ question, answer }) {
         style={{ maxHeight: isOpen ? `${height}px` : "0px" }}
         className="px-6 overflow-hidden transition-max-height duration-300 ease-in-out"
       >
-        <p className="pt-3 pb-3 text-sm text-gray-600">{answer}</p>
+        <div className="pt-3 pb-3 text-sm text-gray-600">
+          <PortableText value={answer} />
+        </div>
       </div>
     </div>
   );
