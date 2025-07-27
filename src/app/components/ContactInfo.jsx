@@ -24,7 +24,7 @@ const ContactInfo = () => {
                 Visit Us
               </h3>
               <p className="text-sm text-gray-600 md:text-center lg:text-start">
-                Aliabad Hunza, 56000, Pakistan
+                Gulmit Gojal Hunza, 15750, Pakistan
               </p>
             </div>
           </div>

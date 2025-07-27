@@ -72,7 +72,7 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="flex flex-1  md:justify-center justify-end items-center gap-6">
           <span className="hidden md:inline md:text-sm lg:font-semibold ">
-            License No. 000
+            {/* License No. 000 */}
           </span>
           {/* Hamburger Menu - for Mobile */}
           <button

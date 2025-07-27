@@ -36,8 +36,8 @@ const Footer = () => {
                 434
               </p>
               <p>
-                <span className="font-semibold">Office:</span> Skardu & Hunza
-                Valley
+                <span className="font-semibold">Office:</span> Gulmit Gojal
+                Hunza
               </p>
             </div>
           </div>
