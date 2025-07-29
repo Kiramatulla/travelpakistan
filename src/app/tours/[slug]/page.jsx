@@ -100,12 +100,12 @@ const page = async (props) => {
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: tours.faqs.map((faq) => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: toPlainText(faq.answer), // ✅ Convert rich text to plain
+        text: faq.answer,
       },
     })),
   };
