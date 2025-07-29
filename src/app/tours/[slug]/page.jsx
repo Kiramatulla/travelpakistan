@@ -96,19 +96,24 @@ const page = async (props) => {
       },
     ],
   };
+  //Sturcuture data for FAQ's
+  const faqStructuredData =
+    Array.isArray(tours.faqs) && tours.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: tours.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: toPlainText(faq.answer), // ✅ Converts from rich blocks
+            },
+          })),
+        }
+      : null;
+  //Main Component Items
 
-  const faqStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: tours.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: toPlainText(faq.answer),
-      },
-    })),
-  };
   return (
     <main className="mt-5 mb-20 ">
       <script
