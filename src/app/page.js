@@ -1,5 +1,6 @@
 import ContactInfo from "./components/ContactInfo";
 import Hero from "./components/Hero";
+import CreateYourItinerary from "./components/homeCardComp/CreateYourItinerary";
 import HomeCard from "./components/homeCardComp/HomeCard";
 import ServicesOffered from "./components/homeServiceComp/ServicesOffered";
 import TrekCardDetails from "./components/trekingComponents/TrekCardDetails";
@@ -25,12 +26,16 @@ export default function Home() {
     <section className="container mx-auto px-4">
         <TrekCardDetails />
       </section>
+      {/* <section>
+        <CreateYourItinerary/>
+      </section> */}
       <section>
         <VehicleCard />
       </section>
       <section>
         <ServicesOffered />
       </section>
+      
   </main>
   );
 }
