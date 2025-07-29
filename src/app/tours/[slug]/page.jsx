@@ -55,6 +55,7 @@ const page = async (props) => {
   const plainItinerary = toPlainText(tours.itinerary || []);
   const images = tours.images?.map((img) => urlFor(img).url()) || [];
   const plainAbout = toPlainText(tours.regionHistory || []);
+  const faqs = tours.faqs || [];
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -95,12 +96,28 @@ const page = async (props) => {
       },
     ],
   };
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
   return (
     <main className="mt-5 mb-20 ">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       ></script>
+      <script type="application/ld+json">
+        {JSON.stringify(faqStructuredData)}
+      </script>
       <TourDetailsPage
         tours={tours}
         relatedTours={relatedTours}
