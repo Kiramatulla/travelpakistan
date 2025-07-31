@@ -24,7 +24,7 @@ const Inclusions = () => {
             size={35}
             className="text-green-600 hidden md:block"
           />
-          <p className="text-gray-500">
+          <p className="text-gray-600">
             Please note that the services we provide vary depending on the type
             of guest—domestic or international and also differ based on the
             nature of the tour, such as one-day trips, trekking tours, and more.

@@ -85,7 +85,7 @@ const RelatedTours = ({ relatedTours }) => {
           size={32}
           className="text-green-600 hidden md:block"
         />
-        <p className="text-gray-500">
+        <p className="text-gray-600">
           <span className="font-bold">Note:</span> Below in the related Tours,
           the prices mentioned at Standard and Premium blocks are calculated
           keeping 2 persons in mind. To get the price for more than two Pax,

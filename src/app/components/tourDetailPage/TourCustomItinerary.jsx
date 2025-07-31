@@ -21,12 +21,12 @@ export default async function ItineraryRegionShowcase() {
         How Can I Create My Own Itinerary?
       </h2>
       <div className="mb-6 space-y-4">
-        <div className="flex items-start gap-2 text-center">
+        <div className="flex items-start text-center">
           {/* Icon container with fixed size */}
           <span className="flex-none w-5 h-5 hidden md:block">
             <TiInfoLargeOutline className="w-full h-full  text-green-600" />
           </span>
-          <p className=" text-slate-500 text-sm px-1 md:px-0">
+          <p className=" text-slate-600 text-sm px-1 md:px-0">
             <span className="font-bold">YES!</span> you can customize your own
             Itinerary, even if you&apos;re unfamiliar with the region. Explore
             more areas using the{" "}

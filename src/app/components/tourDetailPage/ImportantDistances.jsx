@@ -13,7 +13,7 @@ const ImportantDistances = ({ tours }) => {
         </h2>
       </div>
 
-      <p className="text-sm text-gray-500 mb-4 text-center">
+      <p className="text-sm text-gray-600 mb-4 text-center">
         Please note that the distances written below are based on data from
         Google and Google maps, whereas the drive time is from personal
         experience.
