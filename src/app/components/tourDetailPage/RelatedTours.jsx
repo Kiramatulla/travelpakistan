@@ -85,14 +85,14 @@ const RelatedTours = ({ relatedTours }) => {
           size={32}
           className="text-green-600 hidden md:block"
         />
-        <p>
+        <p className="text-gray-500">
           <span className="font-bold">Note:</span> Below in the related Tours,
           the prices mentioned at Standard and Premium blocks are calculated
           keeping 2 persons in mind. To get the price for more than two Pax,
           please visit their relative pages by simply clicking on them.
         </p>
       </div>
-      <div className="text-center text-lg md:text-base md:text-left font-bold pb-2">
+      <div className=" text-lg md:text-base md:text-left font-bold pb-2">
         {renderTable(
           groupedTours["Tour and Sightseeing Only"],
           "Tour and Sightseeing Only"

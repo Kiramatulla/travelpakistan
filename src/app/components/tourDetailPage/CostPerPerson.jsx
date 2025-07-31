@@ -11,7 +11,7 @@ const CostPerPerson = ({ tours }) => {
           size={35}
           className="text-green-600 hidden md:block"
         />
-        <p className="text-sm mb-4 mx-2 text-center md:text-left">
+        <p className="text-gray-500 text-sm mb-4 text-center md:text-left">
           Please note that the price listed below may vary depending on the
           services selected, as client preferences are our top priority. The
           choice of hotels, adding or subtracting tour days and other options

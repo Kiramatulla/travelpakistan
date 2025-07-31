@@ -14,17 +14,17 @@ const Inclusions = () => {
   const categories = tourCategories.map((cat) => cat.id);
 
   return (
-    <section className="mx-6 lg:mx-0 lg:px-8">
+    <section className="mx-2 lg:mx-0 lg:px-8">
       <h1 className="text-center md:text-left text-lg mt-8 font-bold text-black mb-2">
         SERVICES INCLUDED AND EXCLUDED .
       </h1>
-      <div className="space-y-4 mb-4 text-gray-700 max-w-4xl leading-relaxed text-justify">
+      <div className="space-y-4 mb-4 text-gray-700 leading-relaxed text-justify">
         <div className="flex gap-4 text-sm text-center md:text-left mb-2">
           <TiInfoLargeOutline
             size={35}
             className="text-green-600 hidden md:block"
           />
-          <p>
+          <p className="text-gray-500">
             Please note that the services we provide vary depending on the type
             of guest—domestic or international and also differ based on the
             nature of the tour, such as one-day trips, trekking tours, and more.
@@ -48,7 +48,7 @@ const Inclusions = () => {
         ))}
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10">
+      <div className="mx-2 md:mx-0 flex flex-col md:flex-row gap-10">
         {/* Inclusions */}
         <div className="flex-1">
           <h3 className="text-xl font-bold text-gray-800 mb-6 border-b pb-2 border-teal-300">
@@ -91,7 +91,7 @@ const Inclusions = () => {
       </div>
 
       {/* Link to full page */}
-      <div className="my-6">
+      <div className="my-6 mx-2 md:mx-0">
         <Link
           href="/inclusions"
           className="text-green-700 hover:text-amber-600 font-medium inline-flex items-center gap-1 transition-colors"

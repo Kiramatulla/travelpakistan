@@ -16,17 +16,17 @@ export default async function ItineraryRegionShowcase() {
   const regions = await client.fetch(query);
 
   return (
-    <section className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 mb-6 shadow-md">
+    <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 pt-8 md:pt-7 bg-white border border-slate-200 rounded-3xl md:p-12 mb-6 shadow-md">
       <h2 className="text-xl font-bold text-center mb-4">
         How Can I Create My Own Itinerary?
       </h2>
-      <div className="mb-10 space-y-4">
+      <div className="mb-6 space-y-4">
         <div className="flex items-start gap-2 text-center">
           {/* Icon container with fixed size */}
-          <span className="flex-none w-5 h-5">
-            <TiInfoLargeOutline className="w-full h-full hidden md:block text-green-600" />
+          <span className="flex-none w-5 h-5 hidden md:block">
+            <TiInfoLargeOutline className="w-full h-full  text-green-600" />
           </span>
-          <p className="flex-1 text-slate-600 text-sm">
+          <p className=" text-slate-500 text-sm px-1 md:px-0">
             <span className="font-bold">YES!</span> you can customize your own
             Itinerary, even if you&apos;re unfamiliar with the region. Explore
             more areas using the{" "}
@@ -40,7 +40,7 @@ export default async function ItineraryRegionShowcase() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-10">
+      <div className="grid md:grid-cols-3 gap-6 mb-10 p-6">
         {regions.slice(0, 6).map((region, index) => (
           <Link
             href="/customitinerary"
