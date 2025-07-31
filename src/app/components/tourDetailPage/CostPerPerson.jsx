@@ -3,19 +3,22 @@ import { TiInfoLargeOutline } from "react-icons/ti";
 const CostPerPerson = ({ tours }) => {
   return (
     <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
-      <h2 className="font-bold text-lg underline underline-offset-8 text-gray-800 mb-2">
+      <h2 className="font-bold text-center md:text-left text-lg underline underline-offset-8 text-gray-800 mb-2">
         Total Cost of {tours.title}
       </h2>
       <div className="flex">
-        <TiInfoLargeOutline size={35} className="text-green-600" />
-        <p className="text-sm mb-4 mx-2">
+        <TiInfoLargeOutline
+          size={35}
+          className="text-green-600 hidden md:block"
+        />
+        <p className="text-sm mb-4 mx-2 text-center md:text-left">
           Please note that the price listed below may vary depending on the
           services selected, as client preferences are our top priority. The
           choice of hotels, adding or subtracting tour days and other options
           may result in slight differences from the displayed price.
         </p>
       </div>
-      <h2 className=" font-semibold text-gray-800 mb-2 underline underline-offset-4">
+      <h2 className="text-center md:text-left font-semibold text-gray-800 mb-2 underline underline-offset-4">
         Price Per Person – International Tourists
       </h2>
 
@@ -92,7 +95,7 @@ const CostPerPerson = ({ tours }) => {
         </table>
       </div>
 
-      <h2 className="font-semibold text-gray-800 mt-8 mb-2 underline underline-offset-4">
+      <h2 className="text-center md:text-left font-semibold text-gray-800 mt-8 mb-2 underline underline-offset-4">
         Price Per Person – Domestic Tourists
       </h2>
 

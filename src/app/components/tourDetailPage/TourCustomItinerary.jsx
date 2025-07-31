@@ -21,32 +21,21 @@ export default async function ItineraryRegionShowcase() {
         How Can I Create My Own Itinerary?
       </h2>
       <div className="mb-10 space-y-4">
-        <div className="flex items-start gap-2">
+        <div className="flex items-start gap-2 text-center">
           {/* Icon container with fixed size */}
           <span className="flex-none w-5 h-5">
-            <TiInfoLargeOutline className="w-full h-full text-green-600" />
+            <TiInfoLargeOutline className="w-full h-full hidden md:block text-green-600" />
           </span>
-          <p className="flex-1 text-slate-600 text-base md:text-sm">
+          <p className="flex-1 text-slate-600 text-sm">
             <span className="font-bold">YES!</span> you can customize your own
-            Itinerary, even if you don&apos;t know the region at all. Please
-            note that below are just a few regions displayed. If your region
-            isn&apos;t here, use “Click for More Regions” at the end of this
-            section.
-          </p>
-        </div>
-
-        <div className="flex items-start gap-2">
-          <span className="flex-none w-5 h-5">
-            <TiInfoLargeOutline className="w-full h-full text-green-600" />
-          </span>
-          <p className="flex-1 text-slate-600 text-base md:text-sm">
-            For More Research, please choose the region you want to explore.
-            Each region provides infomations like{" "}
+            Itinerary, even if you&apos;re unfamiliar with the region. Explore
+            more areas using the{" "}
+            <span className="font-bold">Click for More Regions</span> button at
+            the end. by visiting the page you will find informations like
             <span className="font-bold">
               Sightseeing Places, Short and Long Treks, Hotels, Restaurants, and
-              more
+              more.
             </span>
-            .
           </p>
         </div>
       </div>

@@ -15,12 +15,15 @@ const Inclusions = () => {
 
   return (
     <section className="mx-6 lg:mx-0 lg:px-8">
-      <h1 className="text-4xl md:text-xl mt-8 font-bold text-black mb-6">
+      <h1 className="text-center md:text-left text-lg mt-8 font-bold text-black mb-2">
         SERVICES INCLUDED AND EXCLUDED .
       </h1>
       <div className="space-y-4 mb-4 text-gray-700 max-w-4xl leading-relaxed text-justify">
-        <div className="flex gap-4 text-sm">
-          <TiInfoLargeOutline size={35} className="text-green-600" />
+        <div className="flex gap-4 text-sm text-center md:text-left mb-2">
+          <TiInfoLargeOutline
+            size={35}
+            className="text-green-600 hidden md:block"
+          />
           <p>
             Please note that the services we provide vary depending on the type
             of guest—domestic or international and also differ based on the

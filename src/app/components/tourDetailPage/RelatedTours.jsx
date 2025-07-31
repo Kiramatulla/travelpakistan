@@ -76,12 +76,15 @@ const RelatedTours = ({ relatedTours }) => {
   };
 
   return (
-    <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 mt-8">
-      <h2 className="pl-2 font-bold text-lg text-gray-800 underline underline-offset-8 py-2 rounded-md md:pl-0">
+    <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 mt-8 ">
+      <h2 className="text-center md:text-left pl-2 font-bold text-lg text-gray-800 underline underline-offset-8 py-2 rounded-md md:pl-0">
         Similar Tour Packages and Pricing
       </h2>
-      <div className="text-sm font-sans flex gap-2">
-        <TiInfoLargeOutline size={32} className="text-green-600" />
+      <div className="text-sm font-sans flex gap-2 text-center md:text-left">
+        <TiInfoLargeOutline
+          size={32}
+          className="text-green-600 hidden md:block"
+        />
         <p>
           <span className="font-bold">Note:</span> Below in the related Tours,
           the prices mentioned at Standard and Premium blocks are calculated
@@ -89,13 +92,14 @@ const RelatedTours = ({ relatedTours }) => {
           please visit their relative pages by simply clicking on them.
         </p>
       </div>
-
-      {renderTable(
-        groupedTours["Tour and Sightseeing Only"],
-        "Tour and Sightseeing Only"
-      )}
-      {renderTable(groupedTours["Tour and Trekking"], "Tour and Trekking")}
-      {renderTable(groupedTours["Festival Tour"], "Festival Tour")}
+      <div className="text-center text-lg md:text-base md:text-left font-bold pb-2">
+        {renderTable(
+          groupedTours["Tour and Sightseeing Only"],
+          "Tour and Sightseeing Only"
+        )}
+        {renderTable(groupedTours["Tour and Trekking"], "Tour and Trekking")}
+        {renderTable(groupedTours["Festival Tour"], "Festival Tour")}
+      </div>
     </div>
   );
 };
