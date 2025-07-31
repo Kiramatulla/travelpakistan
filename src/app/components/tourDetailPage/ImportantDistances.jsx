@@ -5,15 +5,15 @@ const ImportantDistances = ({ tours }) => {
 
   return (
     <section className="max-w-3xl mx-auto px-4 py-6 ">
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
         <GiPathDistance size={36} className="text-green-600" />
 
-        <h2 className="text-2xl font-semibold border-b border-gray-200">
+        <h2 className="text-2xl  md:text-left font-semibold border-b border-gray-200">
           Important Distances
         </h2>
       </div>
 
-      <p className="text-sm text-gray-500 mb-4">
+      <p className="text-sm text-gray-500 mb-4 text-center">
         Please note that the distances written below are based on data from
         Google and Google maps, whereas the drive time is from personal
         experience.
