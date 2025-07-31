@@ -4,6 +4,7 @@ import Blogs from "./Blogs";
 import CostPerPerson from "./CostPerPerson";
 import FaqSection from "./FaqSection";
 import ImageComp from "./ImageComp";
+import ImportantDistances from "./ImportantDistances";
 import Inclusions from "./Inclusions";
 import Itinerary from "./Itinerary";
 import RelatedTours from "./RelatedTours";
@@ -40,6 +41,9 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         </section>
         <section>
           <Itinerary tours={tours} />
+        </section>
+        <section>
+          {tours?.distance?.length > 0 && <ImportantDistances tours={tours} />}
         </section>
         <section>
           <AboutTour tours={tours} />

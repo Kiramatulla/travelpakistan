@@ -220,13 +220,43 @@ export const tours = {
               type: "string",
               validation: (Rule) => Rule.required(),
             },
-             {
-          name: "answer",
-          title: "Answer",
-          type: "array",
-          of: [{ type: "block" }],
-          validation: (Rule) => Rule.required(),
+            {
+              name: "answer",
+              title: "Answer",
+              type: "array",
+              of: [{ type: "block" }],
+              validation: (Rule) => Rule.required(),
+            },
+          ],
         },
+      ],
+    },
+    {
+      name: "distance",
+      title: "Important Distances",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "areaName",
+              title: "Area Name",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "areaDistance",
+              title: "Area Distance",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "driveTime",
+              title: "Drive Time",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
           ],
         },
       ],
