@@ -120,9 +120,11 @@ const page = async (props) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       ></script>
-      <script type="application/ld+json">
-        {JSON.stringify(faqStructuredData)}
-      </script>
+      {faqStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(faqStructuredData)}
+        </script>
+      )}
       <TourDetailsPage
         tours={tours}
         relatedTours={relatedTours}
