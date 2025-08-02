@@ -5,7 +5,6 @@ import { toPlainText } from "@portabletext/react";
 
 export const dynamicParams = true;
 
-// ✅ This will generate static pages for each tour at build time
 export async function generateStaticParams() {
   const query = `*[_type == "tour"]{ "slug": slug.current }`;
   const tours = await client.fetch(query);
@@ -55,7 +54,6 @@ const page = async (props) => {
   const plainItinerary = toPlainText(tours.itinerary || []);
   const images = tours.images?.map((img) => urlFor(img).url()) || [];
   const plainAbout = toPlainText(tours.regionHistory || []);
-  const faqs = tours.faqs || [];
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -107,7 +105,7 @@ const page = async (props) => {
             name: faq.question,
             acceptedAnswer: {
               "@type": "Answer",
-              text: toPlainText(faq.answer), // ✅ Converts from rich blocks
+              text: toPlainText(faq.answer),
             },
           })),
         }
