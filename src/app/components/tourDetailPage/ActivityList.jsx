@@ -17,19 +17,21 @@ const ActivityList = ({ tours }) => {
   });
 
   return (
-    <div className="max-w-3xl mx-auto px-2 md:flex md:flex-col ">
-      <div className="flex flex-col md:flex-row">
+    <div className="max-w-3xl mx-auto px-8 md:px-2">
+      <div className="flex flex-col md:flex-row md:justify-center gap-6 md:gap-28">
         {/* Sightseeing */}
         {grouped.sightseeing.length > 0 && (
-          <div className="mb-6 md:mb-0 md:w-1/3">
+          <div className="">
             <h3 className="text-base font-semibold mb-2">Sightseeing</h3>
-            <ul className="text-sm flex gap-2 items-center">
-              <IoMdCheckmarkCircleOutline
-                size={16}
-                className="text-green-600"
-              />
+            <ul className="text-sm space-y-2">
               {grouped.sightseeing.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="flex gap-3 items-center">
+                  <IoMdCheckmarkCircleOutline
+                    size={16}
+                    className="text-green-600"
+                  />
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
@@ -37,15 +39,17 @@ const ActivityList = ({ tours }) => {
 
         {/* Trekking */}
         {grouped.trekking.length > 0 && (
-          <div className="mb-6 md:mb-0 md:w-1/3">
+          <div className="">
             <h3 className="text-base font-semibold mb-2">Trekking</h3>
-            <ul className="text-sm flex gap-2 items-center">
-              <IoMdCheckmarkCircleOutline
-                size={16}
-                className="text-green-600"
-              />
+            <ul className="text-sm space-y-2">
               {grouped.trekking.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="flex gap-3 items-center">
+                  <IoMdCheckmarkCircleOutline
+                    size={16}
+                    className="text-green-600"
+                  />
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
@@ -53,15 +57,17 @@ const ActivityList = ({ tours }) => {
 
         {/* Hiking */}
         {grouped.hiking.length > 0 && (
-          <div className="md:w-1/3">
+          <div className="">
             <h3 className="text-base font-semibold mb-2">Hiking</h3>
-            <ul className="text-sm flex gap-2 items-center">
-              <IoMdCheckmarkCircleOutline
-                size={16}
-                className="text-green-600"
-              />
+            <ul className="text-sm space-y-2">
               {grouped.hiking.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="flex gap-3 items-center">
+                  <IoMdCheckmarkCircleOutline
+                    size={16}
+                    className="text-green-600"
+                  />
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
