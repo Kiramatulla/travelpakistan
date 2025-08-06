@@ -1,5 +1,6 @@
 import CallToAction from "../CallToAction";
 import AboutTour from "./AboutTour";
+import ActivityList from "./ActivityList";
 import Blogs from "./Blogs";
 import CostPerPerson from "./CostPerPerson";
 import FaqSection from "./FaqSection";
@@ -49,8 +50,12 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
           <AboutTour tours={tours} />
         </section>
         <section>
+          {tours?.activitiesList?.length > 0 && <ActivityList tours={tours} />}
+        </section>
+        <section>
           {tours?.faqs?.length > 0 && <FaqSection tours={tours} />}
         </section>
+
         <section>
           <SocialShare tours={tours} />
         </section>

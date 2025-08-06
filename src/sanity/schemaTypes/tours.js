@@ -261,5 +261,37 @@ export const tours = {
         },
       ],
     },
+    {
+  name: "activitiesList",
+  title: "Trekking / Hiking / Sightseeing",
+  type: "array",
+  of: [
+    {
+      type: "object",
+      fields: [
+        {
+          name: "activityType",
+          title: "Activity Type",
+          type: "string",
+          options: {
+            list: [
+              { title: "Sightseeing", value: "sightseeing" },
+              { title: "Trekking", value: "trekking" },
+              { title: "Hiking", value: "hiking" },
+            ],
+            layout: "dropdown",
+          },
+          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: "name",
+          title: "Name",
+          type: "string",
+          validation: (Rule) => Rule.required(),
+        },
+      ],
+    },
+  ],
+}
   ],
 };
