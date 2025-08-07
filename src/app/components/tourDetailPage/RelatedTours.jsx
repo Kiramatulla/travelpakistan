@@ -19,6 +19,9 @@ const RelatedTours = ({ relatedTours }) => {
     "Tour and Trekking": sortedTours.filter(
       (tour) => tour.tourType === "Tour and Trekking"
     ),
+    "Seasonal Tour": sortedTours.filter(
+      (tour) => tour.tourType === "Seasonal Tour"
+    ),
     "Festival Tour": sortedTours.filter(
       (tour) => tour.tourType === "Festival Tour"
     ),
@@ -98,6 +101,7 @@ const RelatedTours = ({ relatedTours }) => {
           "Tour and Sightseeing Only"
         )}
         {renderTable(groupedTours["Tour and Trekking"], "Tour and Trekking")}
+        {renderTable(groupedTours["Seasonal Tour"], "Seasonal Tour")}
         {renderTable(groupedTours["Festival Tour"], "Festival Tour")}
       </div>
     </div>
