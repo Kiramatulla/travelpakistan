@@ -80,6 +80,7 @@ export const tours = {
             value: "Tour and Sightseeing Only",
           },
           { title: "Tour and Trekking", value: "Tour and Trekking" },
+          { title: "Seasonal Tours", value: "Seasonal Tours" },
           { title: "Festival Tour", value: "Festival Tour" },
         ],
       },
