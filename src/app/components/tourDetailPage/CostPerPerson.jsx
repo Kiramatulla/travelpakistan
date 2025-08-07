@@ -1,4 +1,5 @@
 import { TiInfoLargeOutline } from "react-icons/ti";
+import AboutCost from "./AboutCost";
 
 const CostPerPerson = ({ tours }) => {
   return (
@@ -171,6 +172,7 @@ const CostPerPerson = ({ tours }) => {
           </tbody>
         </table>
       </div>
+      {tours?.aboutCost?.length > 0 && <AboutCost tours={tours} />}
     </section>
   );
 };

@@ -201,6 +201,12 @@ export const tours = {
       validation: (Rule) => Rule.min(0),
     },
     {
+      name: "aboutCost",
+      title: "Cost Description",
+      type: "array",
+      of: [{ type: "block" }],
+    },
+    {
       name: "regionHistory",
       title: "Region History",
       type: "array",
@@ -262,36 +268,43 @@ export const tours = {
       ],
     },
     {
-  name: "activitiesList",
-  title: "Trekking / Hiking / Sightseeing",
-  type: "array",
-  of: [
-    {
-      type: "object",
-      fields: [
+      name: "activitiesList",
+      title: "Trekking / Hiking / Sightseeing",
+      type: "array",
+      of: [
         {
-          name: "activityType",
-          title: "Activity Type",
-          type: "string",
-          options: {
-            list: [
-              { title: "Sightseeing", value: "sightseeing" },
-              { title: "Trekking", value: "trekking" },
-              { title: "Hiking", value: "hiking" },
-            ],
-            layout: "dropdown",
-          },
-          validation: (Rule) => Rule.required(),
-        },
-        {
-          name: "name",
-          title: "Name",
-          type: "string",
-          validation: (Rule) => Rule.required(),
+          type: "object",
+          fields: [
+            {
+              name: "activityType",
+              title: "Activity Type",
+              type: "string",
+              options: {
+                list: [
+                  { title: "Sightseeing", value: "sightseeing" },
+                  { title: "Trekking", value: "trekking" },
+                  { title: "Hiking", value: "hiking" },
+                ],
+                layout: "dropdown",
+              },
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "name",
+              title: "Name",
+              type: "string",
+              validation: (Rule) => Rule.required(),
+            },
+          ],
         },
       ],
     },
-  ],
-}
+    {
+      name: "highlights",
+      title: "Tour Highlights",
+      type: "array",
+      of: [{ type: "string" }],
+      description: "Key features or attractions included in this tour.",
+    },
   ],
 };
