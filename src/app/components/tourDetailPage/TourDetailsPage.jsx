@@ -11,6 +11,7 @@ import Itinerary from "./Itinerary";
 import RelatedTours from "./RelatedTours";
 import SocialShare from "./SocialShare";
 import TourCustomItinerary from "./TourCustomItinerary";
+import TourGallery from "./TourGallery";
 import TourHighlights from "./TourHighlights";
 import TourOverviews from "./TourOverviews";
 import UserGuide from "./UserGuide";
@@ -52,6 +53,9 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         </section>
         <section>
           {tours?.activitiesList?.length > 0 && <ActivityList tours={tours} />}
+        </section>
+        <section>
+          {tours?.gallery?.length > 0 && <TourGallery tours={tours} />}
         </section>
         <section>
           {tours?.highlights?.length > 0 && <TourHighlights tours={tours} />}

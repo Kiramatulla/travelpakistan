@@ -313,5 +313,37 @@ export const tours = {
       of: [{ type: "string" }],
       description: "Key features or attractions included in this tour.",
     },
+    {
+      name: "gallery",
+      title: "Tour Gallery",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "image",
+              title: "Image",
+              type: "image",
+              options: {
+                hotspot: true,
+              },
+            },
+            {
+              name: "caption",
+              title: "Caption (Alt Text)",
+              type: "string",
+              description: 'Example: "View of Passu Cones from Gulmit"',
+            },
+          ],
+          preview: {
+            select: {
+              title: "caption",
+              media: "image",
+            },
+          },
+        },
+      ],
+    },
   ],
 };
