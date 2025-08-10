@@ -14,7 +14,7 @@ export default function TourGallery({ tours }) {
         {tours.gallery.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center"
+            className="flex flex-col justify-center items-center pb-1"
           >
             <div className="">
               <Image
@@ -22,7 +22,7 @@ export default function TourGallery({ tours }) {
                 alt={item.caption || "Tour photo"}
                 width={300}
                 height={300}
-                className="object-cover w-[199px] h-[137px]"
+                className="object-cover w-[199px] h-[137px] md:w-[245px] md:h-[145px] lg:w-[205px] lg:h-[135px] "
               />
             </div>
             <p className="mt-2 text-sm text-center text-gray-700 font-medium">
