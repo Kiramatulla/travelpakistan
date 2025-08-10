@@ -21,10 +21,12 @@ const PortableTextComponents = {
   },
   list: {
     bullet: ({ children }) => (
-      <ul className="list-disc pl-4 mb-4 text-gray-700">{children}</ul>
+      <ul className="list-disc pl-4 md:pl-7 mb-4 text-gray-700">{children}</ul>
     ),
     number: ({ children }) => (
-      <ol className="list-decimal pl-4 mb-4 text-gray-700">{children}</ol>
+      <ol className="list-decimal pl-4 md:pl-7 mb-4 text-gray-700">
+        {children}
+      </ol>
     ),
   },
   listItem: {
@@ -36,7 +38,7 @@ const PortableTextComponents = {
 const Itinerary = ({ tours }) => {
   return (
     <article className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
-      <section className="font-sans text-sm text-justify lg:text-start px-4 lg:px-0 lg:text-sm lg:leading-6">
+      <section className="font-sans text-sm text-justify lg:text-start px-4 lg:px-0 lg:leading-6">
         <PortableText
           value={tours.itinerary}
           components={PortableTextComponents}

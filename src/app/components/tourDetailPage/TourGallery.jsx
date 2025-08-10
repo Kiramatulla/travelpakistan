@@ -26,7 +26,7 @@ export default function TourGallery({ tours }) {
                 className="object-cover w-[199px] h-[137px] md:w-[245px] md:h-[145px] lg:w-[205px] lg:h-[135px] "
               />
             </div>
-            <p className="mt-2 text-xs md:text-sm text-center text-gray-700 font-medium">
+            <p className="mt-2 text-xs text-center text-gray-700 font-medium">
               {item.caption}
             </p>
           </div>
