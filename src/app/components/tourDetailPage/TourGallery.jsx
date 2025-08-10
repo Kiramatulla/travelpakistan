@@ -22,6 +22,7 @@ export default function TourGallery({ tours }) {
                 alt={item.caption || "Tour photo"}
                 width={300}
                 height={300}
+                loading="lazy"
                 className="object-cover w-[199px] h-[137px] md:w-[245px] md:h-[145px] lg:w-[205px] lg:h-[135px] "
               />
             </div>
