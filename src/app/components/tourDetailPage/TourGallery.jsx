@@ -10,7 +10,7 @@ export default function TourGallery({ tours }) {
         Photos from my Personal Collections
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2 gap-2 md:mx-0 md:gap-0">
         {tours.gallery.map((item, index) => (
           <div
             key={index}
