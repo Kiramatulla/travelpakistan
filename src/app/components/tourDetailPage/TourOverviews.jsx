@@ -30,10 +30,10 @@ const PortableTextComponents = {
   },
   list: {
     bullet: ({ children }) => (
-      <ul className="list-disc pl-9 mb-4 text-gray-700">{children}</ul>
+      <ul className="list-disc pl-4 mb-4 text-gray-700">{children}</ul>
     ),
     number: ({ children }) => (
-      <ol className="list-decimal pl-6 mb-4 text-gray-700">{children}</ol>
+      <ol className="list-decimal pl-4 mb-4 text-gray-700">{children}</ol>
     ),
   },
   listItem: {
