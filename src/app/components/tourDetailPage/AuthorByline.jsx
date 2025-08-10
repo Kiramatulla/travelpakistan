@@ -59,15 +59,15 @@ const AuthorByline = ({ tours }) => {
               size={18}
             />
           </Link>
-          {/* <Link
-            href="https://twitter.com"
+          <Link
+            href="https://x.com/KarimBari_09?t=Ts0m-e1WNG7au-OMd5wqmw&s=09"
             aria-label="Twitter"
             target="_blank"
             rel="noopener noreferrer"
             itemProp="sameAs"
           >
             <FaTwitter className="text-sky-500 hover:text-sky-700" size={18} />
-          </Link> */}
+          </Link>
           <Link
             href="https://www.instagram.com/karimbari_09/"
             aria-label="Instagram"
