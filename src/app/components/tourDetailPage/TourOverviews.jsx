@@ -43,7 +43,7 @@ const PortableTextComponents = {
 };
 const TourOverviews = ({ tours }) => {
   return (
-    <article className="px-6 text-justify lg:text-start mt-8 mb-6 lg:pl-8 lg:pr-8">
+    <article className="px-6  lg:text-start mt-8 mb-6 lg:pl-8 lg:pr-8">
       <h1 className="font-bold text-2xl text-gray-800 font-sans mb-4">
         {tours.title}
       </h1>
@@ -53,7 +53,7 @@ const TourOverviews = ({ tours }) => {
           tours?.author?.authorDescription && <AuthorByline tours={tours} />}
       </div>
 
-      <section className="font-sans text-gray-800 text-justify lg:text-start px-2 lg:px-0 lg:text-sm lg:leading-7">
+      <section className="font-sans text-sm text-gray-800 text-justify lg:text-start px-2 lg:px-0 lg:text-sm lg:leading-7">
         <PortableText
           value={tours.tourOverviews}
           components={PortableTextComponents}
