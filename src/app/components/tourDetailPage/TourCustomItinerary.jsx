@@ -16,7 +16,7 @@ export default async function ItineraryRegionShowcase() {
   const regions = await client.fetch(query);
 
   return (
-    <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 pt-8 md:pt-7 bg-white border border-slate-200 rounded-3xl md:p-12 mb-6 shadow-md">
+    <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 pt-8 md:pt-7 bg-white border border-slate-200 rounded-3xl pb-6 md:p-12 mb-6  shadow-md">
       <h2 className="text-xl font-bold text-center mb-4">
         How Can I Create My Own Itinerary?
       </h2>

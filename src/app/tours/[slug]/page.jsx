@@ -51,9 +51,22 @@ const page = async (props) => {
   if (!tours) return "No Tours Found";
 
   const relatedQuery = `{
-    "relatedTours": *[_type == "tour" && category._ref == '${tours.category._ref}' && slug.current != '${params.slug}'],
-    "relatedBlogs": *[_type =="blogs" && category._ref == '${tours.category._ref}']
-  }`;
+  "relatedTours": *[
+    _type == "tour" && category._ref == '${tours.category._ref}' && slug.current != '${params.slug}'
+  ]{
+    tourType,
+    title,
+    "slug": slug.current,
+    images,
+    _id,
+    numberOfDays,
+    International2Persons,
+    International2PersonsLuxury
+  },
+  "relatedBlogs": *[
+    _type == "blogs" && category._ref == '${tours.category._ref}'
+  ]
+}`;
 
   const { relatedTours, relatedBlogs } = await client.fetch(relatedQuery);
 

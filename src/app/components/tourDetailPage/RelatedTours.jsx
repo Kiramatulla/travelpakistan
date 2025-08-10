@@ -54,7 +54,7 @@ const RelatedTours = ({ relatedTours }) => {
                 >
                   <td className="p-2 md:max-w-80 transition-transform hover:scale-95 text-orange-800 hover:text-blue-500">
                     <Link
-                      href={`/tours/${tour.slug.current}`}
+                      href={`/tours/${tour.slug}`}
                       className="flex items-center"
                     >
                       <Image
