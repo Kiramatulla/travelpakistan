@@ -1,3 +1,4 @@
+import { author } from "./author"
 import { blogs } from "./blogs"
 import { category } from "./category"
 import { region } from "./region"
@@ -8,5 +9,5 @@ import { tours } from "./tours"
 import { treks } from "./trek"
 import { vehicles } from "./vehicle"
 export const schema = {
-  types: [tours,category,blogs,treks,vehicles,sitePolicies,region,spot,subregion],
+  types: [tours,category,blogs,treks,vehicles,sitePolicies,region,spot,subregion,author],
 }

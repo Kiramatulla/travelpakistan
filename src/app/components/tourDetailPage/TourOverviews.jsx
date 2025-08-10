@@ -9,6 +9,7 @@ import {
 import { FaUsers } from "react-icons/fa6";
 import { GiBinoculars, GiCommercialAirplane } from "react-icons/gi";
 import { LuAlarmClockCheck } from "react-icons/lu";
+import AuthorByline from "./AuthorByline";
 
 const PortableTextComponents = {
   block: {
@@ -46,6 +47,12 @@ const TourOverviews = ({ tours }) => {
       <h1 className="font-bold text-2xl text-gray-800 font-sans mb-4">
         {tours.title}
       </h1>
+      <div>
+        {tours?.author?.authorName &&
+          tours?.author?.lastUpdated &&
+          tours?.author?.authorDescription && <AuthorByline tours={tours} />}
+      </div>
+
       <section className="font-sans text-gray-800 text-justify lg:text-start px-2 lg:px-0 lg:text-sm lg:leading-7">
         <PortableText
           value={tours.tourOverviews}

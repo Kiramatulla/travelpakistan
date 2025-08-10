@@ -93,6 +93,12 @@ export const tours = {
       of: [{ type: "block" }],
     },
     {
+      name: "author",
+      title: "Author Bio",
+      type: "reference",
+      to: [{ type: "author" }],
+    },
+    {
       name: "itinerary",
       title: "Itinerary",
       type: "array",

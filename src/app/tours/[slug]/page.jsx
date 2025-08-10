@@ -38,7 +38,14 @@ export async function generateMetadata(props) {
 
 const page = async (props) => {
   const params = await props.params;
-  const query = `*[_type == "tour" && slug.current == '${params.slug}'][0]`;
+  const query = `*[_type == "tour" && slug.current == '${params.slug}'][0]{
+  ...,
+  author->{
+    authorName,
+    authorDescription,
+    lastUpdated
+  }
+}`;
   const tours = await client.fetch(query);
 
   if (!tours) return "No Tours Found";
