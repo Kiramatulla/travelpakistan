@@ -11,7 +11,7 @@ import karim from "@/app/assets/karim.jpg";
 const AuthorByline = ({ tours }) => {
   return (
     <section
-      className="flex flex-row items-center md:items-center gap-6 border-b pb-3 mb-3"
+      className="md:flex md:flex-row md:items-center gap-4 border-b pb-3 mb-3"
       itemScope
       itemType="https://schema.org/Person"
     >
@@ -33,7 +33,7 @@ const AuthorByline = ({ tours }) => {
             {tours.author.authorName}:
           </h2>
 
-          <p className="text-sm text-gray-500 px-1" itemProp="description">
+          <p className="text-sm text-gray-500 md:px-1" itemProp="description">
             {tours.author.authorDescription}
           </p>
           <time
