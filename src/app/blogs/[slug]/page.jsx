@@ -35,8 +35,20 @@ const page = async (props) => {
     `*[_type =="blogs" && slug.current == '${params.slug}'][0]`
   );
   const relatedTours = await client.fetch(
-    `*[_type == "tour" && category._ref == '${blogs.category._ref}']`
+    `*[
+    _type == "tour" && category._ref == '${blogs.category._ref}'
+  ]{
+    tourType,
+    title,
+    "slug": slug.current,
+    images,
+    _id,
+    numberOfDays,
+    International2Persons,
+    International2PersonsLuxury
+  }`
   );
+
   const relatedBlogs = await client.fetch(
     `*[_type =="blogs" && category._ref == '${blogs.category._ref}' && slug.current != '${params.slug}']`
   );
