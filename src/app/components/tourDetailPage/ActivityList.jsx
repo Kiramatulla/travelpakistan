@@ -17,7 +17,7 @@ const ActivityList = ({ tours }) => {
   });
 
   return (
-    <div className="max-w-3xl mx-auto px-8 md:px-2 md:flex md:justify-center ">
+    <div className="md:max-w-3xl md:mx-auto px-6 md:px-2 md:flex md:justify-center ">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-24">
         {/* Sightseeing */}
         {grouped.sightseeing.length > 0 && (
