@@ -5,7 +5,7 @@ export default function TourGallery({ tours }) {
   if (!tours?.gallery || tours.gallery.length === 0) return null;
 
   return (
-    <section className="py-10">
+    <section className="py-4">
       <h2 className="text-lg font-bold text-center mb-8">
         Photos from my Personal Collections
       </h2>
