@@ -46,6 +46,9 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
           <Itinerary tours={tours} />
         </section>
         <section>
+          {tours?.gallery?.length > 0 && <TourGallery tours={tours} />}
+        </section>
+        <section>
           {tours?.distance?.length > 0 && <ImportantDistances tours={tours} />}
         </section>
         <section>
@@ -54,9 +57,7 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         <section>
           {tours?.activitiesList?.length > 0 && <ActivityList tours={tours} />}
         </section>
-        <section>
-          {tours?.gallery?.length > 0 && <TourGallery tours={tours} />}
-        </section>
+
         <section>
           {tours?.highlights?.length > 0 && <TourHighlights tours={tours} />}
         </section>
