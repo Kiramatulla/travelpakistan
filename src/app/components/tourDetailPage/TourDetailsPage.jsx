@@ -43,11 +43,12 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
           <TourCustomItinerary />
         </section>
         <section>
-          <Itinerary tours={tours} />
-        </section>
-        <section>
           {tours?.gallery?.length > 0 && <TourGallery tours={tours} />}
         </section>
+        <section>
+          <Itinerary tours={tours} />
+        </section>
+
         <section>
           {tours?.distance?.length > 0 && <ImportantDistances tours={tours} />}
         </section>
