@@ -8,6 +8,8 @@ import { subregion } from "./subregion"
 import { tours } from "./tours"
 import { treks } from "./trek"
 import { vehicles } from "./vehicle"
+import { webstories } from "./webstories"
+
 export const schema = {
-  types: [tours,category,blogs,treks,vehicles,sitePolicies,region,spot,subregion,author],
+  types: [tours,category,blogs,treks,vehicles,sitePolicies,region,spot,subregion,author,webstories],
 }

@@ -15,8 +15,14 @@ import TourGallery from "./TourGallery";
 import TourHighlights from "./TourHighlights";
 import TourOverviews from "./TourOverviews";
 import UserGuide from "./UserGuide";
+import WebStories from "./WebStories";
 
-const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
+const TourDetailPage = ({
+  tours,
+  relatedTours,
+  relatedBlogs,
+  relatedWebStories,
+}) => {
   return (
     <div className="lg:flex lg:flex-row lg:ml-16 ">
       {/* Main Tour Content */}
@@ -48,7 +54,9 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         <section>
           <Itinerary tours={tours} />
         </section>
-
+        <section>
+          <WebStories relatedWebStories={relatedWebStories} />
+        </section>
         <section>
           {tours?.distance?.length > 0 && <ImportantDistances tours={tours} />}
         </section>

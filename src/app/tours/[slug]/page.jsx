@@ -65,10 +65,27 @@ const page = async (props) => {
   },
   "relatedBlogs": *[
     _type == "blogs" && category._ref == '${tours.category._ref}'
-  ]
+  ],
+"relatedWebStories": *[
+    _type == "webstories" && category._ref == '${tours.category._ref}'
+  ]{
+    _id,
+    title,
+    category-> {title, slug},
+    slides[]{
+      heading,
+      text,
+      poster{
+        asset->{ url },
+        alt
+      },
+      "videoFile": videoFile.asset->url
+    }
+  }
 }`;
 
-  const { relatedTours, relatedBlogs } = await client.fetch(relatedQuery);
+  const { relatedTours, relatedBlogs, relatedWebStories } =
+    await client.fetch(relatedQuery);
 
   const plainDescription = toPlainText(tours.tourOverviews || []);
   const plainItinerary = toPlainText(tours.itinerary || []);
@@ -147,6 +164,7 @@ const page = async (props) => {
         tours={tours}
         relatedTours={relatedTours}
         relatedBlogs={relatedBlogs}
+        relatedWebStories={relatedWebStories}
       />
     </main>
   );
