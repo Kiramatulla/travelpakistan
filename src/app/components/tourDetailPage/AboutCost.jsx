@@ -33,7 +33,7 @@ const PortableTextComponents = {
 const AboutCost = ({ tours }) => {
   return (
     <article>
-      <section className="md:mx-1 text-justify lg:text-start px-4 lg:px-0 lg:text-sm lg:leading-6">
+      <section className="md:mx-1 text-justify text-sm lg:text-start px-4 lg:px-0 lg:leading-6">
         <PortableText
           value={tours.aboutCost}
           components={PortableTextComponents}
