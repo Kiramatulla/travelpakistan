@@ -54,11 +54,11 @@ const TourDetailPage = ({
         <section>
           <Itinerary tours={tours} />
         </section>
-        <section>
-          {relatedWebStories?.length > 0 && (
-            <WebStories relatedWebStories={relatedWebStories} />
+        {/* <section>
+          {tours?.slides?.length > 0 && (
+            <WebStories tours={tours} />
           )}
-        </section>
+        </section> */}
         <section>
           {tours?.distance?.length > 0 && <ImportantDistances tours={tours} />}
         </section>
