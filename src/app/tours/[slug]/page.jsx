@@ -44,6 +44,15 @@ const page = async (props) => {
     authorName,
     authorDescription,
     lastUpdated
+  },
+    slides[]{
+    heading,
+    text,
+    poster{
+      asset->{url},
+      alt
+    },
+    "videoFile": videoFile.asset->url
   }
 }`;
   const tours = await client.fetch(query);
