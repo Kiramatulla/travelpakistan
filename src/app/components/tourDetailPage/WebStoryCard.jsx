@@ -4,10 +4,10 @@
 import { useEffect, useRef, useState } from "react";
 import { FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 
-// Global tracker for currently playing video
+// Global tracker so only one reel plays at a time
 let currentPlayingVideo = null;
 
-export default function WebStoryCard({ story, slide, id }) {
+export default function WebStoryCard({ story, slide }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -63,9 +63,8 @@ export default function WebStoryCard({ story, slide, id }) {
         </div>
       )}
 
-      {/* Overlay title */}
+      {/* Overlay text */}
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
-        {/* <p className="text-white text-sm font-medium">{story.title}</p> */}
         {slide?.heading && (
           <p className="text-xs text-gray-200">{slide.heading}</p>
         )}
@@ -77,7 +76,7 @@ export default function WebStoryCard({ story, slide, id }) {
         className="absolute left-2 top-2 bg-black/60 text-white p-2 rounded-full"
       >
         {!isMounted ? (
-          <FaPlay size={16} /> // SSR default to avoid hydration issues
+          <FaPlay size={16} /> // Avoid hydration mismatch
         ) : isPlaying ? (
           <FaPause size={16} />
         ) : (

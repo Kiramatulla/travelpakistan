@@ -345,5 +345,32 @@ export const tours = {
         },
       ],
     },
+    {
+      name: "slides",
+      title: "Slides",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "heading", title: "Heading", type: "string" },
+            { name: "text", title: "Text", type: "text", rows: 3 },
+            {
+              name: "poster",
+              title: "Slide Poster (thumbnail)",
+              type: "image",
+              options: { hotspot: true },
+              fields: [{ name: "alt", title: "Alt Text", type: "string" }],
+            },
+            {
+              name: "videoFile",
+              title: "Video File",
+              type: "file",
+              options: { accept: "video/mp4, video/webm, video/ogg" },
+            },
+          ],
+        },
+      ],
+    },
   ],
 };

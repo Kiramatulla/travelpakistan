@@ -66,22 +66,7 @@ const page = async (props) => {
   "relatedBlogs": *[
     _type == "blogs" && category._ref == '${tours.category._ref}'
   ],
-"relatedWebStories": *[
-    _type == "webstories" && category._ref == '${tours.category._ref}'
-  ]{
-    _id,
-    title,
-    category-> {title, slug},
-    slides[]{
-      heading,
-      text,
-      poster{
-        asset->{ url },
-        alt
-      },
-      "videoFile": videoFile.asset->url
-    }
-  }
+
 }`;
 
   const { relatedTours, relatedBlogs, relatedWebStories } =
