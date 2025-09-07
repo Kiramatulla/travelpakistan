@@ -7,7 +7,7 @@ import { FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 // Global tracker so only one reel plays at a time
 let currentPlayingVideo = null;
 
-export default function WebStoryCard({ story, slide }) {
+export default function WebStoryCard({ slide }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);

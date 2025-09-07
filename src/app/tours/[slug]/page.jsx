@@ -45,7 +45,7 @@ const page = async (props) => {
     authorDescription,
     lastUpdated
   },
-    slides[]{
+slides[]{
     heading,
     text,
     poster{
