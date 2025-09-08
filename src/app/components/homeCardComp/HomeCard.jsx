@@ -7,11 +7,11 @@ const HomeCard = async () => {
   return (
     <section className="font-sans flex flex-col items-center ">
       {/* Section Header */}
-      <div className="max-w-4xl mx-auto px-4 text-center py-16">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+      <div className="max-w-3xl mx-auto px-4 text-center py-10">
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 tracking-tight">
           Explore Pakistan Tour Packages – 2025
         </h1>
-        <p className="text-gray-600 text-base leading-relaxed">
+        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
           Discover breathtaking tours across Hunza&apos;s mountains,
           Skardu&apos;s valleys, Lahore&apos;s rich culture, and
           Cholistan&apos;s deserts. Whether you want adventure, culture, or
