@@ -26,11 +26,11 @@ export default function Home() {
     <section className="container mx-auto px-4">
         <TrekCardDetails />
       </section>
-      {/* <section>
-        <CreateYourItinerary/>
-      </section> */}
       <section>
         <VehicleCard />
+      </section>
+       <section>
+        <CreateYourItinerary/>
       </section>
       <section>
         <ServicesOffered />

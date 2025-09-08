@@ -21,7 +21,9 @@ const ImportantDistances = ({ tours }) => {
             <tr>
               <th className="px-4 py-3 border-b border-gray-200">Area Name</th>
               <th className="px-4 py-3 border-b border-gray-200">Distance</th>
-              <th className="px-4 py-3 border-b border-gray-200">Drive Time</th>
+              <th className="px-4 py-3 border-b border-gray-200">
+                Drive / Trek hrs
+              </th>
             </tr>
           </thead>
           <tbody className="text-gray-800 text-sm divide-y divide-gray-100">

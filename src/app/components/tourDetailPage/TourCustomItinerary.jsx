@@ -25,9 +25,9 @@ export default async function ItineraryRegionShowcase() {
           Design Your Own Adventure
         </h2>
         <p className="text-slate-600 mt-3 text-sm md:text-sm">
-          Build a <span className="font-semibold">custom itinerary</span> that
-          matches your travel style. Explore regions, uncover hidden gems, and
-          choose where your journey begins.
+          This part makes our tour company special. We have all the information
+          about each region. You just have to click on the region you want to
+          visit and start building your tour plan.
         </p>
       </div>
 

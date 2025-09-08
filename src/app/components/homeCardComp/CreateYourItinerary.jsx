@@ -1,114 +1,87 @@
+// components/itineraryInfo/ItineraryRegionShowcase.jsx
 import { client } from "@/sanity/lib/client";
+import Image from "next/image";
 import Link from "next/link";
-import {
-  PiGlobeSimpleBold,
-  PiBinocularsBold,
-  PiMapPinLineBold,
-} from "react-icons/pi";
-import { FaArrowRight, FaMapMarkedAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import background from "@/app/assets/background.jpg";
 
 export default async function CreateYourItinerary() {
   const query = `
     *[_type == "region"]{
       title,
+      "image": image.asset->url,
       subregions[]->{
         title
       }
-    }
+    } | order(title asc)
   `;
   const regions = await client.fetch(query);
 
   return (
-    <section className="bg-white py-20 px-6 md:px-12 lg:px-28">
-      <div className="max-w-5xl mx-auto text-center mb-16">
-        <h2 className="text-4xl font-bold text-slate-800 tracking-tight mb-4">
-          Create Your Itinerary in 3 Simple Steps
+    <section className="max-w-6xl mx-auto px-6 pt-14 pb-8">
+      {/* Heading */}
+      <div className="text-center max-w-2xl mx-auto mb-6">
+        <h2 className="text-2xl md:text-2xl md:font-bold text-slate-900 font-serif">
+          Design Your Own Adventure
         </h2>
-        <p className="text-slate-600 text-lg">
-          Whether youre a first-time traveler or a seasoned explorer — our
-          custom builder helps you craft the perfect journey.
+        <p className="text-slate-600 mt-3 text-sm md:text-sm">
+          This part makes our tour company special. We have all the information
+          about each region. You just have to click on the region you want to
+          visit and start building your tour plan.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto mb-20">
-        <div className="flex flex-col items-center text-center">
-          <div className="bg-teal-100 text-teal-700 p-5 rounded-full text-3xl mb-4">
-            <PiGlobeSimpleBold />
-          </div>
-          <h3 className="font-semibold text-xl text-slate-800 mb-2">
-            1. Select Region
-          </h3>
-          <p className="text-slate-600 text-sm max-w-xs">
-            Choose from top destinations across Pakistan with all the insights
-            you need.
-          </p>
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <div className="bg-orange-100 text-orange-600 p-5 rounded-full text-3xl mb-4">
-            <PiBinocularsBold />
-          </div>
-          <h3 className="font-semibold text-xl text-slate-800 mb-2">
-            2. Explore Options
-          </h3>
-          <p className="text-slate-600 text-sm max-w-xs">
-            Each region includes sightseeing spots, treks, restaurants, hotels
-            and more.
-          </p>
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <div className="bg-sky-100 text-sky-600 p-5 rounded-full text-3xl mb-4">
-            <PiMapPinLineBold />
-          </div>
-          <h3 className="font-semibold text-xl text-slate-800 mb-2">
-            3. Customize Itinerary
-          </h3>
-          <p className="text-slate-600 text-sm max-w-xs">
-            Mix and match your favorite places to build a tailor-made travel
-            plan.
-          </p>
-        </div>
-      </div>
-
-      <div className="p-8 md:p-10 ">
-        <h4 className="text-xl font-semibold text-slate-800 mb-6 text-center">
-          Popular Regions to Start With
-        </h4>
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          {regions.slice(0, 6).map((region, index) => (
-            <Link
-              href="/customitinerary"
-              key={index}
-              className="bg-gradient-to-br from-sky-50 to-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition block"
-            >
-              <div className="flex items-center gap-2 text-teal-700 font-semibold mb-3">
-                <FaMapMarkedAlt className="text-xl" />
-                <h3 className="text-lg font-bold text-slate-800">
+      {/* Grid of regions */}
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {regions.slice(0, 6).map((region, index) => (
+          <div
+            key={region.title + index}
+            className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-white 
+                       transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <Link href="/customitinerary" className="group block">
+              {/* Region Image */}
+              <div className="relative h-40 w-full overflow-hidden">
+                <Image
+                  src={background}
+                  width={300}
+                  height={300}
+                  alt={region.title}
+                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <h3 className="absolute bottom-3 left-4 text-white text-lg font-bold flex items-center gap-2">
+                  <FaMapMarkerAlt className="text-orange-400" />
                   {region.title}
                 </h3>
               </div>
 
-              <ul className="text-sm text-slate-700 space-y-1 pl-6 list-disc">
-                {region.subregions?.slice(0, 3).map((sub, i) => (
-                  <li key={i}>{sub.title}</li>
-                ))}
-                {region.subregions?.length > 3 && (
-                  <li className="italic text-slate-500 hover:text-orange-600 hover:text-lg">
-                    + more
-                  </li>
-                )}
-              </ul>
+              {/* Subregions */}
+              <div className="p-5">
+                <ul className="text-sm text-slate-700 space-y-2 list-disc pl-4">
+                  {region.subregions?.slice(0, 2).map((s, i) => (
+                    <li key={i}>{s.title}</li>
+                  ))}
+                  {region.subregions?.length > 3 && (
+                    <li className="italic text-slate-500">+ more</li>
+                  )}
+                </ul>
+              </div>
             </Link>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
 
-        <div className="text-center mt-10">
-          <Link
-            href="/customitinerary"
-            className="inline-flex items-center gap-2 bg-teal-600 text-white font-medium px-6 py-3 rounded-full hover:bg-teal-700 transition"
-          >
-            Explore All Regions <FaArrowRight />
-          </Link>
-        </div>
+      {/* CTA */}
+      <div className="text-center mt-12">
+        <Link
+          href="/customitinerary"
+          className="inline-block px-8 py-4 bg-gradient-to-r from-teal-600 to-teal-700 
+                     text-white font-semibold rounded-full shadow-lg 
+                     hover:from-teal-700 hover:to-teal-800 transition"
+        >
+          Explore All Regions
+        </Link>
       </div>
     </section>
   );

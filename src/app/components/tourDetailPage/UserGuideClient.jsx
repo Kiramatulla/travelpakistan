@@ -9,7 +9,7 @@ export default function UserGuideClient({ guidePoints }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="hidden md:block bg-white border border-slate-200 rounded-xl shadow-sm p-4 mb-6 font-sans">
+    <div className="hidden md:block bg-gradient-to-br from-blue-50 to-white border border-slate-200 rounded-xl shadow-sm p-4 mb-6 font-sans">
       {/* Header with toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
