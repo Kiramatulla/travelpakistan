@@ -46,7 +46,7 @@ const PortableTextComponents = {
 const TourOverviews = ({ tours }) => {
   return (
     <article className="px-6  lg:text-start mt-8 mb-6 lg:pl-8 lg:pr-8">
-      <h1 className="font-bold text-2xl text-gray-800 font-sans mb-4">
+      <h1 className="text-2xl md:text-2xl md:font-bold text-slate-900 font-serif mb-4">
         {tours.title}
       </h1>
       <div>

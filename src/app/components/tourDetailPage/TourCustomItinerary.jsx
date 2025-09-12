@@ -21,7 +21,7 @@ export default async function ItineraryRegionShowcase() {
     <section className="max-w-7xl mx-auto px-6 pt-14 pb-8">
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto mb-6">
-        <h2 className="text-2xl md:text-2xl md:font-bold text-slate-900 font-serif">
+        <h2 className="text-2xl md:text-xl md:font-bold text-slate-900 font-serif">
           Design Your Own Adventure
         </h2>
         <p className="text-slate-600 mt-3 text-sm md:text-sm">

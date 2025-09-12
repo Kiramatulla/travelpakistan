@@ -6,7 +6,7 @@ export default function WebStories({ tours }) {
 
   return (
     <section className="mt-8">
-      <h2 className="text-xl font-semibold mb-4 pl-8">
+      <h2 className="text-2xl md:text-xl md:font-semibold text-slate-900 font-serif mb-4 pl-4">
         Shorts from {tours.title}
       </h2>
       <div className="flex overflow-x-auto snap-x snap-mandatory pl-1 gap-2">
