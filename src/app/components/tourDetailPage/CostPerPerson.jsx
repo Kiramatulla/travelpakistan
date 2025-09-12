@@ -7,7 +7,7 @@ const CostPerPerson = ({ tours }) => {
       <h2 className="font-bold text-center md:text-left text-lg underline underline-offset-8 text-gray-800 mb-2">
         Total Cost of {tours.title}
       </h2>
-      <div className="flex gap-2 mx-4 md:mx-0">
+      <div className="flex gap-2 mx-2 md:mx-0">
         <TiInfoLargeOutline
           size={35}
           className="text-green-600 hidden md:block"
