@@ -64,7 +64,7 @@ const CostPerPerson = ({ tours }) => {
                   : ""}
               </td>
             </tr>
-            <tr className="border-t text-sm lg:text-xs lg:text-center font-semibold">
+            <tr className="border-t text-xs lg:text-center font-semibold">
               <td className="p-4">Premium Package</td>
               <td className="p-4">
                 ${" "}
@@ -116,7 +116,7 @@ const CostPerPerson = ({ tours }) => {
           <tbody className="divide-y divide-gray-400">
             <tr className="border-t text-xs lg:text-center font-semibold">
               <td className="p-4">Standard Package</td>
-              <td className="p-4 text-sm lg:text-xs">
+              <td className="p-4 ">
                 PKR{" "}
                 {tours?.Domestic2Persons
                   ? tours.Domestic2Persons.toLocaleString()
@@ -141,7 +141,7 @@ const CostPerPerson = ({ tours }) => {
                   : ""}
               </td>
             </tr>
-            <tr className="border-t text-sm lg:text-xs lg:text-center font-semibold">
+            <tr className="border-t text-xs lg:text-center font-semibold">
               <td className="p-4">Premium Package</td>
               <td className="p-4 ">
                 PKR{" "}
