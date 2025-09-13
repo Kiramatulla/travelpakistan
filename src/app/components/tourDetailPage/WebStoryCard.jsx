@@ -46,7 +46,7 @@ export default function WebStoryCard({ slide }) {
   };
 
   return (
-    <div className="relative min-w-[180px] max-w-[180px] h-[290px] md:min-w-[210px] md:max-w-[190px] md:h-[310px] snap-start rounded-xl overflow-hidden shadow-md bg-black">
+    <div className="relative min-w-[180px] max-w-[160px] h-[270px] md:min-w-[200px] md:max-w-[205px] md:h-[285px] snap-start rounded-xl overflow-hidden shadow-md bg-black">
       {slide?.videoFile ? (
         <video
           ref={videoRef}

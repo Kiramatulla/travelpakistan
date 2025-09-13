@@ -9,7 +9,7 @@ export default function WebStories({ tours }) {
       <h2 className="text-2xl text-center md:text-xl md:font-semibold text-slate-900 font-serif mb-4">
         Shorts from {tours.title}
       </h2>
-      <div className="flex overflow-x-auto snap-x snap-mandatory pl-1 gap-2">
+      <div className="flex overflow-x-auto snap-x snap-mandatory pl-1 gap-1">
         {tours.slides.map((slide, index) => (
           <WebStoryCard key={`${tours._id}-${index}`} slide={slide} />
         ))}
