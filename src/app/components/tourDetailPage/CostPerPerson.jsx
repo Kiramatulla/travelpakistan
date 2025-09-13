@@ -7,7 +7,7 @@ const CostPerPerson = ({ tours }) => {
       <h2 className="font-bold text-center md:text-left text-lg underline underline-offset-8 text-gray-800 mb-2">
         Total Cost of {tours.title}
       </h2>
-      <div className="flex items-start gap-3 bg-gradient-to-r from-green-100 to-white p-4 rounded-xl shadow-sm border border-green-200 my-3">
+      <div className="flex items-start gap-3 bg-gradient-to-r from-green-100 to-white p-4 rounded-xl shadow-sm border border-green-200 mt-3 mb-5">
         <TiInfoLargeOutline
           size={35}
           className="text-green-600 shrink-0 hidden md:block "
@@ -28,7 +28,7 @@ const CostPerPerson = ({ tours }) => {
             Pricing details for international tourists based on group size.
           </caption>
           <thead>
-            <tr className="bg-blue-900/80 text-white lg:text-center">
+            <tr className="bg-blue-900/80 text-white lg:text-center text-xs">
               <th className="p-4 ">Package Name</th>
               <th className="p-4 ">Per Person-2</th>
               <th className="p-4 ">Per Person-3</th>
@@ -105,7 +105,7 @@ const CostPerPerson = ({ tours }) => {
             Pricing details for domestic tourists based on group size.
           </caption>
           <thead>
-            <tr className="bg-blue-900/80 text-white lg:text-center">
+            <tr className="bg-blue-900/80 text-white lg:text-center text-xs">
               <th className="p-4 ">Package Name</th>
               <th className="p-4 ">Per Person-2</th>
               <th className="p-4 ">Per Person-3</th>
