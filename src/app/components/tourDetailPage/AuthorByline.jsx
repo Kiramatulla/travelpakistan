@@ -6,7 +6,7 @@ import karim from "@/app/assets/karim.jpg";
 const AuthorByline = ({ tours }) => {
   return (
     <section
-      className="flex items-center gap-3 border-b border-gray-200 pb-2 mb-4 text-sm"
+      className="flex items-start gap-3 border-b border-gray-200 pb-2 mb-4 text-sm"
       itemScope
       itemType="https://schema.org/Person"
     >
@@ -16,32 +16,33 @@ const AuthorByline = ({ tours }) => {
         alt={`${tours.author.authorName} profile photo`}
         width={36}
         height={36}
-        className="rounded-full object-cover flex-shrink-0"
+        className="rounded-full object-cover flex-shrink-0 "
         priority
       />
 
       {/* Details + Social */}
       <div className="flex-1 min-w-0">
-        <div className="flex flex-wrap items-center gap-x-2">
+        {/* Name + Role/Description */}
+        <div className="flex flex-wrap items-center gap-x-1 text-xs md:text-sm">
           <h2 className="font-medium text-gray-900" itemProp="name">
             {tours.author.authorName}
           </h2>
-          <p className="text-gray-600 truncate" itemProp="description">
+          <p className="text-gray-600" itemProp="description">
             {tours.author.authorDescription}
           </p>
         </div>
 
-        <div className="flex items-center gap-2 mt-1">
+        {/* Date + Socials */}
+        <div className="flex sm:flex-row sm:items-center sm:justify-between mt-1 gap-1">
           <time
             dateTime={tours.author.lastUpdated}
             className="text-xs text-gray-400"
             itemProp="dateModified"
           >
-            Website last updated: {tours.author.lastUpdated}
+            Website Last Updated: {tours.author.lastUpdated}
           </time>
 
-          {/* Socials */}
-          <div className="flex gap-2 ml-auto">
+          <div className="flex gap-2">
             <Link
               href="https://www.facebook.com/karimbari09"
               aria-label="Facebook"
