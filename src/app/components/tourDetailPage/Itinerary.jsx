@@ -5,7 +5,9 @@ const PortableTextComponents = {
   block: {
     h1: ({ children }) => <h1 className="font-bold mt-6 mb-2">{children}</h1>,
     h2: ({ children }) => (
-      <h2 className="text-2xl font-bold mt-6 mb-2">{children}</h2>
+      <h2 className="text-2xl md:text-xl  md:font-semibold font-serif md:font-sans mt-6 mb-2 text-slate-900">
+        {children}
+      </h2>
     ),
     h3: ({ children }) => (
       <h3 className="text-lg font-serif text-slate-700 mt-5 mb-1">
