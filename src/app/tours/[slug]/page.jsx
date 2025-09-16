@@ -73,7 +73,7 @@ slides[]{
     International2PersonsLuxury
   },
   "relatedBlogs": *[
-    _type == "blogs" && category._ref == '${tours.category._ref}'
+    _type == "blogs" && category._ref == '${tours.category._ref}' && blogType == "region"
   ],
 
 }`;

@@ -1,6 +1,7 @@
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
+import Link from "next/link";
 
 const PortableTextComponents = {
   types: {
@@ -10,8 +11,8 @@ const PortableTextComponents = {
       }
       return (
         <div className="my-6 flex justify-center">
-          <Image 
-            src={urlFor(value).url()} 
+          <Image
+            src={urlFor(value).url()}
             alt={value.alt || "Blog Image"}
             width={800} // Keeps original width for Next.js optimization
             height={300} // Keeps original height for Next.js optimization
@@ -33,7 +34,8 @@ const PortableTextComponents = {
     ),
     normal: ({ children }) => (
       <div>
-      <p className="mb-4 text-gray-700">{children}</p></div>
+        <p className="mb-4 text-gray-700">{children}</p>
+      </div>
     ),
   },
   list: {
@@ -45,12 +47,46 @@ const PortableTextComponents = {
     ),
   },
   listItem: {
-    bullet: ({ children }) => (
-      <li className="mb-1">{children}</li>
-    ),
-    number: ({ children }) => (
-      <li className="mb-1">{children}</li>
-    ),
+    bullet: ({ children }) => <li className="mb-1">{children}</li>,
+    number: ({ children }) => <li className="mb-1">{children}</li>,
+  },
+  marks: {
+    link: ({ children, value }) => {
+      const href = value?.href || "#";
+
+      // 1. Internal relative path (starts with "/")
+      const isRelativeInternal = href.startsWith("/");
+
+      // 2. Absolute link but to your own domain
+      const isAbsoluteInternal = href.startsWith(
+        "https://www.violatourspk.com"
+      );
+
+      if (isRelativeInternal || isAbsoluteInternal) {
+        // Strip domain for absolute internal links
+        const cleanHref = isAbsoluteInternal
+          ? href.replace("https://www.violatourspk.com", "")
+          : href;
+
+        return (
+          <Link href={cleanHref} className="text-blue-600 underline">
+            {children}
+          </Link>
+        );
+      }
+
+      // external fallback
+      return (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 underline"
+        >
+          {children}
+        </a>
+      );
+    },
   },
 };
 
@@ -61,7 +97,10 @@ const BlogContent = ({ blogs }) => {
         Blog Details
       </h2>
       <section className=" text-justify lg:text-start px-4 lg:px-0 lg:text-gray-700 lg:text-base lg:leading-8">
-        <PortableText value={blogs.blogContent} components={PortableTextComponents}/>
+        <PortableText
+          value={blogs.blogContent}
+          components={PortableTextComponents}
+        />
       </section>
     </article>
   );
