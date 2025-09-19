@@ -10,7 +10,8 @@ const Hero = () => {
         alt="Image of an ibex on a mountain"
         className="object-cover object-center shadow-2xl"
         fill
-        priority
+        priority="high"
+        fetchPriority="high"
         sizes="100vw"
       />
 
