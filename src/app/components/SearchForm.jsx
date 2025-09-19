@@ -13,9 +13,12 @@ const SearchForm = () => {
         placeholder="Search..."
         className="py-3 px-4 md:py-6 md:px-4 text-black outline-none w-full"
       />
-      <button type="submit" className="text-black pr-4 py-2 rounded-full">
+      <button
+        type="submit"
+        className="text-black pr-4 py-2 rounded-full"
+        aria-label="Search"
+      >
         <IoSearchOutline size={20} />
-        <span className="sr-only">Search</span>
       </button>
     </form>
   );
