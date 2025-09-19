@@ -8,8 +8,10 @@ const Hero = () => {
       <Image
         src={bgImage}
         alt="Image of an ibex on a mountain"
-        className="object-cover object-center w-full h-full shadow-2xl"
+        className="object-cover object-center shadow-2xl"
         fill
+        priority
+        sizes="100vw"
       />
 
       <span className="absolute inset-0 bg-black bg-opacity-50 md:h-full lg:h-full"></span>

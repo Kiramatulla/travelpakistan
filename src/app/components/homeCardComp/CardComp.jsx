@@ -6,14 +6,14 @@ import Link from "next/link";
 const CardComp = ({ tour }) => {
   return (
     <Link
-      href={`/tours/${tour.slug.current}`}
+      href={`/tours/${tour.slug}`}
       className="flex justify-center items-center font-sans mb-8"
     >
       <article className="w-[18rem] md:w-[16rem] lg:w-[17rem] h-[24rem] bg-white rounded-xl shadow-2xl overflow-hidden transform transition duration-300 hover:scale-105 border border-gray-200">
         {/* Card Image */}
         <div className="relative w-full h-40">
           <Image
-            src={urlFor(tour.images && tour.images[0]).url()}
+            src={urlFor(tour.image).url()}
             alt={tour.title || "Tour Image"}
             fill
             className="object-cover rounded-t-xl"

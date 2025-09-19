@@ -3,7 +3,14 @@ import Link from "next/link";
 import CardComp from "./CardComp";
 
 const HomeCard = async () => {
-  const tours = await client.fetch(`*[_type == "tour" && featured == true]`);
+  const tours = await client.fetch(`
+  *[_type == "tour" && featured == true]{
+    title,
+    "slug": slug.current,
+    "image": images[0],
+    tourOverviews
+  }
+`);
   return (
     <section className="font-sans flex flex-col items-center ">
       {/* Section Header */}

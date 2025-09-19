@@ -2,7 +2,14 @@ import { client } from "@/sanity/lib/client";
 import TrekCard from "./TrekCard";
 
 const TrekCardDetails = async () => {
-  const treks = await client.fetch(`*[_type == "treks" && featured == true]`);
+  const treks = await client.fetch(`
+  *[_type == "treks" && featured == true]{
+    title,
+    "slug": slug.current,
+    "image": images[0],
+    trekOverview
+  }
+`);
 
   return (
     <section className="mt-2 pt-12  font-sans">
