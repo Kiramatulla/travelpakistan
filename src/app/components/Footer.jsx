@@ -131,6 +131,7 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61575373047070"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit us on Facebook"
               >
                 <FaFacebook
                   size={24}
@@ -141,6 +142,7 @@ const Footer = () => {
                 href="https://www.instagram.com/violatours.pk/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit us on Instagram"
               >
                 <FaInstagram
                   size={24}
@@ -151,6 +153,7 @@ const Footer = () => {
                 href="https://pk.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit us on LinkedIn"
               >
                 <FaLinkedin
                   size={24}
@@ -161,6 +164,7 @@ const Footer = () => {
                 href="https://www.tripadvisor.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Check our reviews on TripAdvisor"
               >
                 <BiLogoTripAdvisor
                   size={26}

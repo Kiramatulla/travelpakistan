@@ -2,7 +2,6 @@ import { client } from "@/sanity/lib/client";
 import { FaIndent, FaOutdent } from "react-icons/fa6";
 import VehicleDetails from "./VehicleDetails";
 
-
 const VehicleCard = async () => {
   const vehicles = await client.fetch(`*[_type == "vehicle"]`);
 
@@ -15,16 +14,17 @@ const VehicleCard = async () => {
           FIND YOUR VEHICLE
           <FaOutdent className="pl-2 ml-2" />
         </h2>
-        <p className="max-w-xs mx-auto text-gray-400 md:max-w-md">
+        <p className="max-w-xs mx-auto text-gray-800 md:max-w-md">
           Click on the vehicle links to discover the best daily rental rates,
           seating capacity, and model details.
         </p>
       </header>
 
       {/* Vehicle Links */}
-     <div className="mt-10"> <VehicleDetails vehicles={vehicles}/> </div>
-
-     
+      <div className="mt-10">
+        {" "}
+        <VehicleDetails vehicles={vehicles} />{" "}
+      </div>
     </section>
   );
 };

@@ -13,9 +13,9 @@ const TrekCardDetails = async () => {
         </h2>
         <p className="text-gray-500 ">
           Explore Trekking adventures across Pakistan wildest Frontier in 2025 –
-          challenge yourself via the Legendary K2 Base Camp to the
-          exciting Gondogoro La, cross remote passes of Hisper La, Khurdopin and
-          Lukpe La.
+          challenge yourself via the Legendary K2 Base Camp to the exciting
+          Gondogoro La, cross remote passes of Hisper La, Khurdopin and Lukpe
+          La.
         </p>
       </header>
 

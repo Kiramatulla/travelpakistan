@@ -15,6 +15,7 @@ const SearchForm = () => {
       />
       <button type="submit" className="text-black pr-4 py-2 rounded-full">
         <IoSearchOutline size={20} />
+        <span className="sr-only">Search</span>
       </button>
     </form>
   );

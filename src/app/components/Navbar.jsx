@@ -78,6 +78,7 @@ const Navbar = () => {
           <button
             className="md:hidden text-black text-2xl p-2"
             onClick={handleClick}
+            aria-label="Navigation Menu"
           >
             <GiHamburgerMenu />
           </button>

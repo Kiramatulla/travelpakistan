@@ -23,9 +23,9 @@ const CardComp = ({ tour }) => {
         {/* Card Content */}
         <div className="flex flex-col justify-between h-[calc(100%-10rem)] p-4 border-2 border-gray-300 border-t-0">
           <div className="flex-1">
-            <h3 className="text-base font-bold text-gray-800 mb-2 leading-tight break-words">
+            <h2 className="text-base font-bold text-gray-800 mb-2 leading-tight break-words">
               {tour.title}
-            </h3>
+            </h2>
             <div className="text-gray-600 text-sm leading-relaxed line-clamp-4">
               <PortableText value={tour.tourOverviews} />
             </div>
@@ -33,9 +33,12 @@ const CardComp = ({ tour }) => {
 
           {/* Read More Button */}
           <div className="mt-4 flex justify-center">
-            <span className="inline-block text-xs font-semibold text-white bg-teal-600 px-4 py-2 rounded-md hover:bg-orange-500 transition-all duration-300 shadow">
+            <button
+              type="button"
+              className="inline-block text-sm font-semibold text-white bg-teal-700 px-4 py-2 rounded-md hover:bg-orange-600 transition-all duration-300 shadow"
+            >
               Read More
-            </span>
+            </button>
           </div>
         </div>
       </article>
