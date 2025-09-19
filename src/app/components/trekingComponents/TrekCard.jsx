@@ -23,7 +23,7 @@ const TrekCard = ({ trek }) => {
             <p className="text-sm text-center  h-[58px] overflow-hidden ">
               {trek.trekOverview}
             </p>
-            <button className="w-full bg-cyan-600 flex items-center justify-center text-white rounded-full px-2 py-2 mt-2 text-sm font-semibold lg:text-md hover:bg-cyan-700 transition-colors duration-300">
+            <button className="w-full bg-cyan-700 flex items-center justify-center text-white rounded-full px-2 py-2 mt-2 text-sm font-semibold lg:text-md hover:bg-cyan-800 transition-colors duration-300">
               View More Details
             </button>
           </div>
