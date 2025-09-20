@@ -13,10 +13,14 @@ const CardComp = ({ tour }) => {
         {/* Card Image */}
         <div className="relative w-full h-40">
           <Image
-            src={urlFor(tour.image).url()}
+            src={urlFor(tour.image).auto("format").url()} // optional: add .width() below if you want Sanity to pre-resize
             alt={tour.title || "Tour Image"}
             fill
             className="object-cover rounded-t-xl"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            quality={70}
+            loading="lazy"
+            priority={false}
           />
         </div>
 

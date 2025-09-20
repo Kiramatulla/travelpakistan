@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative h-[20rem] md:mx-auto lg:h-[28rem] bg-cover bg-center rounded-full">
       <Image
         src={bgImage}
-        alt="Image of an ibex on a mountain"
+        alt="Hunza adventure tours"
         className="object-cover object-center shadow-2xl"
         fill
         priority="high"
