@@ -36,7 +36,7 @@ const HomeCard = async () => {
       {/* Load More Button */}
       <Link
         href="/tours"
-        className="mt-6 p-2 rounded-md font-semibold text-white bg-teal-600 hover:bg-orange-600 text-sm transition-colors duration-300"
+        className="mt-6 p-2 rounded-md font-semibold text-white bg-teal-700 hover:bg-orange-700 text-sm transition-colors duration-300"
       >
         Load All Tours
       </Link>

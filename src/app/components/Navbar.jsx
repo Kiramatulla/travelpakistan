@@ -91,6 +91,7 @@ const Navbar = () => {
           <div>
             <button
               className="absolute top-6 right-6 text-white cursor-pointer"
+              aria-label="Mobile Menu"
               onClick={handleClick}
             >
               <ImCross />

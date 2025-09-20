@@ -1,4 +1,4 @@
-import bgImage from "../assets/hunzavalley.jpg";
+import bgImage from "../assets/hunzavalley.webp";
 import Image from "next/image";
 import SearchForm from "./SearchForm";
 
