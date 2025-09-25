@@ -15,9 +15,9 @@ const Inclusions = () => {
 
   return (
     <section className="mx-2 lg:mx-0 lg:px-8">
-      <h1 className="text-center md:text-left text-lg mt-8 font-bold text-black mb-2">
+      <h2 className="text-center md:text-left text-lg mt-8 font-bold text-black mb-2">
         SERVICES INCLUDED AND EXCLUDED .
-      </h1>
+      </h2>
       <div className="space-y-4 mb-4 text-gray-700 leading-relaxed text-justify">
         <div className="flex gap-4 text-sm text-center md:text-left mb-2">
           <TiInfoLargeOutline
