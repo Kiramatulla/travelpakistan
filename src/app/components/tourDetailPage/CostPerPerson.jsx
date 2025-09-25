@@ -18,9 +18,9 @@ const CostPerPerson = ({ tours }) => {
           adjusting tour days, or adding options—can affect the final cost.
         </p>
       </div>
-      <h2 className="text-center md:text-left font-semibold text-gray-800 mb-2 underline underline-offset-4">
+      <h3 className="text-center md:text-left font-semibold text-gray-800 mb-2 underline underline-offset-4">
         Price Per Person – International Tourists
-      </h2>
+      </h3>
 
       <div className="my-6 bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
         <table className="w-full text-sm font-sans ">
@@ -95,9 +95,9 @@ const CostPerPerson = ({ tours }) => {
         </table>
       </div>
 
-      <h2 className="text-center md:text-left font-semibold text-gray-800 mt-8 mb-2 underline underline-offset-4">
+      <h3 className="text-center md:text-left font-semibold text-gray-800 mt-8 mb-2 underline underline-offset-4">
         Price Per Person – Domestic Tourists
-      </h2>
+      </h3>
 
       <div className="my-6 bg-gradient-to-br from-blue-200 to-white rounded-xl shadow-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
         <table className="w-full text-sm font-sans">
