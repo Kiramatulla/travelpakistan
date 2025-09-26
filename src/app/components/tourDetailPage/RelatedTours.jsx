@@ -79,7 +79,7 @@ const RelatedTours = ({ relatedTours }) => {
   };
 
   return (
-    <div className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8 ">
+    <div className="mx-4 lg:mx-0 lg:pl-8 lg:pr-8 ">
       <h2 className="text-center md:text-left pl-2 font-bold text-lg text-gray-800 underline underline-offset-8 py-2 rounded-md md:pl-0">
         Similar Tour Packages and Pricing
       </h2>

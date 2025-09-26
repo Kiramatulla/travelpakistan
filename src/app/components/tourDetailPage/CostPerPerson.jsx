@@ -3,7 +3,7 @@ import AboutCost from "./AboutCost";
 
 const CostPerPerson = ({ tours }) => {
   return (
-    <section className="mx-2 lg:mx-0 lg:pl-8 lg:pr-8">
+    <div className="mx-4 lg:mx-0 lg:pl-8 lg:pr-8">
       <h2 className="font-bold text-center md:text-left text-lg underline underline-offset-8 text-gray-800 mb-2">
         Total Cost of {tours.title}
       </h2>
@@ -172,7 +172,7 @@ const CostPerPerson = ({ tours }) => {
         </table>
       </div>
       {tours?.aboutCost?.length > 0 && <AboutCost tours={tours} />}
-    </section>
+    </div>
   );
 };
 

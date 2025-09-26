@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Blogs = ({ relatedBlogs }) => {
   return (
-    <aside className="font-sans bg-white rounded-2xl shadow-xl p-5 mb-8">
+    <div className="font-sans bg-white rounded-2xl shadow-xl p-5 mb-8">
       <h2 className="text-xl font-bold text-center mb-4 text-gray-800">
         Explore More About Your Destination
       </h2>
@@ -30,7 +30,7 @@ const Blogs = ({ relatedBlogs }) => {
           </li>
         ))}
       </ul>
-    </aside>
+    </div>
   );
 };
 

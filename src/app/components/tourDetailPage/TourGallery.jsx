@@ -5,7 +5,7 @@ export default function TourGallery({ tours }) {
   if (!tours?.gallery || tours.gallery.length === 0) return null;
 
   return (
-    <section className="py-4">
+    <div className="py-4">
       <h2 className="text-lg font-bold text-center mb-8">
         Photos from my Personal Collections
       </h2>
@@ -16,7 +16,7 @@ export default function TourGallery({ tours }) {
             key={index}
             className="flex flex-col justify-center items-center pb-1"
           >
-            <div className="">
+            <figure>
               <Image
                 src={urlFor(item.image).url()}
                 alt={item.caption || "Tour photo"}
@@ -25,13 +25,13 @@ export default function TourGallery({ tours }) {
                 loading="lazy"
                 className="object-cover w-[199px] h-[137px] md:w-[245px] md:h-[145px] lg:w-[205px] lg:h-[135px] "
               />
-            </div>
+            </figure>
             <p className="mt-2 text-xs text-center text-gray-700 font-medium">
               {item.caption}
             </p>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

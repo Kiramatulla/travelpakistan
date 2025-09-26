@@ -14,7 +14,7 @@ const Inclusions = () => {
   const categories = tourCategories.map((cat) => cat.id);
 
   return (
-    <section className="mx-2 lg:mx-0 lg:px-8">
+    <div className="mx-2 lg:mx-0 lg:px-8">
       <h2 className="text-center md:text-left text-lg mt-8 font-bold text-black mb-2">
         SERVICES INCLUDED AND EXCLUDED .
       </h2>
@@ -100,7 +100,7 @@ const Inclusions = () => {
           <FaArrowRight className="text-center " />
         </Link>
       </div>
-    </section>
+    </div>
   );
 };
 

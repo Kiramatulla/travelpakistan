@@ -55,12 +55,12 @@ const TourOverviews = ({ tours }) => {
           tours?.author?.authorDescription && <AuthorByline tours={tours} />}
       </div>
 
-      <section className="font-sans text-sm text-gray-800 text-justify lg:text-start px-2 lg:px-0 lg:text-sm lg:leading-7">
+      <div className="font-sans text-sm text-gray-800 text-justify lg:text-start px-2 lg:px-0 lg:text-sm lg:leading-7">
         <PortableText
           value={tours.tourOverviews}
           components={PortableTextComponents}
         />
-      </section>
+      </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white text-sm font-sans mt-6">
         {/* Highlights */}
         <div className="flex items-center gap-3 bg-blue-900/80 p-4 rounded-xl shadow-md">

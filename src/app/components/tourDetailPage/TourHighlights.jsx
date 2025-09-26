@@ -2,7 +2,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const TourHighlights = ({ tours }) => {
   return (
-    <section className="mx-2 lg:mx-8 mt-6 bg-white rounded-xl shadow-sm p-4 border border-gray-100">
+    <div className="mx-2 lg:mx-8 mt-6 bg-white rounded-xl shadow-sm p-4 border border-gray-100">
       <h2 className="text-lg font-bold mb-4 text-gray-800">
         {tours.title} - Highlights
       </h2>
@@ -20,7 +20,7 @@ const TourHighlights = ({ tours }) => {
           </li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 };
 

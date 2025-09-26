@@ -25,9 +25,6 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         <section>
           <ImageComp tours={tours} />
         </section>
-        {/* <section>
-          <OverView tours={tours} />
-        </section> */}
         <section>
           <TourOverviews tours={tours} />
         </section>

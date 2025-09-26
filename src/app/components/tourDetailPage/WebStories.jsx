@@ -5,7 +5,7 @@ export default function WebStories({ tours }) {
   if (!tours?.slides?.length) return null;
 
   return (
-    <section className="mt-8">
+    <div className="mt-8">
       <h2 className="text-2xl text-center md:text-xl md:font-semibold text-slate-900 font-serif mb-4">
         Shorts from {tours.title}
       </h2>
@@ -14,6 +14,6 @@ export default function WebStories({ tours }) {
           <WebStoryCard key={`${tours._id}-${index}`} slide={slide} />
         ))}
       </div>
-    </section>
+    </div>
   );
 }
