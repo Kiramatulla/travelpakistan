@@ -104,7 +104,12 @@ export const tours = {
       type: "array",
       of: [{ type: "block" }],
     },
-
+ {
+      name: "relatedTourTitle",
+      title: "Related Tour Title",
+      type: "string",
+      
+    },
     {
       name: "numberOfDays",
       title: "Number of Days",

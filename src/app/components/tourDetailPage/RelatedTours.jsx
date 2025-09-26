@@ -42,8 +42,8 @@ const RelatedTours = ({ relatedTours }) => {
             <thead>
               <tr className="bg-blue-900/90 text-xs text-white">
                 <th className="p-4 text-left">Tour Name</th>
-                <th className="p-4 text-left">Standard Price</th>
-                <th className="p-4 text-left">Premium Price</th>
+                <th className="p-4 text-left">Standard</th>
+                <th className="p-4 text-left">Premium</th>
               </tr>
             </thead>
             <tbody>
