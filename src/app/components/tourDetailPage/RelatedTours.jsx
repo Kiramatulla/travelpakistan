@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TiInfoLargeOutline } from "react-icons/ti";
 
-const RelatedTours = ({ relatedTours }) => {
+const RelatedTours = ({ relatedTours, tours }) => {
   // Sort by days (extracting number from title)
   const sortedTours = relatedTours.sort((a, b) => {
     const daysA = parseInt(a.title.match(/\d+/)?.[0] || "0", 10);
@@ -81,7 +81,7 @@ const RelatedTours = ({ relatedTours }) => {
   return (
     <div className="mx-4 lg:mx-0 lg:pl-8 lg:pr-8 ">
       <h2 className="text-center md:text-left pl-2 font-bold text-lg text-gray-800 underline underline-offset-8 py-2 rounded-md md:pl-0">
-        Similar Tour Packages and Pricing
+        {tours.relatedTourTitle || "Similar Tour Packages and Pricing"}
       </h2>
       <div className="text-sm font-sans flex gap-2 text-center md:text-left">
         <TiInfoLargeOutline

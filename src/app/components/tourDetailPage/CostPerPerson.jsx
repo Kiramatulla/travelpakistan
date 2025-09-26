@@ -5,7 +5,7 @@ const CostPerPerson = ({ tours }) => {
   return (
     <div className="mx-4 lg:mx-0 lg:pl-8 lg:pr-8">
       <h2 className="font-bold text-center md:text-left text-lg underline underline-offset-8 text-gray-800 mb-2">
-        Total Cost of {tours.title}
+        {tours.CostTitle || `Total Cost Of ${tours.title}`}
       </h2>
       <div className="flex items-start gap-3 bg-gradient-to-r from-green-100 to-white p-4 rounded-xl shadow-sm border border-green-200 mt-3 mb-5">
         <TiInfoLargeOutline

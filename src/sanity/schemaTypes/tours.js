@@ -111,6 +111,24 @@ export const tours = {
       
     },
     {
+      name: "CostTitle",
+      title: "Cost Title",
+      type: "string",
+      
+    },
+    {
+      name: "importantDistanceTitle",
+      title: "Important Distance Title",
+      type: "string",
+      
+    },
+    {
+      name: "touristSpotTitle",
+      title: "Tourist Spot Title",
+      type: "string",
+      
+    },
+    {
       name: "numberOfDays",
       title: "Number of Days",
       type: "number",

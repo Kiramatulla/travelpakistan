@@ -5,7 +5,7 @@ const ImportantDistances = ({ tours }) => {
     <div className="mx-2 md:mx-6 lg:mx-8 py-6 ">
       <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
         <h2 className="text-lg md:text-left font-bold md:text-lg border-b border-gray-200">
-          Important Distances
+          {tours.importantDistanceTitle || "Important Distances"}
         </h2>
       </div>
 

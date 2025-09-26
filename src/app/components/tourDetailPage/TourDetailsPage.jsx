@@ -32,7 +32,7 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
           <CostPerPerson tours={tours} />
         </section>
         <section>
-          <RelatedTours relatedTours={relatedTours} />
+          <RelatedTours relatedTours={relatedTours} tours={tours} />
         </section>
         <section>
           <Inclusions />
