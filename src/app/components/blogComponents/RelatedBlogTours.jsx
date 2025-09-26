@@ -81,7 +81,7 @@ const RelatedBlogTours = ({ relatedTours }) => {
   return (
     <div className="mx-4 lg:mx-0 lg:pl-8 lg:pr-8 ">
       <h2 className="text-center md:text-left pl-2 font-bold text-lg text-gray-800 underline underline-offset-8 py-2 rounded-md md:pl-0">
-        {tours.relatedTourTitle || "Similar Tour Packages and Pricing"}
+        Similar Tour Packages and Pricing
       </h2>
       <div className="text-sm font-sans flex gap-2 text-center md:text-left">
         <TiInfoLargeOutline
