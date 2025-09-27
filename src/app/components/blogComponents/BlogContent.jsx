@@ -16,7 +16,7 @@ const PortableTextComponents = {
             alt={value.alt || "Blog Image"}
             width={800} // Keeps original width for Next.js optimization
             height={300} // Keeps original height for Next.js optimization
-            className="w-full sm:h-[20rem] lg:h-[25rem]  lg:rounded-xl object-cover"
+            className="w-full sm:h-[20rem] lg:h-[25rem]  lg:rounded-xl"
           />
         </div>
       );

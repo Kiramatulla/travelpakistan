@@ -57,7 +57,7 @@ const BlogImage = ({ blogs }) => {
               alt={blogs.title}
               width={700}
               height={300}
-              className="w-full h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl object-cover"
+              className="w-full h-[20rem] lg:h-[25rem] px-2 lg:px-10 lg:rounded-xl"
             />
           ) : (
             <span>Blog Images</span> // You can also use a fallback image here if needed
@@ -72,30 +72,8 @@ const BlogImage = ({ blogs }) => {
           <FiArrowRightCircle size={24} />
         </button>
       </div>
-
-      {/* Thumbnails */}
-      {/* <div className="flex gap-2 mt-2 overflow-x-auto px-4">
-        {blogs.featuredImage.map((img, index) => (
-          <div
-            key={index}
-            onClick={() => handleThumbnailClick(index)}
-            className={`cursor-pointer border-2 ${
-              currentIndex === index ? "border-blue-500" : "border-transparent"
-            } rounded-lg overflow-hidden`}
-          >
-            <Image
-              src={urlFor(img).url()}
-              alt={`Thumbnail ${index + 1}`}
-              width={100}
-              height={60}
-              className="object-cover w-24 h-16"
-            />
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };
 
 export default BlogImage;
-
