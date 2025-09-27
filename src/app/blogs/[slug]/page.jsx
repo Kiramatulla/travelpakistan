@@ -41,7 +41,7 @@ const page = async (props) => {
     tourType,
     title,
     "slug": slug.current,
-    images,
+    "image":images[0],
     _id,
     numberOfDays,
     International2Persons,
@@ -50,8 +50,15 @@ const page = async (props) => {
   );
 
   const relatedBlogs = await client.fetch(
-    `*[_type =="blogs" && category._ref == '${blogs.category._ref}' && slug.current != '${params.slug}']`
+    `*[_type =="blogs" && category._ref == '${blogs.category._ref}' && slug.current != '${params.slug}']
+    {
+    title,
+    "slug":slug.current,
+    _id
+    }
+    `
   );
+
   return (
     <main className=" mt-5 lg:mt-2 mb-20">
       <BlogDetailComponent

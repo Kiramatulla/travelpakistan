@@ -74,7 +74,11 @@ slides[]{
   },
   "relatedBlogs": *[
     _type == "blogs" && category._ref == '${tours.category._ref}' && blogType == "region"
-  ],
+  ] {
+  title,
+  "slug":slug.current,
+  _id
+  },
 
 }`;
 

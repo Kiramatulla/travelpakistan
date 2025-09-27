@@ -14,7 +14,7 @@ const Blogs = ({ relatedBlogs }) => {
             key={relatedBlog._id}
             className="group transition-all duration-300"
           >
-            <Link href={`/blogs/${relatedBlog.slug.current}`}>
+            <Link href={`/blogs/${relatedBlog.slug}`}>
               <article className="bg-gradient-to-br from-slate-300 to-white hover:bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
                 {/* Blog Title */}
                 <h3 className="text-base font-semibold text-gray-700">

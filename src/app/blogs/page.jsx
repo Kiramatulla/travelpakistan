@@ -18,7 +18,14 @@ const page = async (props) => {
   const end = start + PAGE_SIZE;
 
   // Fetch the tours for this specific page (using pagination)
-  const blogs = await client.fetch(`*[_type == "blogs"][${start}...${end}]`);
+  const blogs = await client.fetch(`*[_type == "blogs"][${start}...${end}]
+    {
+    title,
+    "slug": slug.current,
+    "featuredImage": featuredImage[0],
+    _id
+    }
+    `);
   const category = await client.fetch(`*[_type == "category"]`);
 
   // Fetch the total number of tours (for pagination controls)
@@ -96,96 +103,3 @@ const page = async (props) => {
 };
 
 export default page;
-
-//======================================Test Going on=================
-// "use client";
-
-// import { useEffect, useState } from "react";
-// import { client } from "@/sanity/lib/client";
-// import BlogCategory from "../components/blogComponents/BlogCategory";
-// import BlogImageCard from "../components/blogComponents/BlogImageCard";
-
-// const PAGE_SIZE = 12;
-
-// export default function BlogPage() {
-//   const [blogs, setBlogs] = useState([]);
-//   const [categories, setCategories] = useState([]);
-//   const [selectedCategory, setSelectedCategory] = useState("");
-//   const [currentPage, setCurrentPage] = useState(1);
-
-//   // Fetch all blogs and categories when page loads
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const allBlogs = await client.fetch(`*[_type == "blogs"]{
-//       title,
-//       slug,
-//       category->{_id, title}
-//     }`);
-//       const allCategories = await client.fetch(
-//         `*[_type == "category"]{_id, title}`
-//       );
-
-//       setBlogs(allBlogs);
-//       setCategories(allCategories);
-//       setSelectedCategory(allCategories[0]?._id || ""); // use _id as default
-//     };
-
-//     fetchData();
-//   }, []);
-
-//   const filteredBlogs = blogs.filter(
-//     (blog) => blog.category?._id === selectedCategory._id
-//   );
-//   console.log(filteredBlogs);
-
-//   const totalPages = Math.ceil(filteredBlogs.length / PAGE_SIZE);
-//   const paginatedBlogs = filteredBlogs.slice(
-//     (currentPage - 1) * PAGE_SIZE,
-//     currentPage * PAGE_SIZE
-//   );
-
-//   return (
-//     <main>
-//       <div className="flex">
-//         <section className="hidden md:flex">
-//           <BlogCategory
-//             category={categories}
-//             selectedCategory={selectedCategory}
-//             setSelectedCategory={(id) => {
-//               setSelectedCategory(id);
-//               setCurrentPage(1);
-//             }}
-//           />
-//         </section>
-//         <section className="lg:p-4">
-//           <div className="max-w-7xl mx-auto px-4">
-//             <h2 className="text-xl sm:text-4xl font-bold text-slate-800 mb-4">
-//               Our Recent Blogs
-//             </h2>
-//             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-//               {paginatedBlogs.map((blog, i) => (
-//                 <BlogImageCard key={i} blog={blog} />
-//               ))}
-//             </div>
-//             {/* Pagination */}
-//             <div className="flex justify-center mt-8 gap-3">
-//               {Array.from({ length: totalPages }).map((_, i) => (
-//                 <button
-//                   key={i}
-//                   onClick={() => setCurrentPage(i + 1)}
-//                   className={`px-4 py-2 rounded ${
-//                     i + 1 === currentPage
-//                       ? "bg-blue-600 text-white"
-//                       : "bg-gray-200"
-//                   }`}
-//                 >
-//                   {i + 1}
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
-//         </section>
-//       </div>
-//     </main>
-//   );
-// }

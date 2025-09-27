@@ -11,14 +11,22 @@ export const metadata = {
     "Looking for a once-in-a-lifetime adventure? Discover 20+ handpicked Pakistan tour packages for 2025, designed just for you. Whether you want to explore the mountains of Hunza, the deserts of Cholistan, or the culture of Lahore — weve got a trip that fits your style, budget, and time",
 };
 
-const Page = async props => {
+const Page = async (props) => {
   const searchParams = await props.searchParams;
   const currentPage = parseInt(searchParams.page || "1");
   const start = (currentPage - 1) * PAGE_SIZE;
   const end = start + PAGE_SIZE;
 
   // Fetch the tours for this specific page (using pagination)
-  const tours = await client.fetch(`*[_type == "tour"][${start}...${end}]`);
+  const tours = await client.fetch(`*[_type == "tour"][${start}...${end}]
+    {
+    title,
+    "slug": slug.current,
+    "image": images[0],
+    tourOverviews,
+    _id
+  }
+    `);
 
   // Fetch the total number of tours (for pagination controls)
   const totalTours = await client.fetch(`count(*[_type == "tour"])`);

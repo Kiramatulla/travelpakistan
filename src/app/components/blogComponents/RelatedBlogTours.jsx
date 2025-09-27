@@ -58,7 +58,7 @@ const RelatedBlogTours = ({ relatedTours }) => {
                       className="flex items-center"
                     >
                       <Image
-                        src={urlFor(tour.images && tour.images[0]).url()}
+                        src={urlFor(tour.image).url()}
                         alt={tour.title}
                         width={300}
                         height={300}
