@@ -93,14 +93,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/livechat"
-                  className="hover:text-teal-600 transition"
-                >
-                  Live Chat
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/privacypolicy"
                   className="hover:text-teal-600 transition"
                 >
@@ -161,7 +153,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                href="https://www.tripadvisor.com/"
+                href="https://www.tripadvisor.com/Attraction_Review-g317116-d33268823-Reviews-Viola_Tours_Pakistan-Gilgit_Gilgit_Baltistan.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Check our reviews on TripAdvisor"
