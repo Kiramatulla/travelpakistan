@@ -19,9 +19,10 @@ import WebStories from "./WebStories";
 
 const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
   return (
-    <div className="lg:flex lg:flex-row lg:ml-16 ">
+    <div className="lg:flex lg:flex-row lg:ml-16  ">
       {/* Main Tour Content */}
-      <div className="lg:w-[65%] lg:pl-2 lg:ml-8 md:pb-20 rounded-lg bg-gradient-to-br from-blue-50 to-white">
+      <div className="lg:w-[65%] lg:pl-2 lg:ml-8 md:pb-20 rounded-lg bg-gradient-to-br from-sky-50 to-white md:border-2">
+        {/*  */}
         <section>
           <ImageComp tours={tours} />
         </section>

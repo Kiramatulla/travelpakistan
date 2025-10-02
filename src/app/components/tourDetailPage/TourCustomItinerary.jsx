@@ -18,7 +18,7 @@ export default async function ItineraryRegionShowcase() {
   const regions = await client.fetch(query);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 pt-14 pb-8">
+    <div className="max-w-7xl mx-auto px-6 pt-6 pb-8">
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto mb-6">
         <h2 className="text-2xl md:text-xl md:font-bold text-slate-900 font-serif">
@@ -33,7 +33,7 @@ export default async function ItineraryRegionShowcase() {
 
       {/* Grid of regions */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {regions.slice(0, 6).map((region, index) => (
+        {regions.slice(0, 3).map((region, index) => (
           <div
             key={region.title + index}
             className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-white 

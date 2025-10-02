@@ -55,7 +55,7 @@ const TourOverviews = ({ tours }) => {
           tours?.author?.authorDescription && <AuthorByline tours={tours} />}
       </div>
 
-      <div className="font-sans text-sm text-gray-800 text-justify lg:text-start px-2 lg:px-0 lg:text-sm lg:leading-7">
+      <div className="font-sans text-sm text-justify lg:text-start px-2 lg:px-0 lg:text-sm lg:leading-7">
         <PortableText
           value={tours.tourOverviews}
           components={PortableTextComponents}
