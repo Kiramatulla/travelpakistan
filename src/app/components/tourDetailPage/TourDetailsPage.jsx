@@ -35,12 +35,11 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
           <RelatedTours relatedTours={relatedTours} tours={tours} />
         </section>
         <section>
-          <Inclusions />
-        </section>
-        <section>
           {tours?.slides?.length > 0 && <WebStories tours={tours} />}
         </section>
-
+        <section>
+          <Inclusions />
+        </section>
         <section>
           <TourCustomItinerary />
         </section>

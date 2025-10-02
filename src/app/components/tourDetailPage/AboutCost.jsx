@@ -23,35 +23,33 @@ const PortableTextComponents = {
 
   list: {
     bullet: ({ children }) => (
-      <ul className="list-disc pl-4 md:pl-8 mb-4 text-gray-700">{children}</ul>
+      <ul className="list-disc pl-4 md:pl-10 mb-4 text-gray-700 marker:pr-2 space-y-2">
+        {children}
+      </ul>
     ),
     number: ({ children }) => (
-      <ol className="list-decimal pl-4 md:pl-8 mb-4 text-gray-700">
+      <ol className="list-decimal pl-4 md:pl-10 mb-4 text-gray-700 space-y-2">
         {children}
       </ol>
     ),
   },
 
   listItem: {
-    bullet: ({ children }) => <li className="mb-1">{children}</li>,
-    number: ({ children }) => <li className="mb-1">{children}</li>,
+    bullet: ({ children }) => <li className="mb-1 ">{children}</li>,
+    number: ({ children }) => <li className="mb-1 gap-x-4 ">{children}</li>,
   },
 
-  // ✅ Add link handling here
   marks: {
     link: ({ children, value }) => {
       const href = value?.href || "#";
 
-      // 1. Internal relative path (starts with "/")
       const isRelativeInternal = href.startsWith("/");
 
-      // 2. Absolute link but to your own domain
       const isAbsoluteInternal = href.startsWith(
         "https://www.violatourspk.com"
       );
 
       if (isRelativeInternal || isAbsoluteInternal) {
-        // Strip domain for absolute internal links
         const cleanHref = isAbsoluteInternal
           ? href.replace("https://www.violatourspk.com", "")
           : href;
@@ -81,7 +79,7 @@ const PortableTextComponents = {
 const AboutCost = ({ tours }) => {
   return (
     <div>
-      <section className="md:mx-1 text-justify text-sm lg:text-start px-2 lg:px-0 lg:leading-6">
+      <section className="md:mx-1 text-justify text-sm lg:text-start px-2 lg:px-0 lg:leading-7">
         <PortableText
           value={tours.aboutCost}
           components={PortableTextComponents}

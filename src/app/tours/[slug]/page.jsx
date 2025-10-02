@@ -89,7 +89,7 @@ slides[]{
   const plainItinerary = toPlainText(tours.itinerary || []);
   const images = tours.images?.map((img) => urlFor(img).url()) || [];
   const plainAbout = toPlainText(tours.regionHistory || []);
-
+  //structure data for tour content
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
