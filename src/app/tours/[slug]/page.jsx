@@ -129,6 +129,79 @@ slides[]{
       },
     ],
   };
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `https://www.violatourspk.com/tours/${tours.slug}`,
+    url: `https://www.violatourspk.com/tours/${tours.slug}`,
+    name: tours.title,
+    description: tours.description,
+    datePublished: tours.datePublished,
+    dateModified: tours.dateModified,
+    inLanguage: "en-US",
+    isPartOf: {
+      "@id": "https://www.violatourspk.com/#website",
+    },
+    potentialAction: [
+      {
+        "@type": "ReadAction",
+        target: [`https://www.violatourspk.com/tours/${tours.slug}`],
+      },
+    ],
+  };
+
+  // ImageObject Schema
+  const imageObjectSchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "@id": `https://www.violatourspk.com/tours/${tours.slug}#primaryimage`,
+    url: tours.image,
+    contentUrl: tours.image,
+    caption: tours.title,
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.violatourspk.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tours",
+        item: "https://www.violatourspk.com/tours",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: tours.title,
+        item: `https://www.violatourspk.com/tours/${tours.slug}`,
+      },
+    ],
+  };
+
+  // WebSite Schema
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.violatourspk.com/#website",
+    url: "https://www.violatourspk.com",
+    name: "Viola Tours Pakistan",
+    description:
+      "Top Pakistan tour packages to Hunza, Skardu, Fairy Meadows & more.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://https://www.violatourspk.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   //Sturcuture data for FAQ's
   const faqStructuredData =
     Array.isArray(tours.faqs) && tours.faqs.length > 0
@@ -145,19 +218,45 @@ slides[]{
           })),
         }
       : null;
+  // Other
+
   //Main Component Items
 
   return (
     <main className="mt-5 mb-20 ">
+      {/* ======Tourist Trip Schema========= */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       ></script>
+
+      {/* =======WEBPAGE======== */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      ></script>
+      {/* ======imageObjectSchema====== */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageObjectSchema) }}
+      ></script>
+      {/* ======breadcrumbSchema====== */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      ></script>
+      {/* ======webSiteSchema====== */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      ></script>
+      {/* =======FAQ Schema======== */}
       {faqStructuredData && (
         <script type="application/ld+json">
           {JSON.stringify(faqStructuredData)}
         </script>
       )}
+
       <TourDetailsPage
         tours={tours}
         relatedTours={relatedTours}
