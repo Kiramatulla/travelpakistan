@@ -132,8 +132,8 @@ slides[]{
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `https://www.violatourspk.com/tours/${tours.slug}`,
-    url: `https://www.violatourspk.com/tours/${tours.slug}`,
+    "@id": `https://www.violatourspk.com/tours/${tours.slug.current}`,
+    url: `https://www.violatourspk.com/tours/${tours.slug.current}`,
     name: tours.title,
     description: tours.description,
     datePublished: tours.datePublished,
@@ -145,7 +145,7 @@ slides[]{
     potentialAction: [
       {
         "@type": "ReadAction",
-        target: [`https://www.violatourspk.com/tours/${tours.slug}`],
+        target: [`https://www.violatourspk.com/tours/${tours.slug.current}`],
       },
     ],
   };
@@ -154,7 +154,7 @@ slides[]{
   const imageObjectSchema = {
     "@context": "https://schema.org",
     "@type": "ImageObject",
-    "@id": `https://www.violatourspk.com/tours/${tours.slug}#primaryimage`,
+    "@id": `https://www.violatourspk.com/tours/${tours.slug.current}#primaryimage`,
     url: tours.image,
     contentUrl: tours.image,
     caption: tours.title,
@@ -181,7 +181,7 @@ slides[]{
         "@type": "ListItem",
         position: 3,
         name: tours.title,
-        item: `https://www.violatourspk.com/tours/${tours.slug}`,
+        item: `https://www.violatourspk.com/tours/${tours.slug.current}`,
       },
     ],
   };
