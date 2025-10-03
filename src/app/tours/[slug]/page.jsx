@@ -135,7 +135,8 @@ slides[]{
     "@id": `https://www.violatourspk.com/tours/${tours.slug.current}`,
     url: `https://www.violatourspk.com/tours/${tours.slug.current}`,
     name: tours.title,
-    description: tours.description,
+    description:
+      plainDescription || tours.description || tours.Metadescription || "",
     datePublished: tours.datePublished,
     dateModified: tours.dateModified,
     inLanguage: "en-US",
@@ -155,8 +156,8 @@ slides[]{
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "@id": `https://www.violatourspk.com/tours/${tours.slug.current}#primaryimage`,
-    url: tours.image,
-    contentUrl: tours.image,
+    url: images[0],
+    contentUrl: images[0],
     caption: tours.title,
   };
 
@@ -199,6 +200,28 @@ slides[]{
       "@type": "SearchAction",
       target: "https://www.violatourspk.com/?s={search_term_string}",
       "query-input": "required name=search_term_string",
+    },
+  };
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `https://www.violatourspk.com/tours/${tours.slug.current}#product`,
+    name: tours.title,
+    description:
+      plainDescription || tours.description || tours.Metadescription || "",
+    image: images, // array of images
+    brand: {
+      "@type": "Organization",
+      name: "Viola Tours Pakistan",
+    },
+    sku: tours._id || tours.slug.current,
+    offers: {
+      "@type": "Offer",
+      url: `https://www.violatourspk.com/tours/${tours.slug.current}`,
+      price: tours.International5Persons || "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      validFrom: new Date().toISOString().split("T")[0],
     },
   };
 
@@ -246,9 +269,15 @@ slides[]{
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       ></script>
       {/* ======webSiteSchema====== */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      ></script>
+      {/* ======Product Schema===== */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       ></script>
       {/* =======FAQ Schema======== */}
       {faqStructuredData && (
