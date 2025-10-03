@@ -8,6 +8,7 @@ import ImageComp from "./ImageComp";
 import ImportantDistances from "./ImportantDistances";
 import Inclusions from "./Inclusions";
 import Itinerary from "./Itinerary";
+import OtherRelatedTours from "./OtherRelatedTours";
 import RelatedTours from "./RelatedTours";
 import SocialShare from "./SocialShare";
 import TourCustomItinerary from "./TourCustomItinerary";
@@ -17,7 +18,12 @@ import TourOverviews from "./TourOverviews";
 import UserGuide from "./UserGuide";
 import WebStories from "./WebStories";
 
-const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
+const TourDetailPage = ({
+  tours,
+  relatedTours,
+  relatedBlogs,
+  OtherRelatedToursData,
+}) => {
   return (
     <div className="lg:flex lg:flex-row lg:ml-16  ">
       {/* Main Tour Content */}
@@ -78,6 +84,7 @@ const TourDetailPage = ({ tours, relatedTours, relatedBlogs }) => {
         <UserGuide />
         <CallToAction />
         <Blogs relatedBlogs={relatedBlogs} />
+        <OtherRelatedTours OtherRelatedToursData={OtherRelatedToursData} />
       </aside>
     </div>
   );

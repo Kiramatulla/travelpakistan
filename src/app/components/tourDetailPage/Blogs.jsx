@@ -15,16 +15,16 @@ const Blogs = ({ relatedBlogs }) => {
             className="group transition-all duration-300"
           >
             <Link href={`/blogs/${relatedBlog.slug}`}>
-              <article className="bg-gradient-to-br from-slate-300 to-white hover:bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
+              <article className="rounded-xl bg-gradient-to-r from-gray-50 to-gray-100 hover:from-blue-50 hover:to-blue-100 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 p-4">
                 {/* Blog Title */}
                 <h3 className="text-base font-semibold text-gray-700">
                   {relatedBlog.title}
                 </h3>
 
                 {/* Read More Button */}
-                <span className="inline-flex items-center text-sm text-gray-500 group-hover:text-orange-500 mt-2">
-                  Read Post <FaArrowRightLong className="ml-2 text-[14px]" />
-                </span>
+                <button className="mt-2 inline-block text-xs px-3 py-1.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                  View Details
+                </button>
               </article>
             </Link>
           </li>

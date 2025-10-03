@@ -59,6 +59,7 @@ slides[]{
 
   if (!tours) return "No Tours Found";
 
+  //==========================RELATED TOURS AND BLOGS========================
   const relatedQuery = `{
   "relatedTours": *[
     _type == "tour" && category._ref == '${tours.category._ref}' && slug.current != '${params.slug}'
@@ -79,12 +80,19 @@ slides[]{
   "slug":slug.current,
   _id
   },
-
+"OtherRelatedToursData": *[
+  _type == "tour" && category._ref != '${tours.category._ref}'
+] | order(_createdAt desc)[0...7]{
+  title,
+  "slug": slug.current,
+  images
+}
 }`;
 
-  const { relatedTours, relatedBlogs, relatedWebStories } =
+  const { relatedTours, relatedBlogs, OtherRelatedToursData } =
     await client.fetch(relatedQuery);
 
+  //========================== STRUCTURE DATA =======================================
   const plainDescription = toPlainText(tours.tourOverviews || []);
   const plainItinerary = toPlainText(tours.itinerary || []);
   const images = tours.images?.map((img) => urlFor(img).url()) || [];
@@ -243,7 +251,7 @@ slides[]{
       : null;
   // Other
 
-  //Main Component Items
+  //==================== Main Component Items ==========================//
 
   return (
     <main className="mt-5 mb-20 ">
@@ -290,7 +298,7 @@ slides[]{
         tours={tours}
         relatedTours={relatedTours}
         relatedBlogs={relatedBlogs}
-        relatedWebStories={relatedWebStories}
+        OtherRelatedToursData={OtherRelatedToursData}
       />
     </main>
   );
