@@ -99,6 +99,12 @@ export const tours = {
       to: [{ type: "author" }],
     },
     {
+      name: 'canonicalUrl',
+      title: 'Canonical URL',
+      type: 'url',
+      description: 'Leave empty if this is the preferred version. Fill only if this page is a duplicate of another URL.',
+    },
+    {
       name: "itinerary",
       title: "Itinerary",
       type: "array",

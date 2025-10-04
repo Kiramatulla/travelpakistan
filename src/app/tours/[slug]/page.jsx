@@ -16,22 +16,31 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props) {
   const params = await props.params;
+
   const query = `*[_type == "tour" && slug.current == $slug][0]{
     metaTitle,
     Metadescription,
-    images
+    images,
+    canonicalUrl
   }`;
+
   const tour = await client.fetch(query, { slug: params.slug });
 
+  const baseUrl = "https://www.violatourspk.com";
+  const currentUrl = `${baseUrl}/tours/${params.slug}`;
+
   return {
-    title: tour.metaTitle,
-    description: tour.Metadescription,
+    title: tour?.metaTitle,
+    description: tour?.Metadescription,
     openGraph: {
       images: [
         {
-          url: urlFor(tour.images && tour.images[0]).url(),
+          url: urlFor(tour?.images && tour?.images[0]).url(),
         },
       ],
+    },
+    alternates: {
+      canonical: tour?.canonicalUrl || currentUrl,
     },
   };
 }
